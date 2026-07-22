@@ -23,6 +23,9 @@
     "message": "Message",
     "submit": "Submit",
     "success": "Thank you for your response. ✨",
-    "back": "← Back"
+    "back": "← Back",
+    "errorRequired": "This field is required.",
+    "errorEmail": "Please enter a valid email address.",
+    "fallbackLead": "Prefer email? Write to us at"
   }
 }

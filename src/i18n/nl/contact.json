@@ -23,6 +23,9 @@
     "message": "Bericht",
     "submit": "Verzenden",
     "success": "Bedankt voor je bericht. ✨",
-    "back": "← Terug"
+    "back": "← Terug",
+    "errorRequired": "Dit veld is verplicht.",
+    "errorEmail": "Voer een geldig e-mailadres in.",
+    "fallbackLead": "Liever e-mailen? Schrijf ons op"
   }
 }

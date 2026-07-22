@@ -23,6 +23,9 @@
     "message": "Lời nhắn",
     "submit": "Gửi",
     "success": "Cảm ơn bạn đã phản hồi. ✨",
-    "back": "← Quay lại"
+    "back": "← Quay lại",
+    "errorRequired": "Trường này là bắt buộc.",
+    "errorEmail": "Vui lòng nhập địa chỉ email hợp lệ.",
+    "fallbackLead": "Bạn thích gửi email hơn? Hãy viết cho chúng tôi tại"
   }
 }

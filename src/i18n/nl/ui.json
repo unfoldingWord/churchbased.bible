@@ -36,6 +36,7 @@
     "notFoundBody": "De pagina die je zoekt bestaat niet of is verplaatst.",
     "backHome": "Terug naar de startpagina",
     "menuLabel": "Menu",
-    "languageLabel": "Taal"
+    "languageLabel": "Taal",
+    "close": "Sluiten"
   }
 }

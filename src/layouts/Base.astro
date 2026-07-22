@@ -35,6 +35,15 @@ const { locale, slug, title, description, bareHeader = false } = Astro.props;
 const def = byCode(locale);
 const ui = content(locale, 'ui');
 const canonical = new URL(localePath(locale, slug), Astro.site);
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: ui.siteTitle,
+  url: Astro.site!.toString(),
+  logo: new URL('/images/uploads/2025/11/CBBT-Logo.png', Astro.site).toString(),
+  description: ui.footer.description.replace(/<[^>]+>/g, ''),
+};
 ---
 
 <html lang={def.tag} dir={def.dir}>
@@ -64,6 +73,7 @@ const canonical = new URL(localePath(locale, slug), Astro.site);
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL('/images/uploads/2025/11/CBBT-Website-Cover.jpg', Astro.site)} />
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
     <slot name="head" />
     {/*
       Cloudflare Web Analytics (cookieless, free) — replaces Jetpack stats.

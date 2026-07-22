@@ -36,6 +36,7 @@
     "notFoundBody": "La página que buscas no existe o se ha movido.",
     "backHome": "Volver a la página de inicio",
     "menuLabel": "Menú",
-    "languageLabel": "Idioma"
+    "languageLabel": "Idioma",
+    "close": "Cerrar"
   }
 }

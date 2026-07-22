@@ -36,6 +36,7 @@
     "notFoundBody": "Halaman yang Anda cari tidak ada atau telah dipindahkan.",
     "backHome": "Kembali ke beranda",
     "menuLabel": "Menu",
-    "languageLabel": "Bahasa"
+    "languageLabel": "Bahasa",
+    "close": "Tutup"
   }
 }

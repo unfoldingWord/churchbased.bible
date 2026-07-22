@@ -23,6 +23,9 @@
     "message": "留言内容",
     "submit": "提交",
     "success": "感谢您的来信。✨",
-    "back": "← 返回"
+    "back": "← 返回",
+    "errorRequired": "此字段为必填项。",
+    "errorEmail": "请输入有效的电子邮件地址。",
+    "fallbackLead": "更喜欢电子邮件？请写信至"
   }
 }

@@ -23,6 +23,9 @@
     "message": "Ujumbe",
     "submit": "Tuma",
     "success": "Asante kwa ujumbe wako. ✨",
-    "back": "← Rudi Nyuma"
+    "back": "← Rudi Nyuma",
+    "errorRequired": "Sehemu hii inahitajika.",
+    "errorEmail": "Tafadhali weka anwani sahihi ya barua pepe.",
+    "fallbackLead": "Unapendelea barua pepe? Tuandikie:"
   }
 }

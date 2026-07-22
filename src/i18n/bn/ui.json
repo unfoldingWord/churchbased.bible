@@ -36,6 +36,7 @@
     "notFoundBody": "আপনি যে পৃষ্ঠাটি খুঁজছেন সেটি নেই বা সরিয়ে নেওয়া হয়েছে।",
     "backHome": "হোমপেজে ফিরে যান",
     "menuLabel": "মেনু",
-    "languageLabel": "ভাষা"
+    "languageLabel": "ভাষা",
+    "close": "বন্ধ করুন"
   }
 }

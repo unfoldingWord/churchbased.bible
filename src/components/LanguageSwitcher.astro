@@ -13,22 +13,26 @@ const current = byCode(locale);
 <div class="lang-switcher">
   <button
     class="lang-switcher__toggle"
-    aria-haspopup="listbox"
+    aria-haspopup="true"
     aria-expanded="false"
     aria-label={label}
   >
-    <span aria-hidden="true">{current.flag}</span>
     <span>{current.name}</span>
     <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
       <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" />
     </svg>
   </button>
-  <ul class="lang-switcher__menu" role="listbox">
+  <ul class="lang-switcher__menu">
     {
       locales.map((l) => (
-        <li role="option" aria-selected={l.code === locale}>
-          <a href={localePath(l.code, slug)} lang={l.tag}>
-            <span aria-hidden="true">{l.flag}</span> {l.name}
+        <li>
+          <a
+            href={localePath(l.code, slug)}
+            lang={l.tag}
+            dir={l.dir}
+            aria-current={l.code === locale ? 'true' : undefined}
+          >
+            {l.name}
           </a>
         </li>
       ))
@@ -80,24 +84,41 @@ const current = byCode(locale);
   .lang-switcher__menu a:hover {
     background: var(--color-tertiary);
   }
-  .lang-switcher__menu [aria-selected='true'] a {
+  .lang-switcher__menu [aria-current='true'] {
     font-weight: 600;
+  }
+  /* Mark the active language without relying on colour alone. */
+  .lang-switcher__menu [aria-current='true']::before {
+    content: '✓ ';
+  }
+  .lang-switcher__menu [dir='rtl'] {
+    text-align: right;
   }
 </style>
 
 <script>
-  document.querySelectorAll('.lang-switcher').forEach((root) => {
-    const toggle = root.querySelector('.lang-switcher__toggle');
+  document.querySelectorAll<HTMLElement>('.lang-switcher').forEach((root) => {
+    const toggle = root.querySelector<HTMLButtonElement>('.lang-switcher__toggle');
     if (!toggle) return;
+
+    const close = (returnFocus = false) => {
+      if (!root.classList.contains('is-open')) return;
+      root.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      if (returnFocus) toggle.focus();
+    };
+
     toggle.addEventListener('click', () => {
       const open = root.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(open));
     });
+
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close(true);
+    });
+
     document.addEventListener('click', (e) => {
-      if (!root.contains(e.target as Node)) {
-        root.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
+      if (!root.contains(e.target as Node)) close();
     });
   });
 </script>

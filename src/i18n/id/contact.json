@@ -23,6 +23,9 @@
     "message": "Pesan",
     "submit": "Kirim",
     "success": "Terima kasih atas pesan Anda. ✨",
-    "back": "← Kembali"
+    "back": "← Kembali",
+    "errorRequired": "Kolom ini wajib diisi.",
+    "errorEmail": "Masukkan alamat email yang valid.",
+    "fallbackLead": "Lebih suka email? Tulis kepada kami di"
   }
 }

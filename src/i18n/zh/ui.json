@@ -36,6 +36,7 @@
     "notFoundBody": "您要找的页面不存在，或已被移动。",
     "backHome": "返回首页",
     "menuLabel": "菜单",
-    "languageLabel": "语言"
+    "languageLabel": "语言",
+    "close": "关闭"
   }
 }

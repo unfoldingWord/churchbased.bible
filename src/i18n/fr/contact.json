@@ -23,6 +23,9 @@
     "message": "Message",
     "submit": "Envoyer",
     "success": "Merci pour votre message. ✨",
-    "back": "← Retour"
+    "back": "← Retour",
+    "errorRequired": "Ce champ est obligatoire.",
+    "errorEmail": "Veuillez saisir une adresse e-mail valide.",
+    "fallbackLead": "Vous préférez l’e-mail ? Écrivez-nous à"
   }
 }

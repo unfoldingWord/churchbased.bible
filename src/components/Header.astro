@@ -11,6 +11,8 @@ interface Props {
 }
 const { locale, ui, slug, variant = 'solid' } = Astro.props;
 const homeHref = localePath(locale, 'home');
+const menuLabel = ui.strings?.menuLabel ?? 'Menu';
+const closeLabel = ui.strings?.close ?? 'Close';
 ---
 
 {
@@ -20,33 +22,43 @@ const homeHref = localePath(locale, 'home');
     </div>
   )
 }
-<div class="lang-float"><LanguageSwitcher locale={locale} slug={slug} label={ui.strings?.languageLabel ?? "Language"} /></div>
+<div class="lang-float"><LanguageSwitcher locale={locale} slug={slug} label={ui.strings?.languageLabel ?? 'Language'} /></div>
 
 <header class:list={['site-header', `site-header--${variant}`]}>
   <p class="site-header__title">
-    <a href={homeHref}>{ui.siteTitle}</a>
+    <a href={homeHref}>
+      <img class="site-header__logo" src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="34" height="34" />
+      <span>{ui.siteTitle}</span>
+    </a>
   </p>
   <nav class="site-nav" aria-label="Main">
-    <button class="site-nav__open" aria-expanded="false" aria-controls="site-nav-menu" aria-label={ui.strings?.menuLabel ?? "Menu"}>
+    <button class="site-nav__open" aria-expanded="false" aria-controls="site-nav-menu" aria-label={menuLabel}>
       <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
       </svg>
     </button>
-    <ul id="site-nav-menu" class="site-nav__menu">
-      {
-        ui.nav.map((item: { label: string; href: string }) => {
-          const href = item.href === '/' ? homeHref : localePath(locale, item.href.replaceAll('/', '') as PageSlug);
-          const current = item.href === `/${slug === 'home' ? '' : slug + '/'}`;
-          return (
-            <li>
-              <a href={href} aria-current={current ? 'page' : undefined}>
-                {item.label}
-              </a>
-            </li>
-          );
-        })
-      }
-    </ul>
+    <div id="site-nav-menu" class="site-nav__panel" aria-label={menuLabel}>
+      <button class="site-nav__close" aria-label={closeLabel}>
+        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <ul class="site-nav__list">
+        {
+          ui.nav.map((item: { label: string; href: string }) => {
+            const href = item.href === '/' ? homeHref : localePath(locale, item.href.replaceAll('/', '') as PageSlug);
+            const current = item.href === `/${slug === 'home' ? '' : slug + '/'}`;
+            return (
+              <li>
+                <a href={href} aria-current={current ? 'page' : undefined}>
+                  {item.label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
   </nav>
 </header>
 
@@ -71,14 +83,15 @@ const homeHref = localePath(locale, 'home');
     align-items: center;
     justify-content: space-between;
     gap: var(--space-3);
-    /* Extra top padding reserves a band for the floating language switcher,
-       so it never overlaps the nav links (e.g. "Contact"). */
-    padding: 68px 5% 24px;
+    padding: 28px 5% 24px;
     font-family: var(--font-heading);
   }
   .site-header--solid {
     background: var(--color-contrast);
   }
+  /* The homepage header floats over the hero; it needs a taller top band so the
+     language switcher (top-right) clears the nav row. Subpages have the tagline
+     strip above, so they don't. */
   .site-header--overlay {
     position: absolute;
     top: 0;
@@ -86,6 +99,7 @@ const homeHref = localePath(locale, 'home');
     right: 0;
     z-index: 40;
     background: transparent;
+    padding-top: 68px;
   }
   .site-header__title {
     margin: 0;
@@ -94,28 +108,42 @@ const homeHref = localePath(locale, 'home');
     letter-spacing: -0.011em;
   }
   .site-header__title a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
     color: #fff;
     text-decoration: none;
   }
-  .site-nav__menu {
+  .site-header__logo {
+    width: 34px;
+    height: auto;
+    flex: none;
+  }
+  .site-nav__panel {
+    /* On desktop the panel is transparent to layout — the link list sits inline
+       in the header row. On mobile it becomes a full-screen dialog. */
+    display: contents;
+  }
+  .site-nav__list {
     display: flex;
     gap: 2.2em;
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  .site-nav__menu a {
+  .site-nav__list a {
     color: #fff;
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
   }
-  .site-nav__menu a:hover,
-  .site-nav__menu a[aria-current='page'] {
+  .site-nav__list a:hover,
+  .site-nav__list a[aria-current='page'] {
     text-decoration: underline;
     text-underline-offset: 6px;
   }
-  .site-nav__open {
+  .site-nav__open,
+  .site-nav__close {
     display: none;
     background: none;
     border: 0;
@@ -132,13 +160,7 @@ const homeHref = localePath(locale, 'home');
     .site-nav__open {
       display: block;
     }
-    .site-nav.is-open .site-nav__open {
-      position: fixed;
-      top: 28px;
-      inset-inline-end: 5%;
-      z-index: 80;
-    }
-    .site-nav__menu {
+    .site-nav__panel {
       display: none;
       position: fixed;
       inset: 0;
@@ -148,21 +170,82 @@ const homeHref = localePath(locale, 'home');
       justify-content: center;
       gap: 1.4em;
       background: var(--color-contrast);
+    }
+    .site-nav.is-open .site-nav__panel {
+      display: flex;
+    }
+    .site-nav__list {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.4em;
       font-size: var(--text-xl);
     }
-    .site-nav.is-open .site-nav__menu {
-      display: flex;
+    .site-nav__close {
+      display: block;
+      position: absolute;
+      top: 24px;
+      inset-inline-end: 5%;
     }
   }
 </style>
 
 <script>
-  document.querySelectorAll('.site-nav').forEach((nav) => {
-    const btn = nav.querySelector('.site-nav__open');
-    if (!btn) return;
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', String(open));
+  document.querySelectorAll<HTMLElement>('.site-nav').forEach((nav) => {
+    const openBtn = nav.querySelector<HTMLButtonElement>('.site-nav__open');
+    const closeBtn = nav.querySelector<HTMLButtonElement>('.site-nav__close');
+    const panel = nav.querySelector<HTMLElement>('.site-nav__panel');
+    if (!openBtn || !panel) return;
+
+    const focusable = () =>
+      Array.from(
+        panel.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')
+      ).filter((el) => el.offsetParent !== null);
+
+    const open = () => {
+      nav.classList.add('is-open');
+      openBtn.setAttribute('aria-expanded', 'true');
+      panel.setAttribute('role', 'dialog');
+      panel.setAttribute('aria-modal', 'true');
+      document.body.style.overflow = 'hidden';
+      focusable()[0]?.focus();
+    };
+
+    const close = (returnFocus = true) => {
+      if (!nav.classList.contains('is-open')) return;
+      nav.classList.remove('is-open');
+      openBtn.setAttribute('aria-expanded', 'false');
+      panel.removeAttribute('role');
+      panel.removeAttribute('aria-modal');
+      document.body.style.overflow = '';
+      if (returnFocus) openBtn.focus();
+    };
+
+    openBtn.addEventListener('click', open);
+    closeBtn?.addEventListener('click', () => close());
+
+    panel.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        close();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      // Trap focus within the open dialog.
+      const items = focusable();
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
+
+    // If the viewport grows back to desktop while open, reset cleanly.
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 700) close(false);
     });
   });
 </script>
