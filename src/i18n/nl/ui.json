@@ -1,0 +1,41 @@
+{
+  "siteTitle": "Kerkgebaseerde Bijbelvertaling",
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Over ons",
+      "href": "/about/"
+    },
+    {
+      "label": "Training",
+      "href": "/training/"
+    },
+    {
+      "label": "Onderzoek",
+      "href": "/research/"
+    },
+    {
+      "label": "Impactverhalen",
+      "href": "/stories/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
+  ],
+  "footer": {
+    "tagline": "Een bediening van de <strong>kerk</strong>; de manier waarop de kerk <em>haar bediening vormgeeft</em>.",
+    "description": "Een wereldwijde beweging die kerken toerust om de Bijbel zelf te vertalen — in de taal van hun hart. Want de kerk die het Woord ontvangt, is de kerk die het het beste kan vertalen."
+  },
+  "strings": {
+    "formError": "Er is iets misgegaan. Probeer het opnieuw, of neem op een andere manier contact met ons op.",
+    "notFoundTitle": "Pagina niet gevonden",
+    "notFoundBody": "De pagina die je zoekt bestaat niet of is verplaatst.",
+    "backHome": "Terug naar de startpagina",
+    "menuLabel": "Menu",
+    "languageLabel": "Taal"
+  }
+}

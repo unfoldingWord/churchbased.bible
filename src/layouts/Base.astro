@@ -1,0 +1,81 @@
+---
+// Latin/Cyrillic/Vietnamese headings — matches the old site.
+import '@fontsource-variable/plus-jakarta-sans';
+// Non-Latin scripts. Every @font-face carries a unicode-range, so a browser
+// only downloads the faces whose characters actually appear on the page —
+// safe to declare globally across all 16 locales.
+import '@fontsource/noto-sans-arabic/400.css';
+import '@fontsource/noto-sans-arabic/600.css';
+import '@fontsource/noto-nastaliq-urdu/400.css';
+import '@fontsource/noto-nastaliq-urdu/600.css';
+import '@fontsource/noto-sans-devanagari/400.css';
+import '@fontsource/noto-sans-devanagari/600.css';
+import '@fontsource/noto-sans-bengali/400.css';
+import '@fontsource/noto-sans-bengali/600.css';
+import '@fontsource/noto-sans-myanmar/400.css';
+import '@fontsource/noto-sans-myanmar/600.css';
+import '@fontsource/noto-sans-sc/400.css';
+import '@fontsource/noto-sans-sc/600.css';
+import '../styles/global.css';
+import { locales, byCode, defaultLocale, localePath, type PageSlug } from '../i18n/config';
+import { content } from '../i18n/content';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  locale: string;
+  slug: PageSlug;
+  title: string;
+  description?: string;
+  /** Homepage renders its own hero-integrated header. */
+  bareHeader?: boolean;
+}
+
+const { locale, slug, title, description, bareHeader = false } = Astro.props;
+const def = byCode(locale);
+const ui = content(locale, 'ui');
+const canonical = new URL(localePath(locale, slug), Astro.site);
+---
+
+<html lang={def.tag} dir={def.dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/images/uploads/2025/11/CBBT-Logo.png" type="image/png" />
+    {
+      locales.map((l) => (
+        <link
+          rel="alternate"
+          hreflang={l.tag}
+          href={new URL(localePath(l.code, slug), Astro.site)}
+        />
+      ))
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(localePath(defaultLocale, slug), Astro.site)}
+    />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/images/uploads/2025/11/CBBT-Website-Cover.jpg', Astro.site)} />
+    <slot name="head" />
+    {/*
+      Cloudflare Web Analytics (cookieless, free) — replaces Jetpack stats.
+      Create a site in the Cloudflare dashboard → Analytics → Web Analytics,
+      then paste the token here and uncomment:
+      <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "YOUR_TOKEN"}'></script>
+    */}
+  </head>
+  <body>
+    {!bareHeader && <Header locale={locale} ui={ui} slug={slug} />}
+    <slot />
+    <Footer locale={locale} ui={ui} />
+  </body>
+</html>

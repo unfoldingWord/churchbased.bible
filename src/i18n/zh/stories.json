@@ -1,0 +1,54 @@
+{
+  "title": "影响故事",
+  "hero": {
+    "video": "/videos/cbbt-impact-stories-header.mp4",
+    "line1": "世界各地的族群都在参与以教会为本的圣经翻译。",
+    "line2": "<strong>这些是他们的故事。</strong>"
+  },
+  "stories": [
+    {
+      "heading": "泽梅",
+      "location": "<em>印度</em>",
+      "body": "假设您是一个大族群中的教会领袖。您注意到一个问题：虽然教会在您的族群中已经存在了一百多年……",
+      "readMore": "阅读更多",
+      "pdf": "/files/2024/08/Zeme.pdf",
+      "image": "/images/uploads/2024/08/Zeme-traditional-dance1-min.jpg"
+    },
+    {
+      "heading": "姆布莱戈",
+      "location": "<em>苏丹</em>",
+      "body": "“我为我的同胞深感负担。”这是艾哈迈德*的话——一位最近归信耶稣的苏丹人。",
+      "readMore": "阅读更多",
+      "pdf": "/files/2024/07/Mblego-final.pdf",
+      "image": "/images/uploads/2024/06/yusuf-yassir-SoLZCj0W1Ss-unsplash1.webp"
+    },
+    {
+      "heading": "塔夫雷茨与哈泰尼",
+      "location": "<em>欧亚大陆</em>",
+      "body": "在欧亚大陆一个多山之国的深处，有两个族群还没有自己语言的圣经译本。",
+      "readMore": "阅读更多",
+      "pdf": "/files/2024/08/Tavretsi-and-Khateni.pdf",
+      "image": "/images/uploads/2024/07/Screenshot-2024-07-15-at-1.45.52%E2%80%AFPM.png"
+    },
+    {
+      "heading": "鲁斯卡·罗姆",
+      "location": "<em>乌克兰</em>",
+      "body": "请想象这样一个场景：您在教会中长大，一生都是教会的成员——事实上，教会早已是您民族历史的一部分……",
+      "readMore": "阅读更多",
+      "pdf": "/files/2024/08/Ruska-Roma.pdf",
+      "image": "/images/uploads/2024/07/romani-6678445_640.jpg"
+    },
+    {
+      "heading": "尤拉卡尼与奇帕",
+      "location": "<em>南美洲</em>",
+      "body": "南美洲有九百多个族群，其中许多尚未听闻福音。他们居住在茂密的丛林中，与外界的关系并不安稳。",
+      "readMore": "阅读更多",
+      "pdf": "/files/2024/09/Yuracani_Quipa.pdf",
+      "image": "/images/uploads/2024/09/yuracani_quipa.jpg"
+    }
+  ],
+  "comingSoon": {
+    "heading": "新的<strong>影响故事</strong>即将推出！",
+    "body": "每一个故事都见证神如何借着祂的教会使祂的话语被人认识。<br>想让您的故事也在这里分享吗？请通过<a href=\"/contact/\">联系表单</a>给我们留言。"
+  }
+}

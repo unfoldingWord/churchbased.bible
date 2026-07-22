@@ -1,0 +1,27 @@
+{
+  "name": "churchbased-bible",
+  "version": "1.0.0",
+  "description": "Church-Based Bible Translation — static site (churchbased.bible)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check:locales": "node scripts/check-locales.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
+    "@fontsource/noto-nastaliq-urdu": "^5.3.0",
+    "@fontsource/noto-sans-arabic": "^5.3.0",
+    "@fontsource/noto-sans-bengali": "^5.3.0",
+    "@fontsource/noto-sans-devanagari": "^5.3.0",
+    "@fontsource/noto-sans-myanmar": "^5.3.0",
+    "@fontsource/noto-sans-sc": "^5.3.0",
+    "astro": "^5.12.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "puppeteer-core": "^25.3.0"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "siteTitle": "Tradução da Bíblia Baseada na Igreja",
+  "nav": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Sobre",
+      "href": "/about/"
+    },
+    {
+      "label": "Treinamento",
+      "href": "/training/"
+    },
+    {
+      "label": "Pesquisa",
+      "href": "/research/"
+    },
+    {
+      "label": "Histórias de impacto",
+      "href": "/stories/"
+    },
+    {
+      "label": "Contato",
+      "href": "/contact/"
+    }
+  ],
+  "footer": {
+    "tagline": "Um ministério da <strong>igreja</strong>; a maneira como a igreja <em>faz ministério</em>.",
+    "description": "Um movimento global que capacita igrejas a traduzirem a Bíblia por si mesmas — na língua do seu coração. Porque a igreja que recebe a Palavra é a igreja mais bem posicionada para traduzi-la."
+  },
+  "strings": {
+    "formError": "Algo deu errado. Tente novamente ou fale conosco de outra forma.",
+    "notFoundTitle": "Página não encontrada",
+    "notFoundBody": "A página que você procura não existe ou foi movida.",
+    "backHome": "Voltar à página inicial",
+    "menuLabel": "Menu",
+    "languageLabel": "Idioma"
+  }
+}

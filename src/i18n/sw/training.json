@@ -1,0 +1,87 @@
+{
+  "title": "Mafunzo",
+  "hero": {
+    "image": "/images/uploads/2025/11/Training.webp",
+    "title": "<strong>Unaweza <strong><em>kuanza</em></strong> Tafsiri ya Biblia inayotegemea Kanisa <strong>leo</strong>!</strong>"
+  },
+  "intro": "Tafsiri ya Biblia inayotegemea Kanisa inafanyika duniani kote, na <strong>wewe unaweza kushiriki!</strong> Mchoro ulio hapa chini unaeleza jinsi CBBT inavyoweza kuonekana katika utendaji. <br><br>Tafsiri bora ya Biblia inawezekana tu pale kanisa na jumuiya wanapokuwa na uwezo wa kusahihisha makosa au kubadilika kadiri lugha inavyobadilika. Kumbuka kwamba <strong>tathmini na usahihishaji endelevu</strong> hufanyika hata baada ya uchapishaji kukamilika.",
+  "cycleImage": "/images/uploads/2024/11/ilab_cycle_graphic_final_w_fonts.svg",
+  "resourcesHeading": "<strong>Nyenzo za Mafunzo</strong>",
+  "resourcesIntro": "Nyenzo hizi zitakupa miongozo ya kina, hatua kwa hatua, ya mchakato wa Tafsiri ya Biblia inayotegemea Kanisa. Ikiwa una maswali yoyote, tafadhali wasiliana nasi kupitia <a href=\"/contact/\">fomu ya mawasiliano</a>.",
+  "resources": [
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.30.26%E2%80%AFPM.png",
+      "heading": "Kuanza",
+      "body": "Miongozo mitatu inayowaandaa wakufunzi kuwafundisha wengine CBBT.",
+      "buttons": [
+        {
+          "label": "Kozi ya 1",
+          "href": "https://docs.google.com/document/d/1SgGqjxoj2XPiUPVsYNG-oxRtFs4akxZbv12SVO75WDE/"
+        },
+        {
+          "label": "Kozi ya 2",
+          "href": "https://docs.google.com/document/d/1TQEcXotHh8eOWA8tQWdY8q-TfXbI4Ntk/"
+        },
+        {
+          "label": "Kozi ya 3",
+          "href": "https://docs.google.com/document/d/1mfBAtorpmqMf5PWGH867Pb6zAPnuCex4YJ5OkABR4Ao/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/fountain-788430_640.jpg",
+      "heading": "Kuelewa Chanzo",
+      "body": "Mkusanyiko wa nyenzo zilizoundwa kwa ajili ya kutafsiri.",
+      "buttons": [
+        {
+          "label": "The Bible Well",
+          "href": "https://app.well.bible/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.36.58%E2%80%AFPM.png",
+      "heading": "Kwenda Ndani Zaidi",
+      "body": "Maktaba ya nyenzo za mafunzo ya CBBT.",
+      "buttons": [
+        {
+          "label": "Maktaba",
+          "href": "https://unfoldingword.org/training-hub"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/06/FoundationsBT.webp",
+      "heading": "Mfululizo wa Video za Tafsiri ya Biblia",
+      "body": "Mfululizo wa video ulioundwa kuonyesha mbinu rahisi zinazoweza kurudiwa ili kuanza tafsiri ya Biblia kwa uwazi na matokeo.",
+      "buttons": [
+        {
+          "label": "Mfululizo wa Video wa FoundationsBT",
+          "href": "https://foundationsbt.com"
+        }
+      ]
+    }
+  ],
+  "faqHeading": "<strong>Maswali Yanayoulizwa Mara kwa Mara</strong>",
+  "faqs": [
+    {
+      "q": "Je, Tafsiri ya Biblia inayotegemea Kanisa inagharimu kiasi gani?",
+      "a": [
+        "Gharama hutofautiana sana na hutegemea ukubwa na upeo wa kazi ya kutafsiri. Hata hivyo, CBBT ni njia ya kutafsiri yenye gharama nafuu kwa kuwa inategemea nguvu kazi ya kanisa la mtaa."
+      ]
+    },
+    {
+      "q": "Je, ni mifano gani ya nyenzo zinazotafsiriwa kwa kutumia Tafsiri ya Biblia inayotegemea Kanisa?",
+      "a": [
+        "CBBT huzaa tafsiri za maandishi na za sauti za nyenzo mbalimbali, zikiwemo Hadithi Huria za Biblia (Open Bible Stories), maelezo ya mafunzo, nyenzo nyingine za uanafunzi, na sehemu za Biblia. Nyenzo utakazochagua zitalingana na mahitaji mahususi ya jumuiya yako."
+      ]
+    },
+    {
+      "q": "Je, Tafsiri ya Biblia inayotegemea Kanisa huchukua muda gani?",
+      "a": [
+        "Hii inategemea kile kinachotafsiriwa na uzoefu wa awali wa timu ya watafsiri. Kwa upande wa Wazeme, tafsiri ya Biblia nzima ilichukua miezi ishirini na mmoja tu.",
+        "Katika hali nyingine, kazi ya kutafsiri huchukua muda mrefu zaidi. Baadhi ya jumuiya huona kutafsiri kama sehemu muhimu ya huduma yao ya injili, na hupanga kuendelea kutafsiri na kusahihisha ili kuhakikisha kwamba ujumbe wa Injili unapatikana kwa kila kizazi."
+      ]
+    }
+  ]
+}

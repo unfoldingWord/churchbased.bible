@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Website-Cover-1024x439.jpg",
+    "title": "Một mục vụ của <strong>hội thánh</strong>; cách hội thánh <em>thi hành mục vụ</em>.",
+    "cta": {
+      "label": "Tìm hiểu thêm",
+      "href": "/about/"
+    }
+  },
+  "story": {
+    "title": "Lời Chúa trở về với người <strong>Zeme</strong>.",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/Zeme.webp",
+        "heading": "<strong>Người Zeme cần một bản dịch Kinh Thánh trong ngôn ngữ của họ.</strong>",
+        "body": "Dù hội thánh đã có mặt ở vùng đông bắc Ấn Độ hơn 100 năm, người Zeme vẫn chưa có một bản dịch Kinh Thánh để sử dụng cho mục vụ và truyền giảng."
+      },
+      {
+        "image": "/images/uploads/2025/11/Benreu-Village.webp",
+        "heading": "<strong>Nhưng phiên dịch Kinh Thánh là một công việc phức tạp và khó tìm được sự trợ giúp.</strong>",
+        "body": "Kinh phí khan hiếm mà công việc lại rất lớn. Người Zeme cần một cách để dịch Kinh Thánh với những nguồn lực họ sẵn có."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Translating.webp",
+        "heading": "<strong>Trong khi tìm kiếm giải pháp, họ đã đến với Phiên dịch Kinh Thánh dựa trên Hội thánh.</strong>",
+        "body": "Một tổ chức địa phương đã huấn luyện một đội ngũ lãnh đạo nói tiếng Zeme về Phiên dịch Kinh Thánh dựa trên Hội thánh (CBBT)."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Bible.webp",
+        "heading": "<strong>CBBT đã giúp họ dịch Kinh Thánh sang tiếng Zeme.</strong>",
+        "body": "Nhóm phiên dịch đã hoàn tất toàn bộ Kinh Thánh và kiểm định độ chính xác của bản dịch chỉ trong hai mươi mốt tháng!"
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Traditional-Dance.webp",
+        "heading": "<strong>Công việc của họ đang góp phần vào sự tăng trưởng của hội thánh!</strong>",
+        "body": "Với bản dịch mới trong tay, người Zeme được trang bị để rao truyền Phúc Âm và môn đồ hóa cho Chúa Giê-xu."
+      }
+    ]
+  },
+  "quote": "<mark>Nhu cầu <strong>phiên dịch Kinh Thánh</strong> đang lớn hơn bao giờ hết. <strong>Hội thánh </strong>cần một <em><strong>giải pháp</strong></em>.</mark>",
+  "how": {
+    "title": "<strong>CBBT</strong> hoạt động như thế nào",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/4-1.png",
+        "heading": "Trang bị cho hội thánh…",
+        "body": "CBBT trang bị cho hội thánh địa phương để vận dụng kinh nghiệm và chuyên môn sẵn có nhằm đáp ứng nhu cầu phiên dịch và tăng trưởng trong sự hiểu biết thần học. Các lãnh đạo hội thánh được huấn luyện về quy trình phiên dịch."
+      },
+      {
+        "image": "/images/uploads/2025/11/3.png",
+        "heading": "…cho công việc phiên dịch…",
+        "body": "Các nhóm phiên dịch đào sâu ý nghĩa của Lời Đức Chúa Trời, còn các lãnh đạo hội thánh địa phương và khu vực bảo đảm bản dịch đáng tin cậy, dễ hiểu, phù hợp và thu hút. Hội thánh và cộng đồng cùng tham gia vào tiến trình này ngay từ đầu."
+      },
+      {
+        "image": "/images/uploads/2025/11/2.png",
+        "heading": "…để môn đồ hóa cho Chúa Giê-xu.",
+        "body": "Nhờ dịch Kinh Thánh và các tài liệu môn đồ hóa sang ngôn ngữ của mình, hội thánh địa phương được trang bị để môn đồ hóa cho Chúa Giê-xu và đem Phúc Âm đến với dân tộc mình."
+      }
+    ]
+  },
+  "fromChurch": {
+    "heading": "Từ Hội thánh; cho Hội thánh.",
+    "lead": "<strong>Hãy bước vào những câu chuyện về Phiên dịch Kinh Thánh dựa trên Hội thánh đang biến đổi đời sống và cộng đồng trên khắp thế giới.</strong>",
+    "body": "Từ các hội thánh làng quê đến những mạng lưới toàn cầu, hãy khám phá cách Đức Chúa Trời đang dùng dân Ngài để dịch Kinh Thánh cách trung tín, chia sẻ cách rộng rãi, và chứng kiến những tấm lòng được biến đổi qua Lời Ngài.",
+    "cta": {
+      "label": "Đọc các câu chuyện",
+      "href": "/stories/"
+    },
+    "image": "/images/uploads/2024/08/bennett-tobias-Tt_X-AHU3tg-unsplash.webp"
+  },
+  "finalCta": {
+    "video": "/videos/cbbt-homepage-video.mp4",
+    "heading": "Bạn đã sẵn sàng bắt đầu hành trình CBBT của mình chưa?",
+    "body": "Phiên dịch Kinh Thánh dựa trên Hội thánh có thể giúp bạn dịch Kinh Thánh sang ngôn ngữ của mình như thế nào? Hãy xem thư viện tài liệu huấn luyện của chúng tôi. Không có thời điểm nào tốt hơn ngay lúc này.",
+    "cta": {
+      "label": "Bắt đầu",
+      "href": "/training/"
+    }
+  }
+}

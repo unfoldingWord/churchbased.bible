@@ -1,0 +1,28 @@
+{
+  "title": "Contact",
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Lower-Banner.webp",
+    "title": "<strong>Every Voice, Every Church, One Mission</strong>"
+  },
+  "intro": "From every nation and tongue, God is building His church. Whether you want to learn more, share a story, or join the global movement of Church-Based Bible Translation, we would love to connect with you.",
+  "matter": "<strong>Your message matters!</strong>",
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "required": "(required)",
+    "subject": "What is the subject of your message?",
+    "subjectOptions": [
+      "Select An Option",
+      "Question About Resources & Training",
+      "Interest In Starting A Project",
+      "Sharing About a Project",
+      "Comment About An Impact Story",
+      "Error | Correction",
+      "Other"
+    ],
+    "message": "Message",
+    "submit": "Submit",
+    "success": "Thank you for your response. ✨",
+    "back": "← Back"
+  }
+}

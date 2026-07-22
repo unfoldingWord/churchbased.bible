@@ -1,0 +1,141 @@
+{
+  "title": "研究",
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Research-Header.webp",
+    "title": "<strong><strong>探索以教会为本的圣经翻译背后的心意。</strong></strong>"
+  },
+  "intro": "<br>在这里，您可以找到研究论文和简短的教学视频，阐明这一方式背后的圣经与神学依据。每一份资源都旨在帮助各地教会用自己的语言、在自己的处境中理解并应用神的话语。",
+  "papersHeading": "白皮书",
+  "papers": [
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-28-at-2.54.15%E2%80%AFPM.png",
+      "body": "<strong>可信，且被信任</strong><br>本文阐述了圣经译本本身的可信度与本地教会对译本的信任之间的区别，并提出建立系统化的核查模式，使本地教会对译本的信任程度与其可信度相称。",
+      "files": [
+        {
+          "label": "英语",
+          "href": "/files/2024/07/Trustworthy-and-Trusted_Jore_2017-1.pdf"
+        },
+        {
+          "label": "西班牙语",
+          "href": "/files/2024/07/Traduccion-Confiable-hasta-digna-de-Confianza-1.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-28-at-2.44.28%E2%80%AFPM.png",
+      "body": "<strong>从未得之民到教会立足</strong><br>本文对比了两种圣经翻译模式。随着翻译运动采纳 CBBT 等新模式，圣经翻译机构也有了参与和支持的新途径。",
+      "files": [
+        {
+          "label": "英语",
+          "href": "/files/2024/06/From-Unreached-to-Established-version1.pdf"
+        },
+        {
+          "label": "西班牙语",
+          "href": "/files/2024/07/From-Unreached-to-Established-Espanol-Version-1.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-28-at-2.50.04%E2%80%AFPM.png",
+      "body": "<strong>放手</strong><br>本文回应了针对圣经资源开放版权的几种反对意见，指出当前“保留所有权利”的惯例正在拦阻全球教会的成长与成熟。",
+      "files": [
+        {
+          "label": "英语",
+          "href": "/files/2024/06/Letting-Go-An-Appeal-and-Rationale-for-Open-licensed-Biblical-Content-version1-1.pdf"
+        },
+        {
+          "label": "西班牙语",
+          "href": "/files/2024/07/Letting-Go-Dejando-ir-traduccion-v2.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-28-at-3.00.22%E2%80%AFPM.png",
+      "body": "<strong>“签字批准”与“提供意见”：21 世纪圣经翻译顾问角色的转变</strong><br>本文探讨圣经翻译顾问角色的转变，特别说明全球南方教会的兴起带来了大量翻译项目，传统顾问模式已难以应付。随着教会在圣经翻译中承担主导，顾问们开始以其他方式提供服务。",
+      "files": [
+        {
+          "label": "英语",
+          "href": "/files/2024/06/SigningOffVsGivingInput.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/12/factorsForEffectiveCBBTFirstPage-1.webp",
+      "body": "<strong>有效开展 CBBT 的关键因素</strong><br>本文探讨有效开展以教会为本的圣经翻译的关键因素，包括本地主导与带领（根基性要素）、翻译能力、教会氛围以及实际的可扩展性。",
+      "files": [
+        {
+          "label": "英语",
+          "href": "/files/2024/12/04-Factors-for-Effective-CBBT-Whitepaper.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/03/ilab_qa_recs_pg_1.webp",
+      "body": "<strong>创新实验室质量保证建议</strong><br>本文探讨多模态圣经翻译如何增进信任与可及性，并呼吁本地教会在这一过程中承担领导。文中还倡导在以教会为本的圣经翻译中采用循环式的质量保证，以及对“翻译完成”更灵活的界定。",
+      "files": [
+        {
+          "label": "英语",
+          "href": "/files/2025/03/00-Innovation-Lab-Quality-Assurance-Recommendations-Whitepaper.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/03/evaluating_bible_translation.webp",
+      "body": "<strong>评估圣经翻译</strong><br>本文探讨通过多模态方法、教会主导的决策和循环式质量保证来评估圣经翻译，强调从最终阶段的检查转向社区的持续参与，确保译本始终切合需要并被广泛接受。",
+      "files": [
+        {
+          "label": "英语",
+          "href": "/files/2025/03/01-Evaluating-Bible-Translation-Whitepaper.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/03/overview_of_ccbt_qa.webp",
+      "body": "<strong>教会与社区为本（CBBT）质量保证循环概览</strong><br>本文探讨以教会与社区为本的圣经翻译（CBBT）循环，强调一种可持续、由教会主导的质量保证方式。文中概述了一个五阶段流程，包括能力建设、社区参与、质量审核、教会领袖确认以及循环修订，以确保持续产出高质量的圣经译本。",
+      "files": [
+        {
+          "label": "英语",
+          "href": "/files/2025/03/02-CBBT-Cycle-Whitepaper.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/03/qa_mentor_job_desc.webp",
+      "body": "<strong>质量保证导师职责说明</strong><br>本文探讨质量保证导师在以教会为本的圣经翻译（CBBT）中的角色，强调与质量保证社区协作，而非沿用传统的专家模式。导师为教会领袖和翻译人员提供培训、辅导和支持，通过社区参与和多模态的圣经互动确保翻译质量。",
+      "files": [
+        {
+          "label": "英语",
+          "href": "/files/2025/03/03-Quality-Assurance-Mentor-Job-Description-Whitepaper.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/03/whats_diff_with_mmt.webp",
+      "body": "<strong>多模态翻译（MMT）在实践中有何不同？</strong><br>本文探讨多模态翻译（MMT）在圣经翻译中的实际益处，强调通过口述、视觉和文字等方式的全方位参与。文中着重说明 MMT 如何增进理解、社区参与和艺术表达，使译本在各种传播方式中都能深深打动使用者。",
+      "files": [
+        {
+          "label": "英语",
+          "href": "/files/2025/03/07-What-is-Different-with-Multimodal-Translation-in-Practice-v2-Whitepaper.docx.pdf"
+        }
+      ]
+    }
+  ],
+  "videosHeading": "圣经神学视频库",
+  "videos": [
+    {
+      "video": "/videos/biblical-theology-video-1-intro.mp4",
+      "heading": "主题",
+      "body": "本视频简要介绍圣经叙事的主要主题、贯穿全本圣经的共同线索，以及它们对忠实翻译的重要性。"
+    },
+    {
+      "video": "/videos/biblical-theology-video-2-reasons.mp4",
+      "heading": "缘由",
+      "body": "本视频强调将所要翻译的经文置于圣经宏大叙事的整体背景中的重要性。"
+    },
+    {
+      "video": "/videos/biblical-theology-video-3-resources.mp4",
+      "heading": "资源",
+      "body": "本视频介绍可用于更深入探索圣经神学和圣经宏大叙事的资源。"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+---
+import { localePath, type PageSlug } from '../i18n/config';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  locale: string;
+  ui: any;
+  slug: PageSlug;
+  /** overlay = transparent, sits on top of a hero cover (homepage). */
+  variant?: 'solid' | 'overlay';
+}
+const { locale, ui, slug, variant = 'solid' } = Astro.props;
+const homeHref = localePath(locale, 'home');
+---
+
+{
+  variant === 'solid' && (
+    <div class="tagline-strip">
+      <p set:html={ui.footer.tagline} />
+    </div>
+  )
+}
+<div class="lang-float"><LanguageSwitcher locale={locale} slug={slug} label={ui.strings?.languageLabel ?? "Language"} /></div>
+
+<header class:list={['site-header', `site-header--${variant}`]}>
+  <p class="site-header__title">
+    <a href={homeHref}>{ui.siteTitle}</a>
+  </p>
+  <nav class="site-nav" aria-label="Main">
+    <button class="site-nav__open" aria-expanded="false" aria-controls="site-nav-menu" aria-label={ui.strings?.menuLabel ?? "Menu"}>
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <ul id="site-nav-menu" class="site-nav__menu">
+      {
+        ui.nav.map((item: { label: string; href: string }) => {
+          const href = item.href === '/' ? homeHref : localePath(locale, item.href.replaceAll('/', '') as PageSlug);
+          const current = item.href === `/${slug === 'home' ? '' : slug + '/'}`;
+          return (
+            <li>
+              <a href={href} aria-current={current ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .tagline-strip {
+    background: var(--color-secondary);
+    text-align: center;
+    padding-block: 6px;
+  }
+  .tagline-strip p {
+    margin: 0;
+    font-size: 12px;
+  }
+  .lang-float {
+    position: absolute;
+    top: 0;
+    inset-inline-end: 5%;
+    z-index: 50;
+  }
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: 28px 5%;
+    font-family: var(--font-heading);
+  }
+  .site-header--solid {
+    background: var(--color-contrast);
+  }
+  .site-header--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background: transparent;
+  }
+  .site-header__title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.011em;
+  }
+  .site-header__title a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .site-nav__menu {
+    display: flex;
+    gap: 2.2em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .site-nav__menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .site-nav__menu a:hover,
+  .site-nav__menu a[aria-current='page'] {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+  .site-nav__open {
+    display: none;
+    background: none;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 4px;
+  }
+  @media (max-width: 700px) {
+    .site-nav__open {
+      display: block;
+    }
+    .site-nav.is-open .site-nav__open {
+      position: fixed;
+      top: 28px;
+      inset-inline-end: 5%;
+      z-index: 80;
+    }
+    .site-nav__menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 70;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.4em;
+      background: var(--color-contrast);
+      font-size: var(--text-xl);
+    }
+    .site-nav.is-open .site-nav__menu {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.site-nav').forEach((nav) => {
+    const btn = nav.querySelector('.site-nav__open');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+</script>

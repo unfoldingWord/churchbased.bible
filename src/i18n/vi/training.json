@@ -1,0 +1,87 @@
+{
+  "title": "Huấn luyện",
+  "hero": {
+    "image": "/images/uploads/2025/11/Training.webp",
+    "title": "<strong>Bạn có thể <strong><em>bắt đầu</em></strong> Phiên dịch Kinh Thánh dựa trên Hội thánh ngay <strong>hôm nay</strong>!</strong>"
+  },
+  "intro": "Phiên dịch Kinh Thánh dựa trên Hội thánh đang diễn ra trên khắp thế giới, và <strong>bạn có thể tham gia!</strong> Hình minh họa bên dưới mô tả CBBT có thể diễn ra như thế nào trong thực tế. <br><br>Một bản dịch Kinh Thánh chất lượng chỉ có được khi hội thánh và cộng đồng có năng lực sửa lỗi hoặc điều chỉnh khi ngôn ngữ thay đổi. Xin lưu ý rằng việc <strong>đánh giá và hiệu đính liên tục</strong> vẫn tiếp diễn ngay cả sau khi đã xuất bản xong.",
+  "cycleImage": "/images/uploads/2024/11/ilab_cycle_graphic_final_w_fonts.svg",
+  "resourcesHeading": "<strong>Tài liệu huấn luyện</strong>",
+  "resourcesIntro": "Những tài liệu này sẽ cung cấp cho bạn các hướng dẫn chi tiết, từng bước về tiến trình Phiên dịch Kinh Thánh dựa trên Hội thánh. Nếu bạn có bất kỳ câu hỏi nào, xin liên hệ qua <a href=\"/contact/\">biểu mẫu liên hệ</a>.",
+  "resources": [
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.30.26%E2%80%AFPM.png",
+      "heading": "Bắt đầu",
+      "body": "Ba sổ tay trang bị cho người huấn luyện để huấn luyện những người khác về CBBT.",
+      "buttons": [
+        {
+          "label": "Khóa 1",
+          "href": "https://docs.google.com/document/d/1SgGqjxoj2XPiUPVsYNG-oxRtFs4akxZbv12SVO75WDE/"
+        },
+        {
+          "label": "Khóa 2",
+          "href": "https://docs.google.com/document/d/1TQEcXotHh8eOWA8tQWdY8q-TfXbI4Ntk/"
+        },
+        {
+          "label": "Khóa 3",
+          "href": "https://docs.google.com/document/d/1mfBAtorpmqMf5PWGH867Pb6zAPnuCex4YJ5OkABR4Ao/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/fountain-788430_640.jpg",
+      "heading": "Hiểu văn bản nguồn",
+      "body": "Một bộ sưu tập tài liệu được thiết kế cho công việc phiên dịch.",
+      "buttons": [
+        {
+          "label": "The Bible Well",
+          "href": "https://app.well.bible/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.36.58%E2%80%AFPM.png",
+      "heading": "Đào sâu hơn",
+      "body": "Một thư viện tài liệu huấn luyện CBBT.",
+      "buttons": [
+        {
+          "label": "Thư viện",
+          "href": "https://unfoldingword.org/training-hub"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/06/FoundationsBT.webp",
+      "heading": "Loạt video về phiên dịch Kinh Thánh",
+      "body": "Một loạt video được thiết kế để giới thiệu những cách làm đơn giản, dễ lặp lại nhằm khởi đầu việc phiên dịch Kinh Thánh cách rõ ràng và hiệu quả.",
+      "buttons": [
+        {
+          "label": "Loạt video FoundationsBT",
+          "href": "https://foundationsbt.com"
+        }
+      ]
+    }
+  ],
+  "faqHeading": "<strong>Các câu hỏi thường gặp</strong>",
+  "faqs": [
+    {
+      "q": "Phiên dịch Kinh Thánh dựa trên Hội thánh tốn kém bao nhiêu?",
+      "a": [
+        "Chi phí rất khác nhau, tùy thuộc vào quy mô và phạm vi của công việc phiên dịch. Dù vậy, CBBT là một phương thức phiên dịch tiết kiệm chi phí vì dựa vào nguồn nhân lực của hội thánh địa phương."
+      ]
+    },
+    {
+      "q": "Một số ví dụ về các tài liệu được dịch bằng Phiên dịch Kinh Thánh dựa trên Hội thánh là gì?",
+      "a": [
+        "CBBT tạo ra cả bản dịch dạng in lẫn dạng âm thanh cho nhiều loại tài liệu, bao gồm Truyện Kinh Thánh Mở (Open Bible Stories), các chú giải nghiên cứu, những tài liệu môn đồ hóa khác, và các phần của Kinh Thánh. (Các) tài liệu bạn chọn sẽ tùy theo nhu cầu cụ thể của cộng đồng bạn."
+      ]
+    },
+    {
+      "q": "Phiên dịch Kinh Thánh dựa trên Hội thánh mất bao lâu?",
+      "a": [
+        "Điều này tùy thuộc vào nội dung được dịch và kinh nghiệm trước đó của nhóm phiên dịch. Trong trường hợp người Zeme, việc dịch toàn bộ Kinh Thánh chỉ mất hai mươi mốt tháng.",
+        "Trong những trường hợp khác, công việc phiên dịch mất nhiều thời gian hơn. Một số cộng đồng xem phiên dịch là một phần quan trọng trong mục vụ Phúc Âm của họ, và họ dự định liên tục dịch và hiệu đính để bảo đảm sứ điệp Phúc Âm luôn sẵn có cho mỗi thế hệ."
+      ]
+    }
+  ]
+}

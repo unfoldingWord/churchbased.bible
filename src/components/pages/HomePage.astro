@@ -1,0 +1,303 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../Header.astro';
+import MediaText from '../MediaText.astro';
+import { content } from '../../i18n/content';
+
+interface Props {
+  locale: string;
+}
+const { locale } = Astro.props;
+const t = content(locale, 'home');
+const ui = content(locale, 'ui');
+const plainTitle = t.hero.title.replace(/<[^>]+>/g, '');
+// Full-width hero wants the full-size cover; the WebP rendition is 84 KB
+// vs the multi-hundred-KB WP original.
+const heroImage = '/images/uploads/2025/11/CBBT-Website-Cover.webp';
+---
+
+<Base locale={locale} slug="home" title={`${ui.siteTitle} | ${plainTitle}`} description={plainTitle} bareHeader>
+  <link rel="preload" as="image" href={heroImage} fetchpriority="high" slot="head" />
+  <section class="hero" style={`background-image:url('${heroImage}')`}>
+    <Header locale={locale} ui={ui} slug="home" variant="overlay" />
+    <div class="hero__content">
+      <img class="hero__logo" src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="120" height="120" />
+      <h1 set:html={t.hero.title} />
+      <a class="button" href={t.hero.cta.href}>{t.hero.cta.label}</a>
+    </div>
+  </section>
+
+  <section class="section story">
+    <div class="container">
+      <h2 class="story__title" set:html={t.story.title} />
+      <div class="story__steps">
+        {
+          t.story.steps.map((step: any) => (
+            <div class="story__step" data-reveal>
+              <img src={step.image} alt="" loading="lazy" />
+              <div>
+                <h3 set:html={step.heading} />
+                <p set:html={step.body} />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section quote">
+    <div class="container">
+      <blockquote>
+        <p set:html={t.quote} />
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section how">
+    <div class="container">
+      <h2 class="how__title" set:html={t.how.title} />
+      <div class="how__steps">
+        {
+          t.how.steps.map((step: any) => (
+            <div class="how__step" data-reveal>
+              <img src={step.image} alt="" loading="lazy" />
+              <h3 set:html={step.heading} />
+              <p set:html={step.body} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <MediaText image={t.fromChurch.image} media="end" tone="cream">
+        <h2 class="from-church__heading" set:html={t.fromChurch.heading} />
+        <p><strong set:html={t.fromChurch.lead} /></p>
+        <p set:html={t.fromChurch.body} />
+        <p class="from-church__cta"><a class="button button--dark" href={t.fromChurch.cta.href}>{t.fromChurch.cta.label}</a></p>
+      </MediaText>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <video data-src={t.finalCta.video} muted loop playsinline preload="none" aria-hidden="true"></video>
+    <div class="final-cta__scrim"></div>
+    <div class="container final-cta__content">
+      <div class="final-cta__box">
+        <h2 set:html={t.finalCta.heading} />
+        <p set:html={t.finalCta.body} />
+        <a class="button" href={t.finalCta.cta.href}>{t.finalCta.cta.label}</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 88vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 0.5);
+  }
+  .hero__content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding-inline: var(--space-3);
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+  .hero__logo {
+    margin-inline: auto;
+    width: 64px;
+    height: auto;
+  }
+  .hero__content h1 {
+    color: #fff;
+    font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.1rem);
+    margin-block: 1.6em 0.9em;
+  }
+
+  .story__title {
+    text-align: center;
+    margin-block-end: var(--space-5);
+  }
+  .story__steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5) var(--space-5);
+  }
+  .story__step {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: var(--space-2);
+    align-items: start;
+  }
+  .story__step img {
+    width: 100%;
+    aspect-ratio: 4 / 3.1;
+    object-fit: cover;
+  }
+  .story__step h3 {
+    font-size: 19px;
+    margin-block-end: 0.6em;
+  }
+  .story__step p {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .quote {
+    background: var(--color-contrast);
+    color: #fff;
+    padding-block: var(--space-5);
+  }
+  .quote blockquote {
+    margin: 0;
+    text-align: center;
+  }
+  .quote p {
+    font-family: var(--font-heading);
+    font-size: clamp(1.55rem, 1.3rem + 1.1vw, 1.953rem);
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    max-width: 24em;
+    margin-inline: auto;
+  }
+  .quote :global(mark) {
+    background: transparent;
+    color: inherit;
+  }
+
+  .how__title {
+    text-align: center;
+    margin-block-end: var(--space-5);
+  }
+  .how__steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+  .how__step img {
+    height: 92px;
+    width: auto;
+    margin-block-end: var(--space-3);
+  }
+  .how__step h3 {
+    font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.625rem);
+  }
+  .how__step p {
+    font-size: 15px;
+  }
+  @media (max-width: 780px) {
+    .how__steps,
+    .story__steps {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .from-church__heading {
+    text-align: center;
+  }
+  .from-church__cta {
+    text-align: center;
+    margin-block-start: var(--space-2);
+  }
+
+  .final-cta {
+    position: relative;
+    overflow: hidden;
+    padding-block: var(--space-6);
+    color: #fff;
+  }
+  .final-cta video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .final-cta__scrim {
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 0.55);
+  }
+  .final-cta__content {
+    position: relative;
+  }
+  .final-cta__box {
+    border: 1px solid rgb(255 255 255 / 0.75);
+    padding: clamp(2rem, 4vw, 3.25rem);
+  }
+  .final-cta h2 {
+    max-width: 20em;
+  }
+  .final-cta p {
+    max-width: 44em;
+    margin-block-end: var(--space-3);
+  }
+
+  /* Scroll-driven reveal (replaces the Elementor scroll animation).
+     Falls back to fully visible when JS or reduced-motion applies. */
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :global(html.js) [data-reveal] {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+    :global(html.js) [data-reveal].is-visible {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  document.documentElement.classList.add('js');
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      }
+    },
+    { threshold: 0.2 }
+  );
+  document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+
+  // The CTA background video is far below the fold — don't spend bandwidth
+  // on it until the section approaches the viewport.
+  const lazyVideo = document.querySelector<HTMLVideoElement>('video[data-src]');
+  if (lazyVideo) {
+    const vio = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          lazyVideo.src = lazyVideo.dataset.src!;
+          lazyVideo.play().catch(() => {});
+          vio.disconnect();
+        }
+      },
+      { rootMargin: '600px' }
+    );
+    vio.observe(lazyVideo);
+  }
+</script>

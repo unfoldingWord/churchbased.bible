@@ -1,0 +1,119 @@
+{
+  "title": "À propos",
+  "hero": {
+    "image": "/images/uploads/2024/07/Copy-of-IMG_2453.webp",
+    "title": "<strong>Qu'est-ce que la traduction de la Bible par l'Église locale ?</strong>"
+  },
+  "power": {
+    "heading": "<strong>La puissance de la CBBT</strong>",
+    "body": "Lorsque l'Église dirige la traduction, c'est toute la communauté qui est transformée. Regardez comment la traduction de la Bible par l'Église locale affermit la foi, unit les croyants et aide la Parole de Dieu à atteindre de nouvelles langues maternelles et de nouveaux foyers.",
+    "video": "/videos/cbbt-advocacy-video.mp4"
+  },
+  "demand": {
+    "line1": "La demande pour des traductions de la Bible est plus forte que jamais.",
+    "line2": "<strong>L'Église a besoin d'une solution.</strong>"
+  },
+  "growth": [
+    {
+      "image": "/images/uploads/2024/07/alexander-schimmeck-MraFXV3v7Ts-unsplash1.jpg",
+      "body": "Au cours des cent dernières années, <strong>l'Église a connu une croissance rapide dans le monde entier</strong>, se multipliant même de manière exponentielle dans les pays du Sud."
+    },
+    {
+      "image": "/images/uploads/2024/05/theodore-goutas-aeq3jJj0sUw-unsplash.webp",
+      "body": "En raison de cette croissance, l'Église est confrontée à <strong>une demande sans précédent</strong> pour des traductions de qualité des Écritures et des ressources de formation de disciples."
+    }
+  ],
+  "paradigmsHeading": "Des groupes ethniques du monde entier se tournent vers de <strong>nouveaux paradigmes de traduction de la Bible.</strong>",
+  "paradigms": [
+    {
+      "image": "/images/uploads/2024/05/ian-macharia-gogGhbvHrYw-unsplash.webp",
+      "body": "<strong>La traduction de la Bible par l'Église locale (CBBT) </strong>équipe les responsables d'Églises locales pour traduire les Écritures dans leur propre langue."
+    },
+    {
+      "image": "/images/uploads/2024/07/justin-porter-hZCsLN3Y49c-unsplash.jpg",
+      "body": "<strong>La CBBT affermit l'Église</strong> en engageant la communauté avec les Écritures tout au long du processus de traduction."
+    }
+  ],
+  "conditionsHeading": "<strong>La traduction de la Bible par l'Église locale</strong> est la plus efficace lorsque les conditions suivantes sont réunies.",
+  "conditions": [
+    {
+      "image": "/images/uploads/2024/06/man-2562325_1280.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/user.svg",
+          "title": "<strong>Appropriation locale</strong>",
+          "body": "L'Église reconnaît et assume la responsabilité de traduire la Bible dans sa (ses) langue(s)."
+        },
+        {
+          "icon": "/images/uploads/2024/05/book-key.svg",
+          "title": "<strong>Accès aux ressources</strong>",
+          "body": "L'Église a accès à des Bibles sous licence libre, à la technologie et aux outils de traduction qui répondent à ses besoins."
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/05/people-2562222_1280.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/tree-deciduous.svg",
+          "title": "<strong>Formation théologique</strong>",
+          "body": "L'Église est ancrée dans l'Évangile et capable de surmonter les obstacles à la maturité spirituelle."
+        },
+        {
+          "icon": "/images/uploads/2024/06/notebook-pen.svg",
+          "title": "<strong>Valeurs, compétences, formation et expérience</strong>",
+          "body": "L'Église possède déjà une capacité de traduction et une haute estime des Écritures."
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/jerry-wang-mvxM2SMiZyQ-unsplash.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/waypoints.svg",
+          "title": "<strong>Relations inter-Églises</strong>",
+          "body": "Les réseaux d'Églises locales sont reliés au-delà des dénominations et capables de collaborer."
+        },
+        {
+          "icon": "/images/uploads/2024/05/users.svg",
+          "title": "<strong>Unité</strong>",
+          "body": "Les réseaux d'Églises locales privilégient l'unité sur l'essentiel plutôt que les désaccords sur les points secondaires."
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/bill-wegener-7MD4DR9jbP0-unsplash.jpg",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/refresh-cw.svg",
+          "title": "<strong>Durabilité</strong>",
+          "body": "L'Église locale partage la vision de bâtir une capacité de traduction à long terme."
+        },
+        {
+          "icon": "/images/uploads/2024/05/expand.svg",
+          "title": "<strong>Multiplication</strong>",
+          "body": "L'Église locale a l'intention de former d'autres réseaux d'Églises au processus de traduction."
+        }
+      ]
+    }
+  ],
+  "nextHeading": "Écoutez d'autres témoignages, puis <strong>passez à l'étape suivante</strong> !",
+  "next": [
+    {
+      "image": "/images/uploads/2025/11/Ukraine.webp",
+      "body": "La CBBT fonctionne-t-elle vraiment ? Oui ! Découvrez les <strong>histoires d'impact</strong> de la traduction de la Bible par l'Église locale à travers le monde !",
+      "cta": {
+        "label": "Lire les histoires",
+        "href": "/stories/"
+      }
+    },
+    {
+      "image": "/images/uploads/2024/05/Copy-of-IMG_20200228_120424401.webp",
+      "body": "Vous pouvez participer à la CBBT ! Consultez la page Formation pour commencer.",
+      "cta": {
+        "label": "Commencer la formation",
+        "href": "/training/"
+      }
+    }
+  ]
+}

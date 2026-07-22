@@ -1,0 +1,119 @@
+{
+  "title": "Kuhusu",
+  "hero": {
+    "image": "/images/uploads/2024/07/Copy-of-IMG_2453.webp",
+    "title": "<strong>Tafsiri ya Biblia inayotegemea Kanisa ni nini?</strong>"
+  },
+  "power": {
+    "heading": "<strong>Nguvu ya CBBT</strong>",
+    "body": "Kanisa linapoongoza kazi ya kutafsiri, jumuiya nzima hubadilishwa. Tazama jinsi Tafsiri ya Biblia inayotegemea Kanisa inavyoimarisha imani, kuwaunganisha waumini, na kusaidia Neno la Mungu kufika katika lugha mama mpya na nyumba mpya.",
+    "video": "/videos/cbbt-advocacy-video.mp4"
+  },
+  "demand": {
+    "line1": "Hitaji la kutafsiri Biblia ni kubwa kuliko wakati mwingine wowote.",
+    "line2": "<strong>Kanisa linahitaji suluhisho.</strong>"
+  },
+  "growth": [
+    {
+      "image": "/images/uploads/2024/07/alexander-schimmeck-MraFXV3v7Ts-unsplash1.jpg",
+      "body": "Katika kipindi cha miaka mia moja iliyopita, <strong>kanisa limekua kwa kasi duniani kote</strong>, na hata kuongezeka mara nyingi zaidi katika nchi za Kusini mwa dunia."
+    },
+    {
+      "image": "/images/uploads/2024/05/theodore-goutas-aeq3jJj0sUw-unsplash.webp",
+      "body": "Kwa sababu ya ukuaji huu, kanisa linakabiliwa na <strong>hitaji lisilo na kifani</strong> la tafsiri bora za Maandiko na nyenzo za uanafunzi."
+    }
+  ],
+  "paradigmsHeading": "Vikundi vya watu duniani kote vinageukia<strong> mifumo mipya inayoibuka ya tafsiri ya Biblia.</strong>",
+  "paradigms": [
+    {
+      "image": "/images/uploads/2024/05/ian-macharia-gogGhbvHrYw-unsplash.webp",
+      "body": "<strong>Tafsiri ya Biblia inayotegemea Kanisa (CBBT) </strong>huwaandaa viongozi wa makanisa ya mtaa kutafsiri Maandiko katika lugha yao wenyewe."
+    },
+    {
+      "image": "/images/uploads/2024/07/justin-porter-hZCsLN3Y49c-unsplash.jpg",
+      "body": "<strong>CBBT huliimarisha kanisa</strong> kwa kuihusisha jumuiya na Maandiko katika mchakato mzima wa kutafsiri."
+    }
+  ],
+  "conditionsHeading": "<strong>Tafsiri ya Biblia inayotegemea Kanisa</strong> hufanya kazi vizuri zaidi pale masharti yafuatayo yanapotimizwa.",
+  "conditions": [
+    {
+      "image": "/images/uploads/2024/06/man-2562325_1280.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/user.svg",
+          "title": "<strong>Umiliki wa Wenyeji</strong>",
+          "body": "Kanisa linatambua na kuchukua jukumu la kutafsiri Biblia katika lugha yake (au lugha zake)."
+        },
+        {
+          "icon": "/images/uploads/2024/05/book-key.svg",
+          "title": "<strong>Rasilimali</strong>",
+          "body": "Kanisa lina uwezo wa kupata Biblia zenye leseni huria, teknolojia, na zana za kutafsiri zinazofaa kwa mahitaji yake."
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/05/people-2562222_1280.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/tree-deciduous.svg",
+          "title": "<strong>Malezi ya Kitheolojia</strong>",
+          "body": "Kanisa limejengwa imara katika injili na linaweza kushinda vikwazo vinavyozuia ukomavu wa kiroho."
+        },
+        {
+          "icon": "/images/uploads/2024/06/notebook-pen.svg",
+          "title": "<strong>Maadili, Stadi, Mafunzo, na Uzoefu</strong>",
+          "body": "Kanisa lina uwezo wa kutafsiri uliopo tayari na linayathamini sana Maandiko."
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/jerry-wang-mvxM2SMiZyQ-unsplash.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/waypoints.svg",
+          "title": "<strong>Kuunganishwa</strong>",
+          "body": "Mitandao ya makanisa ya mtaa imeunganishwa kuvuka mipaka ya madhehebu na inaweza kushirikiana."
+        },
+        {
+          "icon": "/images/uploads/2024/05/users.svg",
+          "title": "<strong>Umoja</strong>",
+          "body": "Mitandao ya makanisa ya mtaa huthamini umoja katika mambo ya msingi kuliko kutokubaliana katika mambo yasiyo ya msingi."
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/bill-wegener-7MD4DR9jbP0-unsplash.jpg",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/refresh-cw.svg",
+          "title": "<strong>Uendelevu</strong>",
+          "body": "Kanisa la mtaa linashiriki maono ya kujenga uwezo wa muda mrefu wa kazi ya kutafsiri."
+        },
+        {
+          "icon": "/images/uploads/2024/05/expand.svg",
+          "title": "<strong>Kuzidisha</strong>",
+          "body": "Kanisa la mtaa linakusudia kufundisha mitandao mingine ya makanisa mchakato wa kazi ya kutafsiri."
+        }
+      ]
+    }
+  ],
+  "nextHeading": "Sikia Kutoka kwa Wengine Kisha <strong>Chukua Hatua Inayofuata</strong>!",
+  "next": [
+    {
+      "image": "/images/uploads/2025/11/Ukraine.webp",
+      "body": "Je, CBBT inafanya kazi kweli? Ndiyo! Angalia <strong>hadithi za mabadiliko</strong> za Tafsiri ya Biblia inayotegemea Kanisa kutoka duniani kote!",
+      "cta": {
+        "label": "Soma Hadithi",
+        "href": "/stories/"
+      }
+    },
+    {
+      "image": "/images/uploads/2024/05/Copy-of-IMG_20200228_120424401.webp",
+      "body": "Unaweza kushiriki katika CBBT! Tazama ukurasa wa Mafunzo ili kuanza.",
+      "cta": {
+        "label": "Anza Mafunzo",
+        "href": "/training/"
+      }
+    }
+  ]
+}

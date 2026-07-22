@@ -1,0 +1,54 @@
+{
+  "title": "Hadithi za Mabadiliko",
+  "hero": {
+    "video": "/videos/cbbt-impact-stories-header.mp4",
+    "line1": "Vikundi vya watu duniani kote hushiriki katika Tafsiri ya Biblia inayotegemea Kanisa.",
+    "line2": "<strong>Hizi ndizo hadithi zao.</strong>"
+  },
+  "stories": [
+    {
+      "heading": "Zeme",
+      "location": "<em>India</em>",
+      "body": "Tuseme wewe ni kiongozi wa kanisa katika kundi kubwa la watu. Umeona tatizo: ingawa kanisa limekuwepo katika kundi lako la watu kwa zaidi ya miaka 100…",
+      "readMore": "Soma Zaidi",
+      "pdf": "/files/2024/08/Zeme.pdf",
+      "image": "/images/uploads/2024/08/Zeme-traditional-dance1-min.jpg"
+    },
+    {
+      "heading": "Mblego",
+      "location": "<em>Sudan</em>",
+      "body": "\"Nimeelemewa sana na mzigo wa watu wangu.\" Haya ni maneno ya Ahmed*, mwanamume wa Sudan ambaye hivi karibuni amekuwa mfuasi wa Yesu.",
+      "readMore": "Soma Zaidi",
+      "pdf": "/files/2024/07/Mblego-final.pdf",
+      "image": "/images/uploads/2024/06/yusuf-yassir-SoLZCj0W1Ss-unsplash1.webp"
+    },
+    {
+      "heading": "Tavretsi na Khateni",
+      "location": "<em>Eurasia</em>",
+      "body": "Ndani kabisa ya nchi ya Eurasia yenye milima, vikundi viwili vya watu havina tafsiri ya Biblia katika lugha yao.",
+      "readMore": "Soma Zaidi",
+      "pdf": "/files/2024/08/Tavretsi-and-Khateni.pdf",
+      "image": "/images/uploads/2024/07/Screenshot-2024-07-15-at-1.45.52%E2%80%AFPM.png"
+    },
+    {
+      "heading": "Ruska Roma",
+      "location": "<em>Ukraini</em>",
+      "body": "Hebu wazia hali ifuatayo. Umekulia kanisani na kuwa mshiriki maisha yako yote—kwa kweli, limekuwa sehemu ya historia ya watu wako…",
+      "readMore": "Soma Zaidi",
+      "pdf": "/files/2024/08/Ruska-Roma.pdf",
+      "image": "/images/uploads/2024/07/romani-6678445_640.jpg"
+    },
+    {
+      "heading": "Yuracani na Quipa",
+      "location": "<em>Amerika Kusini</em>",
+      "body": "Amerika Kusini ni nyumbani kwa vikundi vya watu zaidi ya 900. Vingi kati yao havijafikiwa na injili, vikiishi katika misitu minene na vikiwa na mahusiano yasiyo tulivu na ulimwengu wa nje.",
+      "readMore": "Soma Zaidi",
+      "pdf": "/files/2024/09/Yuracani_Quipa.pdf",
+      "image": "/images/uploads/2024/09/yuracani_quipa.jpg"
+    }
+  ],
+  "comingSoon": {
+    "heading": "<strong>Hadithi mpya za mabadiliko</strong> zinakuja hivi karibuni!",
+    "body": "Kila hadithi inaonyesha jinsi Mungu anavyofanya kazi kupitia kanisa lake ili Neno lake lijulikane.<br>Ungependa hadithi yako ionekane hapa? Tutumie ujumbe kupitia <a href=\"/contact/\">fomu ya mawasiliano</a>."
+  }
+}

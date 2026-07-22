@@ -1,0 +1,28 @@
+{
+  "title": "Kontak",
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Lower-Banner.webp",
+    "title": "<strong>Setiap Suara, Setiap Gereja, Satu Misi</strong>"
+  },
+  "intro": "Dari setiap bangsa dan bahasa, Allah sedang membangun gereja-Nya. Entah Anda ingin belajar lebih banyak, membagikan sebuah kisah, atau bergabung dengan gerakan global Penerjemahan Alkitab Berbasis Gereja, kami akan senang terhubung dengan Anda.",
+  "matter": "<strong>Pesan Anda sangat berarti!</strong>",
+  "form": {
+    "name": "Nama",
+    "email": "Email",
+    "required": "(wajib diisi)",
+    "subject": "Apa topik dari pesan Anda?",
+    "subjectOptions": [
+      "Pilih Salah Satu",
+      "Pertanyaan tentang Bahan & Pelatihan",
+      "Berminat Memulai Sebuah Proyek",
+      "Berbagi tentang Sebuah Proyek",
+      "Komentar tentang Sebuah Kisah Dampak",
+      "Kesalahan | Koreksi",
+      "Lainnya"
+    ],
+    "message": "Pesan",
+    "submit": "Kirim",
+    "success": "Terima kasih atas pesan Anda. ✨",
+    "back": "← Kembali"
+  }
+}

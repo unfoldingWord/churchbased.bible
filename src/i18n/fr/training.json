@@ -1,0 +1,87 @@
+{
+  "title": "Formation",
+  "hero": {
+    "image": "/images/uploads/2025/11/Training.webp",
+    "title": "<strong>Vous pouvez <strong><em>commencer</em></strong> la traduction de la Bible par l'Église locale <strong>dès aujourd'hui</strong> !</strong>"
+  },
+  "intro": "La traduction de la Bible par l'Église locale se pratique partout dans le monde, et <strong>vous pouvez y participer !</strong> L'illustration ci-dessous montre ce à quoi la CBBT peut ressembler dans la pratique. <br><br>Une traduction de la Bible de qualité n'est possible que lorsque l'Église et la communauté ont la capacité de corriger les erreurs ou de s'adapter à l'évolution de la langue. Notez que <strong>l'évaluation et la révision se poursuivent</strong> même après la publication.",
+  "cycleImage": "/images/uploads/2024/11/ilab_cycle_graphic_final_w_fonts.svg",
+  "resourcesHeading": "<strong>Ressources de formation</strong>",
+  "resourcesIntro": "Ces ressources vous fourniront des guides détaillés, étape par étape, sur le processus de traduction de la Bible par l'Église locale. Si vous avez des questions, veuillez nous écrire via le <a href=\"/contact/\">formulaire de contact</a>.",
+  "resources": [
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.30.26%E2%80%AFPM.png",
+      "heading": "Premiers pas",
+      "body": "Trois manuels qui équipent les formateurs pour former d'autres personnes à la CBBT.",
+      "buttons": [
+        {
+          "label": "Cours 1",
+          "href": "https://docs.google.com/document/d/1SgGqjxoj2XPiUPVsYNG-oxRtFs4akxZbv12SVO75WDE/"
+        },
+        {
+          "label": "Cours 2",
+          "href": "https://docs.google.com/document/d/1TQEcXotHh8eOWA8tQWdY8q-TfXbI4Ntk/"
+        },
+        {
+          "label": "Cours 3",
+          "href": "https://docs.google.com/document/d/1mfBAtorpmqMf5PWGH867Pb6zAPnuCex4YJ5OkABR4Ao/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/fountain-788430_640.jpg",
+      "heading": "Comprendre la source",
+      "body": "Une collection de ressources conçues pour la traduction.",
+      "buttons": [
+        {
+          "label": "The Bible Well",
+          "href": "https://app.well.bible/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.36.58%E2%80%AFPM.png",
+      "heading": "Aller plus loin",
+      "body": "Une bibliothèque de ressources de formation à la CBBT.",
+      "buttons": [
+        {
+          "label": "Bibliothèque",
+          "href": "https://unfoldingword.org/training-hub"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/06/FoundationsBT.webp",
+      "heading": "Série de vidéos sur la traduction de la Bible",
+      "body": "Une série de vidéos conçue pour présenter des pratiques simples et reproductibles afin de commencer la traduction de la Bible avec clarté et impact.",
+      "buttons": [
+        {
+          "label": "Série de vidéos FoundationsBT",
+          "href": "https://foundationsbt.com"
+        }
+      ]
+    }
+  ],
+  "faqHeading": "<strong>Questions fréquentes</strong>",
+  "faqs": [
+    {
+      "q": "Combien coûte la traduction de la Bible par l'Église locale ?",
+      "a": [
+        "Les coûts sont très variables et dépendent de la taille et de l'étendue du travail de traduction. Cela dit, la CBBT est un moyen de traduction économique puisqu'elle s'appuie sur les forces vives de l'Église locale."
+      ]
+    },
+    {
+      "q": "Quels sont des exemples de ressources traduites grâce à la traduction de la Bible par l'Église locale ?",
+      "a": [
+        "La CBBT produit des traductions imprimées et audio de toute une gamme de ressources, notamment les Histoires bibliques libres (Open Bible Stories), des notes d'étude, d'autres ressources de formation de disciples et des portions de la Bible. La ou les ressources que vous choisirez dépendront des besoins de votre communauté."
+      ]
+    },
+    {
+      "q": "Combien de temps prend la traduction de la Bible par l'Église locale ?",
+      "a": [
+        "Cela dépend de ce qui est traduit et de l'expérience préalable de l'équipe de traduction. Dans le cas des Zeme, la traduction de la Bible entière n'a pris que vingt-et-un mois.",
+        "Dans d'autres cas, le travail de traduction prend plus de temps. Certaines communautés considèrent la traduction comme une partie importante de leur ministère de l'Évangile et prévoient de traduire et de réviser continuellement, afin que le message de l'Évangile soit accessible à chaque génération."
+      ]
+    }
+  ]
+}

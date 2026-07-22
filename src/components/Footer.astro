@@ -1,0 +1,50 @@
+---
+import { localePath } from '../i18n/config';
+
+interface Props {
+  locale: string;
+  ui: any;
+}
+const { locale, ui } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <p class="site-footer__title">
+        <a href={localePath(locale, 'home')}>{ui.siteTitle}</a>
+      </p>
+      <p class="site-footer__tagline" set:html={ui.footer.tagline} />
+      <p class="site-footer__description" set:html={ui.footer.description} />
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-contrast);
+    color: #fff;
+    padding-block: var(--space-5);
+    margin-block-start: var(--space-5);
+  }
+  .site-footer__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-l);
+    font-weight: 700;
+    margin-block-end: 0.4em;
+  }
+  .site-footer__title a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .site-footer__tagline {
+    font-size: var(--text-m);
+    opacity: 0.9;
+  }
+  .site-footer__description {
+    max-width: 34em;
+    font-size: var(--text-s);
+    opacity: 0.75;
+    margin-block-start: 1em;
+  }
+</style>

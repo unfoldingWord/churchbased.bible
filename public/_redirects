@@ -1,0 +1,15 @@
+# Old WordPress attachment permalinks for videos → the pages that embed them
+/cbbt-advocacy-video-v9-sensitive-mov/ /about/ 301
+/biblical-theology-video-1-intro-mp4/ /research/ 301
+/biblical-theology-video-2-reasons-mp4/ /research/ 301
+/biblical-theology-video-3-resources-mp4/ /research/ 301
+/cbbt-video-footer-mp4/ / 301
+/cbbt-homepage-video-mp4/ / 301
+/cbbt-impact-stories-video-mp4/ /stories/ 301
+/cbbt-impact-stories-video-1-mp4/ /stories/ 301
+/cbbt-impact-stories-video-2-mp4/ /stories/ 301
+/cbbt-impact-stories-header-mp4/ /stories/ 301
+
+# WordPress cruft
+/wp-admin/* / 301
+/feed/ / 301

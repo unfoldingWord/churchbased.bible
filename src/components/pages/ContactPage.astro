@@ -1,0 +1,143 @@
+---
+import Base from '../../layouts/Base.astro';
+import SubHero from '../SubHero.astro';
+import { content } from '../../i18n/content';
+
+interface Props {
+  locale: string;
+}
+const { locale } = Astro.props;
+const t = content(locale, 'contact');
+const ui = content(locale, 'ui');
+const plain = (s: string) => s.replace(/<[^>]+>/g, '');
+const f = t.form;
+// first option is the placeholder ("Select An Option")
+const [placeholderOption, ...subjects] = f.subjectOptions;
+---
+
+<Base locale={locale} slug="contact" title={`${t.title} – ${ui.siteTitle}`} description={plain(t.hero.title)}>
+  <SubHero pageTitle={t.title} heroTitle={t.hero.title} image={t.hero.image} />
+
+  <section class="section contact">
+    <div class="container narrow">
+      <h3 class="contact__intro" set:html={t.intro} />
+      <h2 class="contact__matter" set:html={t.matter} />
+
+      <form class="contact-form" method="post" action="/api/contact" data-success={f.success} data-error={ui.strings.formError}>
+        <p class="hp">
+          <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+        </p>
+        <input type="hidden" name="locale" value={locale} />
+        <div class="field">
+          <label for="cf-name">{f.name} <span class="req">{f.required}</span></label>
+          <input id="cf-name" name="name" type="text" required autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="cf-email">{f.email} <span class="req">{f.required}</span></label>
+          <input id="cf-email" name="email" type="email" required autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="cf-subject">{f.subject} <span class="req">{f.required}</span></label>
+          <select id="cf-subject" name="subject" required>
+            <option value="" selected disabled>{placeholderOption}</option>
+            {subjects.map((s: string) => <option value={s}>{s}</option>)}
+          </select>
+        </div>
+        <div class="field">
+          <label for="cf-message">{f.message}</label>
+          <textarea id="cf-message" name="message" rows="6"></textarea>
+        </div>
+        <p class="submit-row">
+          <button class="button button--dark" type="submit">{f.submit}</button>
+        </p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .narrow {
+    max-width: 760px;
+  }
+  .contact__intro {
+    text-align: center;
+    font-weight: 500;
+    font-size: clamp(1.05rem, 1rem + 0.4vw, 1.25rem);
+    max-width: 46em;
+    margin-inline: auto;
+  }
+  .contact__matter {
+    text-align: center;
+    margin-block: 0.8em var(--space-4);
+  }
+  .contact-form {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 12px 32px rgb(0 0 0 / 0.16);
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
+  .hp {
+    position: absolute;
+    left: -9999px;
+  }
+  .field {
+    margin-block-end: var(--space-3);
+  }
+  .field label {
+    display: block;
+    font-weight: 600;
+    margin-block-end: 0.4em;
+  }
+  .req {
+    font-weight: 400;
+    font-size: 0.85em;
+    opacity: 0.7;
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    font: inherit;
+    padding: 0.6em 0.8em;
+    border: 1px solid #c9c4bb;
+    border-radius: 4px;
+    background: #fff;
+  }
+  .field textarea {
+    resize: vertical;
+  }
+  .submit-row {
+    text-align: center;
+    margin: 0;
+  }
+  .form-status {
+    text-align: center;
+    margin-block-start: var(--space-2);
+    min-height: 1.4em;
+  }
+</style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('.contact-form');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const status = form.querySelector('.form-status')!;
+      const btn = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        form.reset();
+        status.textContent = form.dataset.success ?? 'Thank you!';
+      } catch {
+        status.textContent = form.dataset.error ?? 'Something went wrong. Please try again.';
+        btn.disabled = false;
+      }
+    });
+  }
+</script>

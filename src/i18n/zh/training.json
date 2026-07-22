@@ -1,0 +1,87 @@
+{
+  "title": "培训",
+  "hero": {
+    "image": "/images/uploads/2025/11/Training.webp",
+    "title": "<strong>您<strong>今天</strong>就可以<strong><em>开始</em></strong>以教会为本的圣经翻译！</strong>"
+  },
+  "intro": "以教会为本的圣经翻译正在世界各地进行，<strong>您也可以参与其中！</strong>下面的图示描绘了 CBBT 在实践中可能的样子。<br><br>只有当教会和社区有能力纠正错误、并随着语言的变化作出调整时，才可能产生高质量的圣经译本。请注意，即使在出版完成之后，<strong>持续的评估和修订</strong>仍会继续进行。",
+  "cycleImage": "/images/uploads/2024/11/ilab_cycle_graphic_final_w_fonts.svg",
+  "resourcesHeading": "<strong>培训资源</strong>",
+  "resourcesIntro": "这些资源将为您提供详细的分步指南，带您了解以教会为本的圣经翻译的过程。如有任何疑问，请通过<a href=\"/contact/\">联系表单</a>与我们联系。",
+  "resources": [
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.30.26%E2%80%AFPM.png",
+      "heading": "入门起步",
+      "body": "三本手册，装备培训者训练他人开展 CBBT。",
+      "buttons": [
+        {
+          "label": "课程 1",
+          "href": "https://docs.google.com/document/d/1SgGqjxoj2XPiUPVsYNG-oxRtFs4akxZbv12SVO75WDE/"
+        },
+        {
+          "label": "课程 2",
+          "href": "https://docs.google.com/document/d/1TQEcXotHh8eOWA8tQWdY8q-TfXbI4Ntk/"
+        },
+        {
+          "label": "课程 3",
+          "href": "https://docs.google.com/document/d/1mfBAtorpmqMf5PWGH867Pb6zAPnuCex4YJ5OkABR4Ao/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/fountain-788430_640.jpg",
+      "heading": "理解源文本",
+      "body": "一套专为翻译而设计的资源。",
+      "buttons": [
+        {
+          "label": "The Bible Well",
+          "href": "https://app.well.bible/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.36.58%E2%80%AFPM.png",
+      "heading": "深入学习",
+      "body": "CBBT 培训资源库。",
+      "buttons": [
+        {
+          "label": "资源库",
+          "href": "https://unfoldingword.org/training-hub"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/06/FoundationsBT.webp",
+      "heading": "圣经翻译视频系列",
+      "body": "这一视频系列旨在展示简单、可复制的做法，帮助您清晰而有力地开始圣经翻译。",
+      "buttons": [
+        {
+          "label": "FoundationsBT 视频系列",
+          "href": "https://foundationsbt.com"
+        }
+      ]
+    }
+  ],
+  "faqHeading": "<strong>常见问题</strong>",
+  "faqs": [
+    {
+      "q": "以教会为本的圣经翻译需要多少费用？",
+      "a": [
+        "费用差异很大，取决于翻译工作的规模和范围。尽管如此，CBBT 依靠本地教会的人力，是一种经济高效的翻译方式。"
+      ]
+    },
+    {
+      "q": "有哪些资源是通过以教会为本的圣经翻译来翻译的？",
+      "a": [
+        "CBBT 产出多种资源的文字版和音频版译本，包括《开放式圣经故事》（Open Bible Stories）、研经注释、其他门徒训练资源以及圣经的部分经卷。您选择哪些资源，取决于您所在社区的具体需要。"
+      ]
+    },
+    {
+      "q": "以教会为本的圣经翻译需要多长时间？",
+      "a": [
+        "这取决于所翻译的内容以及翻译团队先前的经验。以泽梅人为例，整本圣经的翻译仅用了二十一个月。",
+        "在其他情况下，翻译工作需要更长的时间。有些社区把翻译看作福音事工的重要组成部分，计划持续不断地翻译和修订，好让福音信息临到每一个世代。"
+      ]
+    }
+  ]
+}

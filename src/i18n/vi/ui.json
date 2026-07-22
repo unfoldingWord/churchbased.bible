@@ -1,0 +1,41 @@
+{
+  "siteTitle": "Phiên dịch Kinh Thánh dựa trên Hội thánh",
+  "nav": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Giới thiệu",
+      "href": "/about/"
+    },
+    {
+      "label": "Huấn luyện",
+      "href": "/training/"
+    },
+    {
+      "label": "Nghiên cứu",
+      "href": "/research/"
+    },
+    {
+      "label": "Câu chuyện tác động",
+      "href": "/stories/"
+    },
+    {
+      "label": "Liên hệ",
+      "href": "/contact/"
+    }
+  ],
+  "footer": {
+    "tagline": "Một mục vụ của <strong>hội thánh</strong>; cách hội thánh <em>thi hành mục vụ</em>.",
+    "description": "Một phong trào toàn cầu giúp các hội thánh tự mình phiên dịch Kinh Thánh — trong ngôn ngữ của tấm lòng họ. Vì Hội thánh nhận lãnh Lời Chúa chính là Hội thánh ở vị trí tốt nhất để phiên dịch Lời ấy."
+  },
+  "strings": {
+    "formError": "Đã có lỗi xảy ra. Vui lòng thử lại, hoặc liên hệ với chúng tôi theo cách khác.",
+    "notFoundTitle": "Không tìm thấy trang",
+    "notFoundBody": "Trang bạn đang tìm không tồn tại hoặc đã được chuyển đi.",
+    "backHome": "Về trang chủ",
+    "menuLabel": "Trình đơn",
+    "languageLabel": "Ngôn ngữ"
+  }
+}

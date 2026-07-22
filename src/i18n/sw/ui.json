@@ -1,0 +1,41 @@
+{
+  "siteTitle": "Tafsiri ya Biblia inayotegemea Kanisa",
+  "nav": [
+    {
+      "label": "Nyumbani",
+      "href": "/"
+    },
+    {
+      "label": "Kuhusu",
+      "href": "/about/"
+    },
+    {
+      "label": "Mafunzo",
+      "href": "/training/"
+    },
+    {
+      "label": "Utafiti",
+      "href": "/research/"
+    },
+    {
+      "label": "Hadithi za Mabadiliko",
+      "href": "/stories/"
+    },
+    {
+      "label": "Wasiliana Nasi",
+      "href": "/contact/"
+    }
+  ],
+  "footer": {
+    "tagline": "Huduma ya <strong>kanisa</strong>; jinsi kanisa <em>linavyofanya huduma</em>.",
+    "description": "Vuguvugu la kimataifa linalowezesha makanisa kutafsiri Biblia wao wenyewe—katika lugha ya mioyo yao. Kwa sababu Kanisa linalopokea Neno ndilo Kanisa lililo katika nafasi bora zaidi ya kulitafsiri."
+  },
+  "strings": {
+    "formError": "Hitilafu imetokea. Tafadhali jaribu tena, au wasiliana nasi kwa njia nyingine.",
+    "notFoundTitle": "Ukurasa haukupatikana",
+    "notFoundBody": "Ukurasa unaoutafuta haupo au umehamishwa.",
+    "backHome": "Rudi kwenye ukurasa wa mwanzo",
+    "menuLabel": "Menyu",
+    "languageLabel": "Lugha"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Impact Stories",
+  "hero": {
+    "video": "/videos/cbbt-impact-stories-header.mp4",
+    "line1": "People groups around the world participate in Church-Based Bible Translation.",
+    "line2": "<strong>These are their stories.</strong>"
+  },
+  "stories": [
+    {
+      "heading": "Zeme",
+      "location": "<em>India</em>",
+      "body": "Suppose you’re a church leader in a large people group. You’ve noticed a problem: though the church has existed in your people group for over 100 years…",
+      "readMore": "Read More",
+      "pdf": "/files/2024/08/Zeme.pdf",
+      "image": "/images/uploads/2024/08/Zeme-traditional-dance1-min.jpg"
+    },
+    {
+      "heading": "Mblego",
+      "location": "<em>Sudan</em>",
+      "body": "“I am so burdened for my people.” These are the words of Ahmed*, a Sudanese man who recently became a follower of Jesus.",
+      "readMore": "Read More",
+      "pdf": "/files/2024/07/Mblego-final.pdf",
+      "image": "/images/uploads/2024/06/yusuf-yassir-SoLZCj0W1Ss-unsplash1.webp"
+    },
+    {
+      "heading": "Tavretsi and Khateni",
+      "location": "<em>Eurasia</em>",
+      "body": "Deep in a mountainous Eurasian country, two people groups do not have a translation of the Bible in their language.",
+      "readMore": "Read More",
+      "pdf": "/files/2024/08/Tavretsi-and-Khateni.pdf",
+      "image": "/images/uploads/2024/07/Screenshot-2024-07-15-at-1.45.52%E2%80%AFPM.png"
+    },
+    {
+      "heading": "Ruska Roma",
+      "location": "<em>Ukraine</em>",
+      "body": "Imagine the following scenario. You’ve grown up in the church and been a member your entire life—indeed, it has been part of your people’s history…",
+      "readMore": "Read More",
+      "pdf": "/files/2024/08/Ruska-Roma.pdf",
+      "image": "/images/uploads/2024/07/romani-6678445_640.jpg"
+    },
+    {
+      "heading": "Yuracani and Quipa",
+      "location": "<em>South America</em>",
+      "body": "South America is home to over 900 people groups. Many of them are unreached by the gospel, living in dense jungles and involved in uneasy relationships with the outside world.",
+      "readMore": "Read More",
+      "pdf": "/files/2024/09/Yuracani_Quipa.pdf",
+      "image": "/images/uploads/2024/09/yuracani_quipa.jpg"
+    }
+  ],
+  "comingSoon": {
+    "heading": "New <strong>stories of impact</strong> are coming soon!",
+    "body": "Each story shows how God is working through His church to make His Word known.<br>Want to see your story featured? Send us a message through the <a href=\"/contact/\">contact form</a>."
+  }
+}

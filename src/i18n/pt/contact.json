@@ -1,0 +1,28 @@
+{
+  "title": "Contato",
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Lower-Banner.webp",
+    "title": "<strong>Cada voz, cada igreja, uma só missão</strong>"
+  },
+  "intro": "De toda nação e língua, Deus está edificando a Sua igreja. Se você quer saber mais, compartilhar uma história ou se unir ao movimento global de Tradução da Bíblia Baseada na Igreja, será um prazer conversar com você.",
+  "matter": "<strong>Sua mensagem é importante!</strong>",
+  "form": {
+    "name": "Nome",
+    "email": "E-mail",
+    "required": "(obrigatório)",
+    "subject": "Qual é o assunto da sua mensagem?",
+    "subjectOptions": [
+      "Selecione uma opção",
+      "Dúvida sobre recursos e treinamento",
+      "Interesse em iniciar um projeto",
+      "Compartilhar sobre um projeto",
+      "Comentário sobre uma história de impacto",
+      "Erro | Correção",
+      "Outro"
+    ],
+    "message": "Mensagem",
+    "submit": "Enviar",
+    "success": "Obrigado pela sua mensagem. ✨",
+    "back": "← Voltar"
+  }
+}

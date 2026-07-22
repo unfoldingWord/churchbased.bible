@@ -1,0 +1,119 @@
+{
+  "title": "关于我们",
+  "hero": {
+    "image": "/images/uploads/2024/07/Copy-of-IMG_2453.webp",
+    "title": "<strong>什么是以教会为本的圣经翻译？</strong>"
+  },
+  "power": {
+    "heading": "<strong>CBBT 的力量</strong>",
+    "body": "当教会带领翻译时，整个社区都会被改变。请观看以教会为本的圣经翻译如何坚固信心、使信徒合一，并帮助神的话语进入新的母语和千家万户。",
+    "video": "/videos/cbbt-advocacy-video.mp4"
+  },
+  "demand": {
+    "line1": "对圣经翻译的需求比以往任何时候都更迫切。",
+    "line2": "<strong>教会需要一个解决方案。</strong>"
+  },
+  "growth": [
+    {
+      "image": "/images/uploads/2024/07/alexander-schimmeck-MraFXV3v7Ts-unsplash1.jpg",
+      "body": "在过去的一百年里，<strong>教会在世界各地迅速成长</strong>，在全球南方更是呈倍数增长。"
+    },
+    {
+      "image": "/images/uploads/2024/05/theodore-goutas-aeq3jJj0sUw-unsplash.webp",
+      "body": "正因这样的增长，教会面对着对优质圣经译本和门徒训练资源<strong>前所未有的需求</strong>。"
+    }
+  ],
+  "paradigmsHeading": "世界各地的族群正在转向<strong>新兴的圣经翻译模式。</strong>",
+  "paradigms": [
+    {
+      "image": "/images/uploads/2024/05/ian-macharia-gogGhbvHrYw-unsplash.webp",
+      "body": "<strong>以教会为本的圣经翻译（CBBT）</strong>装备本地教会的领袖，将圣经翻译成他们自己的语言。"
+    },
+    {
+      "image": "/images/uploads/2024/07/justin-porter-hZCsLN3Y49c-unsplash.jpg",
+      "body": "<strong>CBBT 坚固教会</strong>，让社区在整个翻译过程中不断与圣经互动。"
+    }
+  ],
+  "conditionsHeading": "当具备以下条件时，<strong>以教会为本的圣经翻译</strong>最能发挥果效。",
+  "conditions": [
+    {
+      "image": "/images/uploads/2024/06/man-2562325_1280.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/user.svg",
+          "title": "<strong>本地主导</strong>",
+          "body": "教会认识到将圣经翻译成本族语言是自己的责任，并承担起这一责任。"
+        },
+        {
+          "icon": "/images/uploads/2024/05/book-key.svg",
+          "title": "<strong>资源供应</strong>",
+          "body": "教会能够获得符合自身需要的开放版权圣经、技术和翻译工具。"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/05/people-2562222_1280.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/tree-deciduous.svg",
+          "title": "<strong>神学造就</strong>",
+          "body": "教会在福音上根基稳固，能够胜过灵命成熟路上的拦阻。"
+        },
+        {
+          "icon": "/images/uploads/2024/06/notebook-pen.svg",
+          "title": "<strong>价值观、技能、培训与经验</strong>",
+          "body": "教会已具备一定的翻译能力，并高度尊崇圣经。"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/jerry-wang-mvxM2SMiZyQ-unsplash.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/waypoints.svg",
+          "title": "<strong>彼此联结</strong>",
+          "body": "本地教会网络跨宗派彼此联结，能够同心合作。"
+        },
+        {
+          "icon": "/images/uploads/2024/05/users.svg",
+          "title": "<strong>合一</strong>",
+          "body": "本地教会网络看重在要道上的合一，过于在非要道上的分歧。"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/bill-wegener-7MD4DR9jbP0-unsplash.jpg",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/refresh-cw.svg",
+          "title": "<strong>可持续性</strong>",
+          "body": "本地教会认同异象，愿意建立长期的翻译工作能力。"
+        },
+        {
+          "icon": "/images/uploads/2024/05/expand.svg",
+          "title": "<strong>倍增</strong>",
+          "body": "本地教会有意培训其他教会网络掌握翻译工作的流程。"
+        }
+      ]
+    }
+  ],
+  "nextHeading": "先听听他人的见证，然后<strong>踏出下一步</strong>！",
+  "next": [
+    {
+      "image": "/images/uploads/2025/11/Ukraine.webp",
+      "body": "CBBT 真的有效吗？是的！来看看世界各地以教会为本的圣经翻译的<strong>影响故事</strong>！",
+      "cta": {
+        "label": "阅读故事",
+        "href": "/stories/"
+      }
+    },
+    {
+      "image": "/images/uploads/2024/05/Copy-of-IMG_20200228_120424401.webp",
+      "body": "您也可以参与 CBBT！请访问培训页面开始了解。",
+      "cta": {
+        "label": "开始培训",
+        "href": "/training/"
+      }
+    }
+  ]
+}

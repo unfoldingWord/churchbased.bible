@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Website-Cover-1024x439.jpg",
+    "title": "Huduma ya <strong>kanisa</strong>; jinsi kanisa <em>linavyofanya huduma</em>.",
+    "cta": {
+      "label": "Jifunze Zaidi",
+      "href": "/about/"
+    }
+  },
+  "story": {
+    "title": "Neno Lafika Nyumbani kwa <strong>Wazeme</strong>.",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/Zeme.webp",
+        "heading": "<strong>Wazeme walihitaji tafsiri ya Biblia katika lugha yao.</strong>",
+        "body": "Ingawa kanisa lilikuwa limekuwepo kaskazini-mashariki mwa India kwa zaidi ya miaka 100, Wazeme hawakuwa na tafsiri ya Biblia ambayo wangeweza kuitumia kwa huduma na uinjilisti."
+      },
+      {
+        "image": "/images/uploads/2025/11/Benreu-Village.webp",
+        "heading": "<strong>Lakini kutafsiri Biblia ni kazi ngumu, na si rahisi kupata msaada.</strong>",
+        "body": "Fedha zilikuwa chache na kazi ilikuwa kubwa mno. Wazeme walihitaji njia ya kutafsiri Biblia kwa rasilimali walizokuwa nazo."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Translating.webp",
+        "heading": "<strong>Katika kutafuta suluhisho, waligeukia Tafsiri ya Biblia inayotegemea Kanisa.</strong>",
+        "body": "Shirika la mahali hapo lilifundisha timu ya viongozi wanaozungumza Kizeme katika Tafsiri ya Biblia inayotegemea Kanisa (CBBT)."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Bible.webp",
+        "heading": "<strong>CBBT iliwawezesha kutafsiri Biblia katika Kizeme.</strong>",
+        "body": "Timu ya watafsiri ilikamilisha Biblia nzima na kukagua usahihi wa tafsiri hiyo katika muda wa miezi ishirini na mmoja tu!"
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Traditional-Dance.webp",
+        "heading": "<strong>Kazi yao inachangia ukuaji wa kanisa!</strong>",
+        "body": "Wakiwa na tafsiri mpya mkononi, Wazeme wamewezeshwa kueneza injili na kufanya wanafunzi wa Yesu."
+      }
+    ]
+  },
+  "quote": "<mark>Hitaji la <strong>kutafsiri Biblia</strong> ni kubwa kuliko wakati mwingine wowote. <strong>Kanisa </strong>linahitaji <em><strong>suluhisho</strong></em>.</mark>",
+  "how": {
+    "title": "Jinsi <strong>CBBT</strong> Inavyofanya Kazi",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/4-1.png",
+        "heading": "Kuliandaa kanisa…",
+        "body": "CBBT huliandaa kanisa la mtaa kutumia uzoefu na ujuzi wake uliopo ili kukidhi mahitaji yake ya kutafsiri na kukua katika ufahamu wa kitheolojia. Viongozi wa kanisa hufundishwa michakato ya kutafsiri."
+      },
+      {
+        "image": "/images/uploads/2025/11/3.png",
+        "heading": "…kwa ajili ya kazi ya kutafsiri…",
+        "body": "Timu za watafsiri huchimbua kwa kina maana ya Neno la Mungu, na viongozi wa kanisa wa mtaa na wa eneo huhakikisha tafsiri zinaaminika, zinaeleweka, zinafaa, na zinavutia. Kanisa na jumuiya hushirikishwa katika mchakato huo tangu mwanzo."
+      },
+      {
+        "image": "/images/uploads/2025/11/2.png",
+        "heading": "…ili kufanya wanafunzi wa Yesu.",
+        "body": "Kwa kutafsiri Biblia na nyenzo za uanafunzi katika lugha yao, kanisa la mtaa linawezeshwa kufanya wanafunzi wa Yesu na kuwafikia watu wao kwa injili."
+      }
+    ]
+  },
+  "fromChurch": {
+    "heading": "Kutoka kwa Kanisa; kwa ajili ya Kanisa.",
+    "lead": "<strong>Pitia hadithi za Tafsiri ya Biblia inayotegemea Kanisa zinazobadilisha maisha na jumuiya duniani kote.</strong>",
+    "body": "Kuanzia makanisa ya vijijini hadi mitandao ya kimataifa, gundua jinsi Mungu anavyowatumia watu wake kutafsiri Maandiko kwa uaminifu, kuyashiriki bila malipo, na kuona mioyo ikibadilishwa kupitia Neno lake.",
+    "cta": {
+      "label": "Soma Hadithi",
+      "href": "/stories/"
+    },
+    "image": "/images/uploads/2024/08/bennett-tobias-Tt_X-AHU3tg-unsplash.webp"
+  },
+  "finalCta": {
+    "video": "/videos/cbbt-homepage-video.mp4",
+    "heading": "Je, uko tayari kuanza safari yako ya CBBT?",
+    "body": "Je, Tafsiri ya Biblia inayotegemea Kanisa inawezaje kukusaidia kutafsiri Biblia katika lugha yako? Tazama maktaba yetu ya nyenzo za mafunzo. Hakujawahi kuwa na wakati mzuri zaidi kuliko sasa hivi.",
+    "cta": {
+      "label": "Anza Sasa",
+      "href": "/training/"
+    }
+  }
+}

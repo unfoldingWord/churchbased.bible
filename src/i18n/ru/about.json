@@ -1,0 +1,119 @@
+{
+  "title": "О нас",
+  "hero": {
+    "image": "/images/uploads/2024/07/Copy-of-IMG_2453.webp",
+    "title": "<strong>Что такое перевод Библии силами церкви?</strong>"
+  },
+  "power": {
+    "heading": "<strong>Сила CBBT</strong>",
+    "body": "Когда переводом руководит церковь, меняется вся община. Посмотрите, как перевод Библии силами церкви укрепляет веру, объединяет верующих и помогает Божьему Слову звучать на новых родных языках и приходить в новые дома.",
+    "video": "/videos/cbbt-advocacy-video.mp4"
+  },
+  "demand": {
+    "line1": "Потребность в переводе Библии велика как никогда.",
+    "line2": "<strong>Церкви нужно решение.</strong>"
+  },
+  "growth": [
+    {
+      "image": "/images/uploads/2024/07/alexander-schimmeck-MraFXV3v7Ts-unsplash1.jpg",
+      "body": "За последние сто лет <strong>церковь стремительно росла по всему миру</strong>, а на Глобальном Юге она умножалась в геометрической прогрессии."
+    },
+    {
+      "image": "/images/uploads/2024/05/theodore-goutas-aeq3jJj0sUw-unsplash.webp",
+      "body": "Из-за этого роста церковь сталкивается с <strong>беспрецедентной потребностью</strong> в качественных переводах Писания и материалов для ученичества."
+    }
+  ],
+  "paradigmsHeading": "Народы по всему миру обращаются к<strong> новым парадигмам перевода Библии.</strong>",
+  "paradigms": [
+    {
+      "image": "/images/uploads/2024/05/ian-macharia-gogGhbvHrYw-unsplash.webp",
+      "body": "<strong>Перевод Библии силами церкви (CBBT) </strong>дает лидерам поместных церквей возможность переводить Писание на свой родной язык."
+    },
+    {
+      "image": "/images/uploads/2024/07/justin-porter-hZCsLN3Y49c-unsplash.jpg",
+      "body": "<strong>CBBT укрепляет церковь</strong>, вовлекая общину во взаимодействие с Писанием на протяжении всего процесса перевода."
+    }
+  ],
+  "conditionsHeading": "<strong>Перевод Библии силами церкви</strong> наиболее эффективен при соблюдении следующих условий.",
+  "conditions": [
+    {
+      "image": "/images/uploads/2024/06/man-2562325_1280.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/user.svg",
+          "title": "<strong>Местная ответственность</strong>",
+          "body": "Церковь осознает и берет на себя ответственность за перевод Библии на свой язык (или языки)."
+        },
+        {
+          "icon": "/images/uploads/2024/05/book-key.svg",
+          "title": "<strong>Ресурсы</strong>",
+          "body": "Церковь имеет доступ к Библиям с открытой лицензией, технологиям и переводческим инструментам, которые соответствуют ее нуждам."
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/05/people-2562222_1280.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/tree-deciduous.svg",
+          "title": "<strong>Богословское становление</strong>",
+          "body": "Церковь утверждена в Евангелии и способна преодолевать препятствия на пути к духовной зрелости."
+        },
+        {
+          "icon": "/images/uploads/2024/06/notebook-pen.svg",
+          "title": "<strong>Ценности, навыки, обучение и опыт</strong>",
+          "body": "У церкви уже есть навыки перевода и глубокое почтение к Писанию."
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/jerry-wang-mvxM2SMiZyQ-unsplash.webp",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/waypoints.svg",
+          "title": "<strong>Взаимосвязанность</strong>",
+          "body": "Сети поместных церквей связаны между собой поверх деноминационных границ и способны сотрудничать."
+        },
+        {
+          "icon": "/images/uploads/2024/05/users.svg",
+          "title": "<strong>Единство</strong>",
+          "body": "Сети поместных церквей ценят единство в главном выше разногласий во второстепенном."
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/bill-wegener-7MD4DR9jbP0-unsplash.jpg",
+      "items": [
+        {
+          "icon": "/images/uploads/2024/05/refresh-cw.svg",
+          "title": "<strong>Устойчивость</strong>",
+          "body": "Поместная церковь разделяет видение долгосрочного развития потенциала для переводческого труда."
+        },
+        {
+          "icon": "/images/uploads/2024/05/expand.svg",
+          "title": "<strong>Умножение</strong>",
+          "body": "Поместная церковь намерена обучать процессу перевода другие церковные сети."
+        }
+      ]
+    }
+  ],
+  "nextHeading": "Послушайте других — и <strong>сделайте следующий шаг</strong>!",
+  "next": [
+    {
+      "image": "/images/uploads/2025/11/Ukraine.webp",
+      "body": "Действительно ли CBBT работает? Да! Познакомьтесь с <strong>историями влияния</strong> перевода Библии силами церкви со всего мира!",
+      "cta": {
+        "label": "Читать истории",
+        "href": "/stories/"
+      }
+    },
+    {
+      "image": "/images/uploads/2024/05/Copy-of-IMG_20200228_120424401.webp",
+      "body": "Вы можете участвовать в CBBT! Чтобы начать, посетите страницу «Обучение».",
+      "cta": {
+        "label": "Начать обучение",
+        "href": "/training/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Histoires d'impact",
+  "hero": {
+    "video": "/videos/cbbt-impact-stories-header.mp4",
+    "line1": "Des groupes ethniques du monde entier participent à la traduction de la Bible par l'Église locale.",
+    "line2": "<strong>Voici leurs histoires.</strong>"
+  },
+  "stories": [
+    {
+      "heading": "Zeme",
+      "location": "<em>Inde</em>",
+      "body": "Supposons que vous soyez responsable d'une Église au sein d'un grand groupe ethnique. Vous avez constaté un problème : bien que l'Église soit implantée parmi votre peuple depuis plus de 100 ans…",
+      "readMore": "Lire la suite",
+      "pdf": "/files/2024/08/Zeme.pdf",
+      "image": "/images/uploads/2024/08/Zeme-traditional-dance1-min.jpg"
+    },
+    {
+      "heading": "Mblego",
+      "location": "<em>Soudan</em>",
+      "body": "« Mon peuple me tient tellement à cœur. » Ce sont les mots d'Ahmed*, un Soudanais devenu récemment disciple de Jésus.",
+      "readMore": "Lire la suite",
+      "pdf": "/files/2024/07/Mblego-final.pdf",
+      "image": "/images/uploads/2024/06/yusuf-yassir-SoLZCj0W1Ss-unsplash1.webp"
+    },
+    {
+      "heading": "Tavretsi et Khateni",
+      "location": "<em>Eurasie</em>",
+      "body": "Au fin fond d'un pays montagneux d'Eurasie, deux groupes ethniques n'ont pas de traduction de la Bible dans leur langue.",
+      "readMore": "Lire la suite",
+      "pdf": "/files/2024/08/Tavretsi-and-Khateni.pdf",
+      "image": "/images/uploads/2024/07/Screenshot-2024-07-15-at-1.45.52%E2%80%AFPM.png"
+    },
+    {
+      "heading": "Ruska Roma",
+      "location": "<em>Ukraine</em>",
+      "body": "Imaginez le scénario suivant. Vous avez grandi dans l'Église et en avez été membre toute votre vie – l'Église fait d'ailleurs partie de l'histoire de votre peuple…",
+      "readMore": "Lire la suite",
+      "pdf": "/files/2024/08/Ruska-Roma.pdf",
+      "image": "/images/uploads/2024/07/romani-6678445_640.jpg"
+    },
+    {
+      "heading": "Yuracani et Quipa",
+      "location": "<em>Amérique du Sud</em>",
+      "body": "L'Amérique du Sud abrite plus de 900 groupes ethniques. Beaucoup d'entre eux ne sont pas encore atteints par l'Évangile ; ils vivent dans des jungles denses et entretiennent des relations difficiles avec le monde extérieur.",
+      "readMore": "Lire la suite",
+      "pdf": "/files/2024/09/Yuracani_Quipa.pdf",
+      "image": "/images/uploads/2024/09/yuracani_quipa.jpg"
+    }
+  ],
+  "comingSoon": {
+    "heading": "De nouvelles <strong>histoires d'impact</strong> arrivent bientôt !",
+    "body": "Chaque histoire montre comment Dieu agit à travers son Église pour faire connaître sa Parole.<br>Vous aimeriez que votre histoire soit publiée ? Envoyez-nous un message via le <a href=\"/contact/\">formulaire de contact</a>."
+  }
+}

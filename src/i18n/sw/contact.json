@@ -1,0 +1,28 @@
+{
+  "title": "Wasiliana Nasi",
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Lower-Banner.webp",
+    "title": "<strong>Kila Sauti, Kila Kanisa, Dhamira Moja</strong>"
+  },
+  "intro": "Kutoka kila taifa na kila lugha, Mungu analijenga kanisa lake. Iwe unataka kujifunza zaidi, kushiriki hadithi, au kujiunga na vuguvugu la kimataifa la Tafsiri ya Biblia inayotegemea Kanisa, tungependa kuwasiliana nawe.",
+  "matter": "<strong>Ujumbe wako ni muhimu!</strong>",
+  "form": {
+    "name": "Jina",
+    "email": "Barua pepe",
+    "required": "(inahitajika)",
+    "subject": "Ujumbe wako unahusu nini?",
+    "subjectOptions": [
+      "Chagua Mojawapo",
+      "Swali Kuhusu Nyenzo na Mafunzo",
+      "Nia ya Kuanzisha Mradi",
+      "Kushiriki Kuhusu Mradi",
+      "Maoni Kuhusu Hadithi ya Mabadiliko",
+      "Hitilafu | Masahihisho",
+      "Nyingine"
+    ],
+    "message": "Ujumbe",
+    "submit": "Tuma",
+    "success": "Asante kwa ujumbe wako. ✨",
+    "back": "← Rudi Nyuma"
+  }
+}

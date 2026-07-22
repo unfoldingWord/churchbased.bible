@@ -1,0 +1,41 @@
+{
+  "siteTitle": "以教会为本的圣经翻译",
+  "nav": [
+    {
+      "label": "首页",
+      "href": "/"
+    },
+    {
+      "label": "关于我们",
+      "href": "/about/"
+    },
+    {
+      "label": "培训",
+      "href": "/training/"
+    },
+    {
+      "label": "研究",
+      "href": "/research/"
+    },
+    {
+      "label": "影响故事",
+      "href": "/stories/"
+    },
+    {
+      "label": "联系我们",
+      "href": "/contact/"
+    }
+  ],
+  "footer": {
+    "tagline": "这是<strong>教会</strong>的事工，也是教会<em>做事工</em>的方式。",
+    "description": "这是一场全球性的运动，装备各地教会亲自将圣经翻译成他们心灵的语言。因为领受神话语的教会，正是最适合翻译这话语的教会。"
+  },
+  "strings": {
+    "formError": "出了点问题。请重试，或通过其他方式与我们联系。",
+    "notFoundTitle": "未找到页面",
+    "notFoundBody": "您要找的页面不存在，或已被移动。",
+    "backHome": "返回首页",
+    "menuLabel": "菜单",
+    "languageLabel": "语言"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "title": "Training",
+  "hero": {
+    "image": "/images/uploads/2025/11/Training.webp",
+    "title": "<strong>You can <strong><em>begin</em></strong> Church-Based Bible Translation <strong>today</strong>!</strong>"
+  },
+  "intro": "Church-Based Bible Translation is happening all over the world, and <strong>you can take part!</strong> The illustration below describes what CBBT might look like in practice. <br><br>Quality Bible translation is only possible when the church and community have capacity to correct errors or adapt as the language changes. Note that <strong>ongoing evaluation and revision</strong> happens even after publication is complete.",
+  "cycleImage": "/images/uploads/2024/11/ilab_cycle_graphic_final_w_fonts.svg",
+  "resourcesHeading": "<strong>Training Resources</strong>",
+  "resourcesIntro": "These resources will provide you with detailed and step-by-step guides to the process of Church-Based Bible Translation. If you have any questions, please reach out through the <a href=\"/contact/\">contact form</a>.",
+  "resources": [
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.30.26%E2%80%AFPM.png",
+      "heading": "Getting Started",
+      "body": "Three manuals that equip trainers to train others in CBBT.",
+      "buttons": [
+        {
+          "label": "Course 1",
+          "href": "https://docs.google.com/document/d/1SgGqjxoj2XPiUPVsYNG-oxRtFs4akxZbv12SVO75WDE/"
+        },
+        {
+          "label": "Course 2",
+          "href": "https://docs.google.com/document/d/1TQEcXotHh8eOWA8tQWdY8q-TfXbI4Ntk/"
+        },
+        {
+          "label": "Course 3",
+          "href": "https://docs.google.com/document/d/1mfBAtorpmqMf5PWGH867Pb6zAPnuCex4YJ5OkABR4Ao/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/fountain-788430_640.jpg",
+      "heading": "Understanding The Source",
+      "body": "A collection of resources designed for translation.",
+      "buttons": [
+        {
+          "label": "The Bible Well",
+          "href": "https://app.well.bible/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.36.58%E2%80%AFPM.png",
+      "heading": "Going Deeper",
+      "body": "A library of CBBT training resources.",
+      "buttons": [
+        {
+          "label": "Library",
+          "href": "https://unfoldingword.org/training-hub"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/06/FoundationsBT.webp",
+      "heading": "BT Video Series",
+      "body": "A video series designed to showcase simple, repeatable practices to start Bible translation with clarity and impact.",
+      "buttons": [
+        {
+          "label": "FoundationsBT Video Series",
+          "href": "https://foundationsbt.com"
+        }
+      ]
+    }
+  ],
+  "faqHeading": "<strong>Frequently Asked Questions</strong>",
+  "faqs": [
+    {
+      "q": "How much does Church-Based Bible Translation cost?",
+      "a": [
+        "Costs are highly variable and depend on the size and scope of the translation work. That said, CBBT is a cost-effective means of translation since it relies on the workforce of the local church."
+      ]
+    },
+    {
+      "q": "What are some examples of resources that are translated using Church-Based Bible Translation?",
+      "a": [
+        "CBBT results in both printed and audio translations of a range of resources, including Open Bible Stories, study notes, other discipleship resources, and portions of the Bible. The resource(s) you choose will be specific to the needs of your community."
+      ]
+    },
+    {
+      "q": "How long does Church-Based Bible Translation take?",
+      "a": [
+        "This depends on what is being translated and the prior experience of the translation team. In the case of the Zeme, the translation of the entire Bible took just twenty-one months.",
+        "In other cases, the translation work takes longer. Some communities see translation as an important part of their gospel ministry and they plan to continually translate and revise to ensure that the Gospel message is available to each generation."
+      ]
+    }
+  ]
+}

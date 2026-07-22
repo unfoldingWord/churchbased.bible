@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Website-Cover-1024x439.jpg",
+    "title": "Een bediening van de <strong>kerk</strong>; de manier waarop de kerk <em>haar bediening vormgeeft</em>.",
+    "cta": {
+      "label": "Meer weten",
+      "href": "/about/"
+    }
+  },
+  "story": {
+    "title": "Het Woord komt thuis bij de <strong>Zeme</strong>.",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/Zeme.webp",
+        "heading": "<strong>De Zeme hadden een Bijbelvertaling nodig in hun eigen taal.</strong>",
+        "body": "Hoewel de kerk al meer dan 100 jaar aanwezig was in Noordoost-India, beschikten de Zeme niet over een Bijbelvertaling die ze konden gebruiken voor bediening en evangelisatie."
+      },
+      {
+        "image": "/images/uploads/2025/11/Benreu-Village.webp",
+        "heading": "<strong>Maar de Bijbel vertalen is een complexe taak en hulp is moeilijk te vinden.</strong>",
+        "body": "Financiering was schaars en de taak was enorm. De Zeme hadden een manier nodig om de Bijbel te vertalen met de middelen die ze tot hun beschikking hadden."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Translating.webp",
+        "heading": "<strong>Op zoek naar een oplossing wendden ze zich tot kerkgebaseerde Bijbelvertaling.</strong>",
+        "body": "Een lokale organisatie trainde een team van Zeme-sprekende leiders in kerkgebaseerde Bijbelvertaling (CBBT)."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Bible.webp",
+        "heading": "<strong>CBBT stelde hen in staat om de Bijbel in het Zeme te vertalen.</strong>",
+        "body": "Het vertaalteam voltooide de hele Bijbel en controleerde de vertaling op nauwkeurigheid in slechts eenentwintig maanden!"
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Traditional-Dance.webp",
+        "heading": "<strong>Hun werk draagt bij aan de groei van de kerk!</strong>",
+        "body": "Met de nieuwe vertaling in handen zijn de Zeme toegerust om het evangelie te verspreiden en discipelen van Jezus te maken."
+      }
+    ]
+  },
+  "quote": "<mark>De vraag naar <strong>Bijbelvertaling</strong> is groter dan ooit. De <strong>kerk </strong>heeft een <em><strong>oplossing</strong></em> nodig.</mark>",
+  "how": {
+    "title": "Hoe <strong>CBBT</strong> werkt",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/4-1.png",
+        "heading": "De kerk toerusten…",
+        "body": "CBBT rust de lokale kerk toe om haar bestaande ervaring en expertise in te zetten om in haar vertaalbehoeften te voorzien en te groeien in theologisch inzicht. Kerkleiders worden getraind in vertaalprocessen."
+      },
+      {
+        "image": "/images/uploads/2025/11/3.png",
+        "heading": "…voor het vertaalwerk…",
+        "body": "Vertaalteams verdiepen zich grondig in de betekenis van Gods Woord, en lokale en regionale kerkleiders zorgen ervoor dat de vertalingen betrouwbaar, begrijpelijk, passend en aantrekkelijk zijn. De kerk en de gemeenschap zijn vanaf het begin betrokken bij het proces."
+      },
+      {
+        "image": "/images/uploads/2025/11/2.png",
+        "heading": "…om discipelen van Jezus te maken.",
+        "body": "Door de Bijbel en discipelschapsmaterialen in hun eigen taal te vertalen, wordt de lokale kerk toegerust om discipelen van Jezus te maken en haar volk met het evangelie te bereiken."
+      }
+    ]
+  },
+  "fromChurch": {
+    "heading": "Van de kerk; voor de kerk.",
+    "lead": "<strong>Reis mee door verhalen over kerkgebaseerde Bijbelvertaling die wereldwijd levens en gemeenschappen verandert.</strong>",
+    "body": "Van dorpskerken tot wereldwijde netwerken: ontdek hoe God Zijn volk gebruikt om de Schrift getrouw te vertalen, haar vrij te delen en harten te zien veranderen door Zijn Woord.",
+    "cta": {
+      "label": "Lees de verhalen",
+      "href": "/stories/"
+    },
+    "image": "/images/uploads/2024/08/bennett-tobias-Tt_X-AHU3tg-unsplash.webp"
+  },
+  "finalCta": {
+    "video": "/videos/cbbt-homepage-video.mp4",
+    "heading": "Ben je klaar om aan je CBBT-reis te beginnen?",
+    "body": "Hoe kan kerkgebaseerde Bijbelvertaling jou helpen om de Bijbel in jouw taal te vertalen? Bekijk onze bibliotheek met trainingsmaterialen. Er is geen beter moment dan nu.",
+    "cta": {
+      "label": "Aan de slag",
+      "href": "/training/"
+    }
+  }
+}

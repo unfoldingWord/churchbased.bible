@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+
+# Local archive of the old WordPress site — permanent snapshot kept on disk, not in git
+raw/
+
+# Intermediate video transcode staging (final files live in public/videos/)
+dist-videos/
+
+# Credentials & local environment (Cloudflare/Wrangler secrets, dotenv)
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+*.local
+.wrangler/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

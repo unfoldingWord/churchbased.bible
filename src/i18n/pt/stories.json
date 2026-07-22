@@ -1,0 +1,54 @@
+{
+  "title": "Histórias de impacto",
+  "hero": {
+    "video": "/videos/cbbt-impact-stories-header.mp4",
+    "line1": "Povos ao redor do mundo participam da Tradução da Bíblia Baseada na Igreja.",
+    "line2": "<strong>Estas são as histórias deles.</strong>"
+  },
+  "stories": [
+    {
+      "heading": "Zeme",
+      "location": "<em>Índia</em>",
+      "body": "Suponha que você seja um líder de igreja em um povo numeroso. Você notou um problema: embora a igreja exista entre o seu povo há mais de 100 anos…",
+      "readMore": "Leia mais",
+      "pdf": "/files/2024/08/Zeme.pdf",
+      "image": "/images/uploads/2024/08/Zeme-traditional-dance1-min.jpg"
+    },
+    {
+      "heading": "Mblego",
+      "location": "<em>Sudão</em>",
+      "body": "“Carrego um grande fardo pelo meu povo.” Estas são as palavras de Ahmed*, um sudanês que recentemente se tornou seguidor de Jesus.",
+      "readMore": "Leia mais",
+      "pdf": "/files/2024/07/Mblego-final.pdf",
+      "image": "/images/uploads/2024/06/yusuf-yassir-SoLZCj0W1Ss-unsplash1.webp"
+    },
+    {
+      "heading": "Tavretsi e Khateni",
+      "location": "<em>Eurásia</em>",
+      "body": "No interior de um país montanhoso da Eurásia, dois povos não têm uma tradução da Bíblia em sua língua.",
+      "readMore": "Leia mais",
+      "pdf": "/files/2024/08/Tavretsi-and-Khateni.pdf",
+      "image": "/images/uploads/2024/07/Screenshot-2024-07-15-at-1.45.52%E2%80%AFPM.png"
+    },
+    {
+      "heading": "Ruska Roma",
+      "location": "<em>Ucrânia</em>",
+      "body": "Imagine o seguinte cenário. Você cresceu na igreja e foi membro dela a vida inteira — na verdade, ela faz parte da história do seu povo…",
+      "readMore": "Leia mais",
+      "pdf": "/files/2024/08/Ruska-Roma.pdf",
+      "image": "/images/uploads/2024/07/romani-6678445_640.jpg"
+    },
+    {
+      "heading": "Yuracani e Quipa",
+      "location": "<em>América do Sul</em>",
+      "body": "A América do Sul abriga mais de 900 povos. Muitos deles ainda não foram alcançados pelo evangelho, vivendo em selvas densas e mantendo relações delicadas com o mundo exterior.",
+      "readMore": "Leia mais",
+      "pdf": "/files/2024/09/Yuracani_Quipa.pdf",
+      "image": "/images/uploads/2024/09/yuracani_quipa.jpg"
+    }
+  ],
+  "comingSoon": {
+    "heading": "Novas <strong>histórias de impacto</strong> chegarão em breve!",
+    "body": "Cada história mostra como Deus está agindo por meio da Sua igreja para tornar conhecida a Sua Palavra.<br>Quer ver a sua história aqui? Envie-nos uma mensagem pelo <a href=\"/contact/\">formulário de contato</a>."
+  }
+}

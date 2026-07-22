@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Website-Cover-1024x439.jpg",
+    "title": "Sebuah pelayanan dari <strong>gereja</strong>; cara gereja <em>melakukan pelayanan</em>.",
+    "cta": {
+      "label": "Selengkapnya",
+      "href": "/about/"
+    }
+  },
+  "story": {
+    "title": "Firman Itu Pulang ke Tengah <strong>Suku Zeme</strong>.",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/Zeme.webp",
+        "heading": "<strong>Suku Zeme membutuhkan terjemahan Alkitab dalam bahasa mereka.</strong>",
+        "body": "Meskipun gereja telah ada di India timur laut selama lebih dari 100 tahun, suku Zeme belum memiliki terjemahan Alkitab yang dapat mereka gunakan untuk pelayanan dan penginjilan."
+      },
+      {
+        "image": "/images/uploads/2025/11/Benreu-Village.webp",
+        "heading": "<strong>Namun menerjemahkan Alkitab adalah tugas yang rumit, dan bantuan sulit ditemukan.</strong>",
+        "body": "Pendanaan sangat terbatas sementara pekerjaan ini sangat besar. Suku Zeme membutuhkan cara untuk menerjemahkan Alkitab dengan sumber daya yang mereka miliki."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Translating.webp",
+        "heading": "<strong>Untuk mencari solusi, mereka beralih ke Penerjemahan Alkitab Berbasis Gereja.</strong>",
+        "body": "Sebuah organisasi lokal melatih tim pemimpin yang berbahasa Zeme dalam Penerjemahan Alkitab Berbasis Gereja (CBBT)."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Bible.webp",
+        "heading": "<strong>CBBT memampukan mereka menerjemahkan Alkitab ke dalam bahasa Zeme.</strong>",
+        "body": "Tim penerjemah menyelesaikan seluruh Alkitab dan memeriksa keakuratan terjemahannya hanya dalam waktu dua puluh satu bulan!"
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Traditional-Dance.webp",
+        "heading": "<strong>Pekerjaan mereka memberikan sumbangsih bagi pertumbuhan gereja!</strong>",
+        "body": "Dengan adanya terjemahan yang baru, suku Zeme diperlengkapi untuk menyebarkan Injil dan memuridkan banyak orang bagi Yesus."
+      }
+    ]
+  },
+  "quote": "<mark>Kebutuhan akan <strong>penerjemahan Alkitab</strong> kini lebih besar dari sebelumnya. <strong>Gereja </strong>membutuhkan sebuah <em><strong>solusi</strong></em>.</mark>",
+  "how": {
+    "title": "Cara Kerja <strong>CBBT</strong>",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/4-1.png",
+        "heading": "Memperlengkapi gereja…",
+        "body": "CBBT memperlengkapi gereja lokal untuk menerapkan pengalaman dan keahlian yang sudah mereka miliki demi memenuhi kebutuhan penerjemahan dan bertumbuh dalam pemahaman teologis. Para pemimpin gereja dilatih dalam proses penerjemahan."
+      },
+      {
+        "image": "/images/uploads/2025/11/3.png",
+        "heading": "…untuk pekerjaan penerjemahan…",
+        "body": "Tim penerjemah menggali lebih dalam makna dari Firman Allah, dan para pemimpin gereja lokal dan regional memastikan terjemahannya dapat dipercaya, dapat dimengerti, tepat, dan enak dibaca. Gereja dan komunitas terlibat dalam proses ini sejak awal."
+      },
+      {
+        "image": "/images/uploads/2025/11/2.png",
+        "heading": "…demi memuridkan orang bagi Yesus.",
+        "body": "Dengan menerjemahkan Alkitab dan bahan-bahan pemuridan ke dalam bahasa mereka, gereja lokal diperlengkapi untuk memuridkan orang bagi Yesus dan menjangkau masyarakat mereka dengan Injil."
+      }
+    ]
+  },
+  "fromChurch": {
+    "heading": "Dari Gereja; untuk Gereja.",
+    "lead": "<strong>Telusurilah kisah-kisah Penerjemahan Alkitab Berbasis Gereja yang mengubah kehidupan dan komunitas di seluruh dunia.</strong>",
+    "body": "Dari gereja-gereja desa hingga jaringan global, temukan bagaimana Allah memakai umat-Nya untuk menerjemahkan Kitab Suci dengan setia, membagikannya secara cuma-cuma, dan melihat hati manusia diubahkan melalui Firman-Nya.",
+    "cta": {
+      "label": "Baca Kisah-Kisahnya",
+      "href": "/stories/"
+    },
+    "image": "/images/uploads/2024/08/bennett-tobias-Tt_X-AHU3tg-unsplash.webp"
+  },
+  "finalCta": {
+    "video": "/videos/cbbt-homepage-video.mp4",
+    "heading": "Apakah Anda siap memulai perjalanan CBBT Anda?",
+    "body": "Bagaimana Penerjemahan Alkitab Berbasis Gereja dapat membantu Anda menerjemahkan Alkitab ke dalam bahasa Anda? Jelajahi pustaka bahan pelatihan kami. Tidak ada waktu yang lebih baik daripada saat ini.",
+    "cta": {
+      "label": "Mulai Sekarang",
+      "href": "/training/"
+    }
+  }
+}

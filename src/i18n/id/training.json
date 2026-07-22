@@ -1,0 +1,87 @@
+{
+  "title": "Pelatihan",
+  "hero": {
+    "image": "/images/uploads/2025/11/Training.webp",
+    "title": "<strong>Anda dapat <strong><em>memulai</em></strong> Penerjemahan Alkitab Berbasis Gereja <strong>hari ini</strong>!</strong>"
+  },
+  "intro": "Penerjemahan Alkitab Berbasis Gereja sedang berlangsung di seluruh dunia, dan <strong>Anda bisa mengambil bagian!</strong> Ilustrasi di bawah ini menggambarkan seperti apa CBBT dalam praktiknya. <br><br>Penerjemahan Alkitab yang berkualitas hanya mungkin terjadi jika gereja dan komunitas memiliki kapasitas untuk memperbaiki kesalahan atau menyesuaikan diri seiring dengan perubahan bahasa. Perhatikan bahwa <strong>evaluasi dan revisi yang berkelanjutan</strong> terus dilakukan, bahkan setelah publikasi selesai.",
+  "cycleImage": "/images/uploads/2024/11/ilab_cycle_graphic_final_w_fonts.svg",
+  "resourcesHeading": "<strong>Bahan-Bahan Pelatihan</strong>",
+  "resourcesIntro": "Bahan-bahan ini akan memberi Anda panduan yang rinci dan langkah demi langkah dalam proses Penerjemahan Alkitab Berbasis Gereja. Jika Anda memiliki pertanyaan, silakan hubungi kami melalui <a href=\"/contact/\">formulir kontak</a>.",
+  "resources": [
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.30.26%E2%80%AFPM.png",
+      "heading": "Memulai",
+      "body": "Tiga buku panduan yang memperlengkapi para pelatih untuk melatih orang lain dalam CBBT.",
+      "buttons": [
+        {
+          "label": "Kursus 1",
+          "href": "https://docs.google.com/document/d/1SgGqjxoj2XPiUPVsYNG-oxRtFs4akxZbv12SVO75WDE/"
+        },
+        {
+          "label": "Kursus 2",
+          "href": "https://docs.google.com/document/d/1TQEcXotHh8eOWA8tQWdY8q-TfXbI4Ntk/"
+        },
+        {
+          "label": "Kursus 3",
+          "href": "https://docs.google.com/document/d/1mfBAtorpmqMf5PWGH867Pb6zAPnuCex4YJ5OkABR4Ao/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/fountain-788430_640.jpg",
+      "heading": "Memahami Teks Sumber",
+      "body": "Kumpulan bahan-bahan yang dirancang untuk penerjemahan.",
+      "buttons": [
+        {
+          "label": "The Bible Well",
+          "href": "https://app.well.bible/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.36.58%E2%80%AFPM.png",
+      "heading": "Mendalami Lebih Jauh",
+      "body": "Perpustakaan bahan-bahan pelatihan CBBT.",
+      "buttons": [
+        {
+          "label": "Perpustakaan",
+          "href": "https://unfoldingword.org/training-hub"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/06/FoundationsBT.webp",
+      "heading": "Seri Video Penerjemahan Alkitab",
+      "body": "Seri video yang dirancang untuk memperlihatkan praktik-praktik sederhana yang dapat diulang untuk memulai penerjemahan Alkitab dengan jelas dan berdampak.",
+      "buttons": [
+        {
+          "label": "Seri Video FoundationsBT",
+          "href": "https://foundationsbt.com"
+        }
+      ]
+    }
+  ],
+  "faqHeading": "<strong>Pertanyaan yang Sering Diajukan</strong>",
+  "faqs": [
+    {
+      "q": "Berapa biaya Penerjemahan Alkitab Berbasis Gereja?",
+      "a": [
+        "Biaya sangat bervariasi dan bergantung pada ukuran serta cakupan pekerjaan penerjemahan. Meskipun demikian, CBBT adalah sarana penerjemahan yang hemat biaya karena mengandalkan tenaga dari gereja lokal."
+      ]
+    },
+    {
+      "q": "Apa saja contoh bahan-bahan yang diterjemahkan menggunakan Penerjemahan Alkitab Berbasis Gereja?",
+      "a": [
+        "CBBT menghasilkan terjemahan cetak dan audio untuk berbagai bahan, antara lain Cerita Alkitab Terbuka (Open Bible Stories), catatan studi Alkitab, bahan-bahan pemuridan lainnya, dan bagian-bagian Alkitab. Bahan-bahan yang Anda pilih akan disesuaikan dengan kebutuhan komunitas Anda."
+      ]
+    },
+    {
+      "q": "Berapa lama waktu yang dibutuhkan untuk Penerjemahan Alkitab Berbasis Gereja?",
+      "a": [
+        "Hal ini bergantung pada bahan yang diterjemahkan dan pengalaman yang telah dimiliki tim penerjemah. Dalam kasus suku Zeme, penerjemahan seluruh Alkitab hanya memakan waktu dua puluh satu bulan.",
+        "Dalam kasus lain, pekerjaan penerjemahan memakan waktu lebih lama. Beberapa komunitas memandang penerjemahan sebagai bagian penting dari pelayanan penginjilan mereka, dan mereka berencana untuk terus menerjemahkan serta merevisi guna memastikan bahwa berita Injil tersedia bagi setiap generasi."
+      ]
+    }
+  ]
+}

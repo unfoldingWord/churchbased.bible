@@ -1,0 +1,41 @@
+{
+  "siteTitle": "Penerjemahan Alkitab Berbasis Gereja",
+  "nav": [
+    {
+      "label": "Beranda",
+      "href": "/"
+    },
+    {
+      "label": "Tentang Kami",
+      "href": "/about/"
+    },
+    {
+      "label": "Pelatihan",
+      "href": "/training/"
+    },
+    {
+      "label": "Penelitian",
+      "href": "/research/"
+    },
+    {
+      "label": "Kisah Dampak",
+      "href": "/stories/"
+    },
+    {
+      "label": "Kontak",
+      "href": "/contact/"
+    }
+  ],
+  "footer": {
+    "tagline": "Sebuah pelayanan dari <strong>gereja</strong>; cara gereja <em>melakukan pelayanan</em>.",
+    "description": "Sebuah gerakan global yang memberdayakan gereja-gereja untuk menerjemahkan Alkitab sendiri—dalam bahasa hati mereka. Karena Gereja yang menerima Firman adalah Gereja yang paling tepat untuk menerjemahkannya."
+  },
+  "strings": {
+    "formError": "Terjadi kesalahan. Silakan coba lagi, atau hubungi kami melalui cara lain.",
+    "notFoundTitle": "Halaman tidak ditemukan",
+    "notFoundBody": "Halaman yang Anda cari tidak ada atau telah dipindahkan.",
+    "backHome": "Kembali ke beranda",
+    "menuLabel": "Menu",
+    "languageLabel": "Bahasa"
+  }
+}

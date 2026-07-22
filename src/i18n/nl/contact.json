@@ -1,0 +1,28 @@
+{
+  "title": "Contact",
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Lower-Banner.webp",
+    "title": "<strong>Elke stem, elke kerk, één missie</strong>"
+  },
+  "intro": "Uit elke natie en taal bouwt God Zijn kerk. Of je nu meer wilt weten, een verhaal wilt delen of wilt aansluiten bij de wereldwijde beweging van kerkgebaseerde Bijbelvertaling: we komen graag met je in contact.",
+  "matter": "<strong>Jouw bericht doet ertoe!</strong>",
+  "form": {
+    "name": "Naam",
+    "email": "E-mailadres",
+    "required": "(verplicht)",
+    "subject": "Wat is het onderwerp van je bericht?",
+    "subjectOptions": [
+      "Kies een optie",
+      "Vraag over materialen en training",
+      "Interesse om een project te starten",
+      "Iets delen over een project",
+      "Reactie op een impactverhaal",
+      "Fout | Correctie",
+      "Anders"
+    ],
+    "message": "Bericht",
+    "submit": "Verzenden",
+    "success": "Bedankt voor je bericht. ✨",
+    "back": "← Terug"
+  }
+}

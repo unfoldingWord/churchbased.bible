@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Website-Cover-1024x439.jpg",
+    "title": "A ministry of the <strong>church</strong>; the way the church <em>does ministry</em>.",
+    "cta": {
+      "label": "Learn More",
+      "href": "/about/"
+    }
+  },
+  "story": {
+    "title": "The Word Comes Home to the <strong>Zeme</strong>.",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/Zeme.webp",
+        "heading": "<strong>The Zeme needed a Bible translation in their language.</strong>",
+        "body": "Though the church had been in northeast India for over 100 years, the Zeme did not have a translation of the Bible that they could use for ministry and evangelism."
+      },
+      {
+        "image": "/images/uploads/2025/11/Benreu-Village.webp",
+        "heading": "<strong>But translating the Bible is a complex task and it’s hard to find help.</strong>",
+        "body": "Funding was scarce and the task was immense. The Zeme needed a way to translate the Bible with the resources they had available."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Translating.webp",
+        "heading": "<strong>In search of a solution, they turned to Church-Based Bible Translation.</strong>",
+        "body": "A local organization trained a team of Zeme-speaking leaders in Church-Based Bible Translation (CBBT)."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Bible.webp",
+        "heading": "<strong>CBBT enabled them to translate the Bible into Zeme.</strong>",
+        "body": "The translation team completed the entire Bible and checked the translation for accuracy in just twenty-one months!"
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Traditional-Dance.webp",
+        "heading": "<strong>Their work is contributing to the growth of the church!</strong>",
+        "body": "With the new translation in hand, the Zeme are equipped to spread the gospel and make disciples of Jesus."
+      }
+    ]
+  },
+  "quote": "<mark>The demand for <strong>Bible translation</strong> is greater than ever. The <strong>church </strong>needs a <em><strong>solution</strong></em>.</mark>",
+  "how": {
+    "title": "How <strong>CBBT</strong> Works",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/4-1.png",
+        "heading": "Equipping the church…",
+        "body": "CBBT equips the local church to apply their existing experience and expertise to meet their translation needs and grow in theological understanding. Church leaders are trained in translation processes."
+      },
+      {
+        "image": "/images/uploads/2025/11/3.png",
+        "heading": "…for the work of translation…",
+        "body": "Translation teams dig deeply into the meaning of God’s Word, and local and regional church leaders ensure translations are trustworthy, understandable, appropriate, and appealing. The church and community are engaged in the process from the beginning."
+      },
+      {
+        "image": "/images/uploads/2025/11/2.png",
+        "heading": "…to make disciples of Jesus.",
+        "body": "By translating the Bible and discipleship resources into their language, the local church is equipped to make disciples of Jesus and reach their people with the gospel."
+      }
+    ]
+  },
+  "fromChurch": {
+    "heading": "From the Church; for the Church.",
+    "lead": "<strong>Journey through stories of Church-Based Bible Translation transforming lives and communities worldwide.</strong>",
+    "body": "From village churches to global networks, discover how God is using His people to translate Scripture faithfully, share it freely, and see hearts changed through His Word.",
+    "cta": {
+      "label": "Read The Stories",
+      "href": "/stories/"
+    },
+    "image": "/images/uploads/2024/08/bennett-tobias-Tt_X-AHU3tg-unsplash.webp"
+  },
+  "finalCta": {
+    "video": "/videos/cbbt-homepage-video.mp4",
+    "heading": "Are you ready to begin your CBBT journey?",
+    "body": "How can Church-Based Bible Translation help you translate the Bible into your language? Check out our library of training resources. There has never been a better time than right now.",
+    "cta": {
+      "label": "Get Started",
+      "href": "/training/"
+    }
+  }
+}

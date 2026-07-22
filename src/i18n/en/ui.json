@@ -1,0 +1,41 @@
+{
+  "siteTitle": "Church-Based Bible Translation",
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "Training",
+      "href": "/training/"
+    },
+    {
+      "label": "Research",
+      "href": "/research/"
+    },
+    {
+      "label": "Impact Stories",
+      "href": "/stories/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
+  ],
+  "footer": {
+    "tagline": "A ministry of the <strong>church</strong>; the way the church <em>does ministry</em>.",
+    "description": "A global movement empowering churches to translate the Bible for themselves—in the language of their hearts. Because the Church that receives the Word is the Church best positioned to translate it."
+  },
+  "strings": {
+    "formError": "Something went wrong. Please try again, or reach us another way.",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you are looking for does not exist or has moved.",
+    "backHome": "Back to the homepage",
+    "menuLabel": "Menu",
+    "languageLabel": "Language"
+  }
+}

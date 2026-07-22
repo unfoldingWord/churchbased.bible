@@ -1,0 +1,54 @@
+{
+  "title": "Kisah Dampak",
+  "hero": {
+    "video": "/videos/cbbt-impact-stories-header.mp4",
+    "line1": "Suku-suku bangsa di seluruh dunia berpartisipasi dalam Penerjemahan Alkitab Berbasis Gereja.",
+    "line2": "<strong>Inilah kisah-kisah mereka.</strong>"
+  },
+  "stories": [
+    {
+      "heading": "Suku Zeme",
+      "location": "<em>India</em>",
+      "body": "Seandainya Anda seorang pemimpin gereja dalam suatu suku yang besar. Anda melihat suatu masalah: meski gereja sudah ada di tengah suku Anda lebih dari 100 tahun…",
+      "readMore": "Baca Selengkapnya",
+      "pdf": "/files/2024/08/Zeme.pdf",
+      "image": "/images/uploads/2024/08/Zeme-traditional-dance1-min.jpg"
+    },
+    {
+      "heading": "Suku Mblego",
+      "location": "<em>Sudan</em>",
+      "body": "\"Saya sangat terbeban bagi suku saya.\" Inilah kata-kata Ahmed*, seorang pria Sudan yang baru saja menjadi pengikut Yesus.",
+      "readMore": "Baca Selengkapnya",
+      "pdf": "/files/2024/07/Mblego-final.pdf",
+      "image": "/images/uploads/2024/06/yusuf-yassir-SoLZCj0W1Ss-unsplash1.webp"
+    },
+    {
+      "heading": "Suku Tavretsi dan Suku Khateni",
+      "location": "<em>Eurasia</em>",
+      "body": "Jauh di sebuah negeri pegunungan di Eurasia, dua suku bangsa tidak memiliki terjemahan Alkitab dalam bahasa mereka.",
+      "readMore": "Baca Selengkapnya",
+      "pdf": "/files/2024/08/Tavretsi-and-Khateni.pdf",
+      "image": "/images/uploads/2024/07/Screenshot-2024-07-15-at-1.45.52%E2%80%AFPM.png"
+    },
+    {
+      "heading": "Suku Ruska Roma",
+      "location": "<em>Ukraina</em>",
+      "body": "Bayangkan situasi berikut ini. Anda tumbuh besar di suatu gereja dan telah menjadi anggota di dalamnya seumur hidup—bahkan, gereja itu merupakan bagian dari sejarah suku Anda…",
+      "readMore": "Baca Selengkapnya",
+      "pdf": "/files/2024/08/Ruska-Roma.pdf",
+      "image": "/images/uploads/2024/07/romani-6678445_640.jpg"
+    },
+    {
+      "heading": "Suku Yuracani dan Suku Quipa",
+      "location": "<em>Amerika Selatan</em>",
+      "body": "Amerika Selatan adalah rumah bagi lebih dari 900 suku bangsa. Banyak di antaranya belum terjangkau oleh Injil, hidup di hutan-hutan lebat dan berada dalam hubungan yang tidak mudah dengan dunia luar.",
+      "readMore": "Baca Selengkapnya",
+      "pdf": "/files/2024/09/Yuracani_Quipa.pdf",
+      "image": "/images/uploads/2024/09/yuracani_quipa.jpg"
+    }
+  ],
+  "comingSoon": {
+    "heading": "<strong>Kisah-kisah dampak</strong> yang baru akan segera hadir!",
+    "body": "Setiap kisah menunjukkan bagaimana Allah bekerja melalui gereja-Nya untuk memperkenalkan Firman-Nya.<br>Ingin kisah Anda ditampilkan di sini? Kirimkan pesan kepada kami melalui <a href=\"/contact/\">formulir kontak</a>."
+  }
+}

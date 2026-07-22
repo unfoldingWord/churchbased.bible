@@ -1,0 +1,87 @@
+{
+  "title": "Treinamento",
+  "hero": {
+    "image": "/images/uploads/2025/11/Training.webp",
+    "title": "<strong>Você pode <strong><em>começar</em></strong> a Tradução da Bíblia Baseada na Igreja <strong>hoje</strong>!</strong>"
+  },
+  "intro": "A Tradução da Bíblia Baseada na Igreja está acontecendo no mundo inteiro, e <strong>você pode participar!</strong> A ilustração abaixo descreve como a CBBT pode ser na prática. <br><br>Uma tradução da Bíblia de qualidade só é possível quando a igreja e a comunidade têm capacidade de corrigir erros e de se adaptar conforme a língua muda. Observe que a <strong>avaliação e revisão contínuas</strong> acontecem mesmo depois de concluída a publicação.",
+  "cycleImage": "/images/uploads/2024/11/ilab_cycle_graphic_final_w_fonts.svg",
+  "resourcesHeading": "<strong>Recursos de treinamento</strong>",
+  "resourcesIntro": "Esses recursos fornecerão guias detalhados, passo a passo, para o processo de Tradução da Bíblia Baseada na Igreja. Se você tiver alguma dúvida, fale conosco pelo <a href=\"/contact/\">formulário de contato</a>.",
+  "resources": [
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.30.26%E2%80%AFPM.png",
+      "heading": "Primeiros passos",
+      "body": "Três manuais que capacitam instrutores a treinar outras pessoas em CBBT.",
+      "buttons": [
+        {
+          "label": "Curso 1",
+          "href": "https://docs.google.com/document/d/1SgGqjxoj2XPiUPVsYNG-oxRtFs4akxZbv12SVO75WDE/"
+        },
+        {
+          "label": "Curso 2",
+          "href": "https://docs.google.com/document/d/1TQEcXotHh8eOWA8tQWdY8q-TfXbI4Ntk/"
+        },
+        {
+          "label": "Curso 3",
+          "href": "https://docs.google.com/document/d/1mfBAtorpmqMf5PWGH867Pb6zAPnuCex4YJ5OkABR4Ao/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/fountain-788430_640.jpg",
+      "heading": "Compreendendo a fonte",
+      "body": "Uma coleção de recursos criados para a tradução.",
+      "buttons": [
+        {
+          "label": "The Bible Well",
+          "href": "https://app.well.bible/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.36.58%E2%80%AFPM.png",
+      "heading": "Aprofundando",
+      "body": "Uma biblioteca de recursos de treinamento em CBBT.",
+      "buttons": [
+        {
+          "label": "Biblioteca",
+          "href": "https://unfoldingword.org/training-hub"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/06/FoundationsBT.webp",
+      "heading": "Série de vídeos sobre tradução da Bíblia",
+      "body": "Uma série de vídeos criada para apresentar práticas simples e repetíveis para começar a tradução da Bíblia com clareza e impacto.",
+      "buttons": [
+        {
+          "label": "Série de vídeos FoundationsBT",
+          "href": "https://foundationsbt.com"
+        }
+      ]
+    }
+  ],
+  "faqHeading": "<strong>Perguntas frequentes</strong>",
+  "faqs": [
+    {
+      "q": "Quanto custa a Tradução da Bíblia Baseada na Igreja?",
+      "a": [
+        "Os custos são muito variáveis e dependem do tamanho e do escopo do trabalho de tradução. Dito isso, a CBBT é um meio de tradução com boa relação custo-benefício, uma vez que depende da força de trabalho da igreja local."
+      ]
+    },
+    {
+      "q": "Quais são alguns exemplos de recursos traduzidos usando a Tradução da Bíblia Baseada na Igreja?",
+      "a": [
+        "A CBBT resulta em traduções impressas e em áudio de uma variedade de recursos, incluindo as Histórias Bíblicas Abertas (Open Bible Stories), notas de estudo, outros recursos de discipulado e porções da Bíblia. Os recursos que você escolher serão específicos para as necessidades da sua comunidade."
+      ]
+    },
+    {
+      "q": "Quanto tempo leva a Tradução da Bíblia Baseada na Igreja?",
+      "a": [
+        "Isso depende do que está sendo traduzido e da experiência anterior da equipe de tradução. No caso dos Zeme, a tradução da Bíblia inteira levou apenas vinte e um meses.",
+        "Em outros casos, o trabalho de tradução leva mais tempo. Algumas comunidades veem a tradução como uma parte importante do seu ministério do evangelho e planejam traduzir e revisar continuamente para garantir que a mensagem do evangelho esteja disponível para cada geração."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+---
+import Base from '../../layouts/Base.astro';
+import SubHero from '../SubHero.astro';
+import MediaText from '../MediaText.astro';
+import { content } from '../../i18n/content';
+
+interface Props {
+  locale: string;
+}
+const { locale } = Astro.props;
+const t = content(locale, 'about');
+const ui = content(locale, 'ui');
+const plain = (s: string) => s.replace(/<[^>]+>/g, '');
+---
+
+<Base locale={locale} slug="about" title={`${t.title} – ${ui.siteTitle}`} description={plain(t.hero.title)}>
+  <SubHero pageTitle={t.title} heroTitle={t.hero.title} image={t.hero.image} />
+
+  <section class="section center-copy">
+    <div class="container">
+      <h2 set:html={t.power.heading} />
+      <p set:html={t.power.body} />
+      <video class="feature-video" src={t.power.video} controls preload="metadata"></video>
+    </div>
+  </section>
+
+  <section class="section center-copy">
+    <div class="container">
+      <p class="demand-line" set:html={t.demand.line1} />
+      <h2 set:html={t.demand.line2} />
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="container cards__list">
+      {
+        t.growth.map((card: any, i: number) => (
+          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream">
+            <p set:html={card.body} />
+          </MediaText>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section center-copy">
+    <div class="container"><h2 set:html={t.paradigmsHeading} /></div>
+  </section>
+
+  <section class="cards">
+    <div class="container cards__list">
+      {
+        t.paradigms.map((card: any, i: number) => (
+          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream">
+            <p set:html={card.body} />
+          </MediaText>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section center-copy">
+    <div class="container"><h2 set:html={t.conditionsHeading} /></div>
+  </section>
+
+  <section class="cards">
+    <div class="container cards__list">
+      {
+        t.conditions.map((group: any, i: number) => (
+          <MediaText image={group.image} media={i % 2 ? 'end' : 'start'} tone="cream">
+            <div class="conditions">
+              {group.items.map((item: any) => (
+                <div class="condition">
+                  <img src={item.icon} alt="" loading="lazy" />
+                  <p class="condition__title" set:html={item.title} />
+                  <p class="condition__body" set:html={item.body} />
+                </div>
+              ))}
+            </div>
+          </MediaText>
+        ))
+      }
+    </div>
+  </section>
+
+  <div class="container"><hr class="separator" /></div>
+
+  <section class="section center-copy">
+    <div class="container"><h2 set:html={t.nextHeading} /></div>
+  </section>
+
+  <section class="cards">
+    <div class="container cards__list">
+      {
+        t.next.map((card: any, i: number) => (
+          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream">
+            <p set:html={card.body} />
+            <p class="cards__cta">
+              <a class="button button--dark" href={card.cta.href}>
+                {card.cta.label}
+              </a>
+            </p>
+          </MediaText>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .center-copy {
+    text-align: center;
+  }
+  .center-copy p {
+    max-width: 46em;
+    margin-inline: auto;
+  }
+  .demand-line {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 1rem + 0.9vw, 1.55rem);
+    font-weight: 600;
+    margin-block-end: 0.4em;
+  }
+  .feature-video {
+    width: min(880px, 100%);
+    margin-inline: auto;
+    margin-block-start: var(--space-4);
+    background: #000;
+  }
+  .cards__list {
+    display: grid;
+    gap: var(--space-4);
+  }
+  .cards__cta {
+    text-align: center;
+  }
+  .conditions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+  .condition img {
+    height: 48px;
+    width: auto;
+    margin-inline: auto;
+    margin-block-end: 0.8em;
+  }
+  .condition {
+    text-align: center;
+  }
+  .condition__title {
+    margin-block-end: 0.4em;
+  }
+  .condition__body {
+    font-size: 14px;
+    margin: 0;
+  }
+  .separator {
+    border: 0;
+    border-top: 1px solid #d8d2c6;
+    margin-block: var(--space-4);
+  }
+  @media (max-width: 620px) {
+    .conditions {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

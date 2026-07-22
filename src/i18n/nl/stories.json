@@ -1,0 +1,54 @@
+{
+  "title": "Impactverhalen",
+  "hero": {
+    "video": "/videos/cbbt-impact-stories-header.mp4",
+    "line1": "Bevolkingsgroepen over de hele wereld nemen deel aan kerkgebaseerde Bijbelvertaling.",
+    "line2": "<strong>Dit zijn hun verhalen.</strong>"
+  },
+  "stories": [
+    {
+      "heading": "Zeme",
+      "location": "<em>India</em>",
+      "body": "Stel dat je een kerkleider bent in een grote bevolkingsgroep. Je bent je bewust van een probleem: hoewel de kerk in jouw bevolkingsgroep al meer dan 100 jaar bestaat…",
+      "readMore": "Lees meer",
+      "pdf": "/files/2024/08/Zeme.pdf",
+      "image": "/images/uploads/2024/08/Zeme-traditional-dance1-min.jpg"
+    },
+    {
+      "heading": "Mblego",
+      "location": "<em>Soedan</em>",
+      "body": "\"Ik voel een zware last voor mijn volk.\" Dit zijn de woorden van Ahmed*, een Soedanese man die onlangs een volgeling van Jezus werd.",
+      "readMore": "Lees meer",
+      "pdf": "/files/2024/07/Mblego-final.pdf",
+      "image": "/images/uploads/2024/06/yusuf-yassir-SoLZCj0W1Ss-unsplash1.webp"
+    },
+    {
+      "heading": "Tavretsi en Khateni",
+      "location": "<em>Eurazië</em>",
+      "body": "Diep in een bergachtig Euraziatisch land hebben twee bevolkingsgroepen geen vertaling van de Bijbel in hun taal.",
+      "readMore": "Lees meer",
+      "pdf": "/files/2024/08/Tavretsi-and-Khateni.pdf",
+      "image": "/images/uploads/2024/07/Screenshot-2024-07-15-at-1.45.52%E2%80%AFPM.png"
+    },
+    {
+      "heading": "Ruska Roma",
+      "location": "<em>Oekraïne</em>",
+      "body": "Stel je het volgende scenario voor. Je bent opgegroeid in de kerk en bent al je hele leven lid — sterker nog, de kerk is deel van de geschiedenis van jouw volk…",
+      "readMore": "Lees meer",
+      "pdf": "/files/2024/08/Ruska-Roma.pdf",
+      "image": "/images/uploads/2024/07/romani-6678445_640.jpg"
+    },
+    {
+      "heading": "Yuracani en Quipa",
+      "location": "<em>Zuid-Amerika</em>",
+      "body": "Zuid-Amerika is het thuis van meer dan 900 bevolkingsgroepen. Velen van hen zijn nog niet met het evangelie bereikt; ze leven in dichte oerwouden en hebben een ongemakkelijke verhouding met de buitenwereld.",
+      "readMore": "Lees meer",
+      "pdf": "/files/2024/09/Yuracani_Quipa.pdf",
+      "image": "/images/uploads/2024/09/yuracani_quipa.jpg"
+    }
+  ],
+  "comingSoon": {
+    "heading": "Er komen binnenkort nieuwe <strong>impactverhalen</strong> aan!",
+    "body": "Elk verhaal laat zien hoe God door Zijn kerk werkt om Zijn Woord bekend te maken.<br>Wil je jouw verhaal hier terugzien? Stuur ons een bericht via het <a href=\"/contact/\">contactformulier</a>."
+  }
+}

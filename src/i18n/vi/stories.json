@@ -1,0 +1,54 @@
+{
+  "title": "Câu chuyện tác động",
+  "hero": {
+    "video": "/videos/cbbt-impact-stories-header.mp4",
+    "line1": "Các dân tộc trên khắp thế giới đang tham gia Phiên dịch Kinh Thánh dựa trên Hội thánh.",
+    "line2": "<strong>Đây là những câu chuyện của họ.</strong>"
+  },
+  "stories": [
+    {
+      "heading": "Zeme",
+      "location": "<em>Ấn Độ</em>",
+      "body": "Giả sử bạn là một lãnh đạo hội thánh trong một dân tộc đông người. Bạn nhận thấy một vấn đề: dù hội thánh đã hiện diện giữa dân tộc bạn hơn 100 năm…",
+      "readMore": "Đọc thêm",
+      "pdf": "/files/2024/08/Zeme.pdf",
+      "image": "/images/uploads/2024/08/Zeme-traditional-dance1-min.jpg"
+    },
+    {
+      "heading": "Mblego",
+      "location": "<em>Sudan</em>",
+      "body": "“Tôi mang gánh nặng lớn cho dân tộc mình.” Đó là lời của Ahmed*, một người Sudan mới trở thành môn đồ của Chúa Giê-xu.",
+      "readMore": "Đọc thêm",
+      "pdf": "/files/2024/07/Mblego-final.pdf",
+      "image": "/images/uploads/2024/06/yusuf-yassir-SoLZCj0W1Ss-unsplash1.webp"
+    },
+    {
+      "heading": "Tavretsi và Khateni",
+      "location": "<em>Âu-Á</em>",
+      "body": "Sâu trong một quốc gia miền núi vùng Âu-Á, có hai dân tộc chưa có bản dịch Kinh Thánh trong ngôn ngữ của họ.",
+      "readMore": "Đọc thêm",
+      "pdf": "/files/2024/08/Tavretsi-and-Khateni.pdf",
+      "image": "/images/uploads/2024/07/Screenshot-2024-07-15-at-1.45.52%E2%80%AFPM.png"
+    },
+    {
+      "heading": "Ruska Roma",
+      "location": "<em>Ukraina</em>",
+      "body": "Hãy hình dung tình huống sau. Bạn lớn lên trong hội thánh và là một thành viên suốt cả cuộc đời — thật vậy, hội thánh đã là một phần lịch sử của dân tộc bạn…",
+      "readMore": "Đọc thêm",
+      "pdf": "/files/2024/08/Ruska-Roma.pdf",
+      "image": "/images/uploads/2024/07/romani-6678445_640.jpg"
+    },
+    {
+      "heading": "Yuracani và Quipa",
+      "location": "<em>Nam Mỹ</em>",
+      "body": "Nam Mỹ là nơi sinh sống của hơn 900 dân tộc. Nhiều dân tộc trong số đó chưa được Phúc Âm vươn đến, sống trong những khu rừng rậm và có mối quan hệ dè dặt với thế giới bên ngoài.",
+      "readMore": "Đọc thêm",
+      "pdf": "/files/2024/09/Yuracani_Quipa.pdf",
+      "image": "/images/uploads/2024/09/yuracani_quipa.jpg"
+    }
+  ],
+  "comingSoon": {
+    "heading": "Những <strong>câu chuyện tác động</strong> mới sắp ra mắt!",
+    "body": "Mỗi câu chuyện cho thấy cách Đức Chúa Trời đang hành động qua hội thánh Ngài để bày tỏ Lời Ngài.<br>Bạn muốn câu chuyện của mình được giới thiệu? Hãy gửi tin nhắn cho chúng tôi qua <a href=\"/contact/\">biểu mẫu liên hệ</a>."
+  }
+}

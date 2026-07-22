@@ -1,0 +1,41 @@
+{
+  "siteTitle": "Traduction de la Bible par l'Église locale",
+  "nav": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "À propos",
+      "href": "/about/"
+    },
+    {
+      "label": "Formation",
+      "href": "/training/"
+    },
+    {
+      "label": "Recherche",
+      "href": "/research/"
+    },
+    {
+      "label": "Histoires d'impact",
+      "href": "/stories/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
+  ],
+  "footer": {
+    "tagline": "Un ministère de l'<strong>Église</strong> ; la manière dont l'Église <em>exerce le ministère</em>.",
+    "description": "Un mouvement mondial qui équipe les Églises pour traduire elles-mêmes la Bible, dans la langue de leur cœur. Car l'Église qui reçoit la Parole est la mieux placée pour la traduire."
+  },
+  "strings": {
+    "formError": "Une erreur s'est produite. Veuillez réessayer ou nous contacter par un autre moyen.",
+    "notFoundTitle": "Page introuvable",
+    "notFoundBody": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "backHome": "Retour à la page d'accueil",
+    "menuLabel": "Menu",
+    "languageLabel": "Langue"
+  }
+}

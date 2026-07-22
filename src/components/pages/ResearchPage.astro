@@ -1,0 +1,112 @@
+---
+import Base from '../../layouts/Base.astro';
+import SubHero from '../SubHero.astro';
+import { content } from '../../i18n/content';
+
+interface Props {
+  locale: string;
+}
+const { locale } = Astro.props;
+const t = content(locale, 'research');
+const ui = content(locale, 'ui');
+const plain = (s: string) => s.replace(/<[^>]+>/g, '');
+---
+
+<Base locale={locale} slug="research" title={`${t.title} – ${ui.siteTitle}`} description={plain(t.intro).slice(0, 160)}>
+  <SubHero pageTitle={t.title} heroTitle={t.hero.title} image={t.hero.image} />
+
+  <section class="section">
+    <div class="container narrow">
+      <p set:html={t.intro} />
+      <hr class="separator" />
+      <h2 set:html={t.papersHeading} />
+      <div class="papers">
+        {
+          t.papers.map((paper: any) => (
+            <div class="paper">
+              <img src={paper.image} alt="" loading="lazy" />
+              <div>
+                <p set:html={paper.body} />
+                <p class="paper__files">
+                  {paper.files.map((f: any) => (
+                    <a class="button button--dark" href={f.href}>
+                      {f.label}
+                    </a>
+                  ))}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <hr class="separator" />
+      <h2 set:html={t.videosHeading} />
+      <div class="videos">
+        {
+          t.videos.map((v: any) => (
+            <div class="video-card">
+              <video src={v.video} controls preload="metadata" />
+              <div>
+                <h3 set:html={v.heading} />
+                <p set:html={v.body} />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .narrow {
+    max-width: 980px;
+  }
+  .separator {
+    border: 0;
+    border-top: 1px solid #d8d2c6;
+    margin-block: var(--space-4);
+  }
+  .papers,
+  .videos {
+    display: grid;
+    gap: var(--space-4);
+    margin-block-start: var(--space-4);
+  }
+  .paper {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: var(--space-3);
+    align-items: center;
+  }
+  .paper img {
+    width: 100%;
+    box-shadow: 0 6px 18px rgb(0 0 0 / 0.18);
+  }
+  .paper__files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+    margin-block-start: 0.9em;
+  }
+  .video-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    align-items: center;
+    background: var(--color-tertiary);
+    border-radius: 6px;
+    padding: var(--space-3);
+    box-shadow: 0 10px 26px rgb(0 0 0 / 0.12);
+  }
+  .video-card video {
+    width: 100%;
+    background: #000;
+  }
+  @media (max-width: 700px) {
+    .paper,
+    .video-card {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

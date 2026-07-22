@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Website-Cover-1024x439.jpg",
+    "title": "Um ministério da <strong>igreja</strong>; a maneira como a igreja <em>faz ministério</em>.",
+    "cta": {
+      "label": "Saiba mais",
+      "href": "/about/"
+    }
+  },
+  "story": {
+    "title": "A Palavra chega ao lar dos <strong>Zeme</strong>.",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/Zeme.webp",
+        "heading": "<strong>Os Zeme precisavam de uma tradução da Bíblia em seu idioma.</strong>",
+        "body": "Embora a igreja estivesse no nordeste da Índia há mais de 100 anos, os Zeme não tinham uma tradução da Bíblia que pudessem usar para o ministério e o evangelismo."
+      },
+      {
+        "image": "/images/uploads/2025/11/Benreu-Village.webp",
+        "heading": "<strong>Mas traduzir a Bíblia é uma tarefa complexa, e é difícil encontrar ajuda.</strong>",
+        "body": "O financiamento era escasso e a tarefa, imensa. Os Zeme precisavam de uma forma de traduzir a Bíblia com os recursos que tinham disponíveis."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Translating.webp",
+        "heading": "<strong>Em busca de uma solução, eles recorreram à Tradução da Bíblia Baseada na Igreja.</strong>",
+        "body": "Uma organização local treinou uma equipe de líderes falantes de Zeme em Tradução da Bíblia Baseada na Igreja (CBBT)."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Bible.webp",
+        "heading": "<strong>A CBBT permitiu que eles traduzissem a Bíblia para o Zeme.</strong>",
+        "body": "A equipe de tradução completou a Bíblia inteira e verificou a exatidão da tradução em apenas vinte e um meses!"
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Traditional-Dance.webp",
+        "heading": "<strong>O trabalho deles está contribuindo para o crescimento da igreja!</strong>",
+        "body": "Com a nova tradução em mãos, os Zeme estão equipados para difundir o evangelho e fazer discípulos de Jesus."
+      }
+    ]
+  },
+  "quote": "<mark>A demanda pela <strong>tradução da Bíblia</strong> é maior do que nunca. A <strong>igreja </strong>precisa de uma <em><strong>solução</strong></em>.</mark>",
+  "how": {
+    "title": "Como a <strong>CBBT</strong> funciona",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/4-1.png",
+        "heading": "Equipando a igreja…",
+        "body": "A CBBT capacita a igreja local a aplicar a experiência e o conhecimento que já possui para atender às suas necessidades de tradução e crescer na compreensão teológica. Os líderes da igreja são treinados nos processos de tradução."
+      },
+      {
+        "image": "/images/uploads/2025/11/3.png",
+        "heading": "…para a obra da tradução…",
+        "body": "As equipes de tradução mergulham profundamente no significado da Palavra de Deus, e os líderes locais e regionais da igreja garantem que as traduções sejam confiáveis, compreensíveis, apropriadas e atraentes. A igreja e a comunidade estão envolvidas no processo desde o início."
+      },
+      {
+        "image": "/images/uploads/2025/11/2.png",
+        "heading": "…para fazer discípulos de Jesus.",
+        "body": "Ao traduzir a Bíblia e recursos de discipulado para o seu idioma, a igreja local é equipada para fazer discípulos de Jesus e alcançar o seu povo com o evangelho."
+      }
+    ]
+  },
+  "fromChurch": {
+    "heading": "Da igreja; para a igreja.",
+    "lead": "<strong>Percorra histórias de como a Tradução da Bíblia Baseada na Igreja está transformando vidas e comunidades no mundo inteiro.</strong>",
+    "body": "De igrejas de vilarejos a redes globais, descubra como Deus está usando o Seu povo para traduzir as Escrituras com fidelidade, compartilhá-las livremente e ver corações transformados por meio da Sua Palavra.",
+    "cta": {
+      "label": "Leia as histórias",
+      "href": "/stories/"
+    },
+    "image": "/images/uploads/2024/08/bennett-tobias-Tt_X-AHU3tg-unsplash.webp"
+  },
+  "finalCta": {
+    "video": "/videos/cbbt-homepage-video.mp4",
+    "heading": "Você está pronto para começar sua jornada na CBBT?",
+    "body": "Como a Tradução da Bíblia Baseada na Igreja pode ajudar você a traduzir a Bíblia para o seu idioma? Conheça nossa biblioteca de recursos de treinamento. Nunca houve um momento melhor do que agora.",
+    "cta": {
+      "label": "Comece agora",
+      "href": "/training/"
+    }
+  }
+}

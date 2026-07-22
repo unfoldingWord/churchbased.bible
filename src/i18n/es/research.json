@@ -1,0 +1,141 @@
+{
+  "title": "Investigación",
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Research-Header.webp",
+    "title": "<strong><strong>Descubre el corazón detrás de la Traducción Bíblica Basada en la Iglesia.</strong></strong>"
+  },
+  "intro": "<br>Aquí encontrarás documentos de investigación y videos cortos de enseñanza que explican las razones bíblicas y teológicas de este enfoque. Cada recurso está diseñado para ayudar a las iglesias de todo el mundo a comprender y aplicar la Palabra de Dios en su propio idioma y contexto.",
+  "papersHeading": "Documentos de investigación",
+  "papers": [
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-28-at-2.54.15%E2%80%AFPM.png",
+      "body": "<strong>Confiable y de Confianza</strong><br>Este documento describe la diferencia entre la confiabilidad de una traducción de la Biblia y la confianza que una iglesia local tiene en ella. Argumenta que la creación de un modelo sistemático de verificación permitirá a las iglesias locales alinear su nivel de confianza en una traducción con su confiabilidad.",
+      "files": [
+        {
+          "label": "Inglés",
+          "href": "/files/2024/07/Trustworthy-and-Trusted_Jore_2017-1.pdf"
+        },
+        {
+          "label": "Español",
+          "href": "/files/2024/07/Traduccion-Confiable-hasta-digna-de-Confianza-1.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-28-at-2.44.28%E2%80%AFPM.png",
+      "body": "<strong>De No Alcanzado a Establecido</strong><br>Este documento contrasta dos paradigmas de la traducción de la Biblia. A medida que el movimiento de traducción adopta nuevos paradigmas como la CBBT, las agencias de traducción de la Biblia tienen nuevas formas de contribuir y apoyar.",
+      "files": [
+        {
+          "label": "Inglés",
+          "href": "/files/2024/06/From-Unreached-to-Established-version1.pdf"
+        },
+        {
+          "label": "Español",
+          "href": "/files/2024/07/From-Unreached-to-Established-Espanol-Version-1.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-28-at-2.50.04%E2%80%AFPM.png",
+      "body": "<strong>Soltando el Control</strong><br>Este documento responde a varias objeciones sobre la concesión de licencias abiertas de recursos bíblicos, argumentando que la norma actual de “todos los derechos reservados” está obstaculizando el crecimiento y la madurez de la iglesia global.",
+      "files": [
+        {
+          "label": "Inglés",
+          "href": "/files/2024/06/Letting-Go-An-Appeal-and-Rationale-for-Open-licensed-Biblical-Content-version1-1.pdf"
+        },
+        {
+          "label": "Español",
+          "href": "/files/2024/07/Letting-Go-Dejando-ir-traduccion-v2.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-28-at-3.00.22%E2%80%AFPM.png",
+      "body": "<strong>“Aprobando” versus “Brindando una Opinión”: El Cambio del Rol de la Consultoría de Traducción Bíblica en el Siglo XXI</strong><br>Este documento analiza el cambio en el rol de los consultores bíblicos, detallando específicamente cómo el crecimiento de la iglesia en el Sur Global ha generado demasiados proyectos de traducción para que los consultores tradicionales puedan mantener el ritmo. Los consultores han comenzado a servir de otras maneras a medida que la iglesia toma la iniciativa en la traducción de la Biblia.",
+      "files": [
+        {
+          "label": "Inglés",
+          "href": "/files/2024/06/SigningOffVsGivingInput.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/12/factorsForEffectiveCBBTFirstPage-1.webp",
+      "body": "<strong>Factores para una CBBT Eficaz</strong><br>Este documento analiza los factores clave para una Traducción Bíblica Basada en la Iglesia eficaz. Estos factores son la apropiación y el liderazgo locales (elementos fundamentales), la capacidad de traducción, el clima eclesial y la escalabilidad práctica.",
+      "files": [
+        {
+          "label": "Inglés",
+          "href": "/files/2024/12/04-Factors-for-Effective-CBBT-Whitepaper.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/03/ilab_qa_recs_pg_1.webp",
+      "body": "<strong>Recomendaciones del Laboratorio de Innovación sobre el Aseguramiento de la Calidad</strong><br>Este documento analiza la traducción multimodal de la Biblia para lograr mayor confianza y accesibilidad, e insta a que la iglesia local dirija el proceso. También aboga por un aseguramiento de la calidad iterativo y por una definición flexible de lo que significa completar una traducción en la Traducción Bíblica Basada en la Iglesia.",
+      "files": [
+        {
+          "label": "Inglés",
+          "href": "/files/2025/03/00-Innovation-Lab-Quality-Assurance-Recommendations-Whitepaper.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/03/evaluating_bible_translation.webp",
+      "body": "<strong>Evaluando la Traducción de la Biblia</strong><br>Este documento analiza la evaluación de la traducción de la Biblia mediante métodos multimodales, la toma de decisiones dirigida por la iglesia y el aseguramiento de la calidad iterativo. Destaca el cambio de las revisiones al final del proceso hacia una participación continua de la comunidad, garantizando que las traducciones sigan siendo relevantes y ampliamente aceptadas.",
+      "files": [
+        {
+          "label": "Inglés",
+          "href": "/files/2025/03/01-Evaluating-Bible-Translation-Whitepaper.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/03/overview_of_ccbt_qa.webp",
+      "body": "<strong>Panorama del Ciclo de Aseguramiento de la Calidad Basado en la Iglesia y la Comunidad (CBBT)</strong><br>Este documento analiza el Ciclo de Traducción de la Biblia Basada en la Iglesia y la Comunidad (CBBT), enfatizando un enfoque sostenible de aseguramiento de la calidad dirigido por la iglesia. Describe un proceso de cinco etapas que incluye el desarrollo de capacidades, la participación de la comunidad, la revisión de la calidad, la validación por parte de los líderes de la iglesia y la revisión iterativa para garantizar una traducción de la Biblia continua y de alta calidad.",
+      "files": [
+        {
+          "label": "Inglés",
+          "href": "/files/2025/03/02-CBBT-Cycle-Whitepaper.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/03/qa_mentor_job_desc.webp",
+      "body": "<strong>Descripción del Puesto de Mentor de Aseguramiento de la Calidad</strong><br>Este documento analiza el rol del Mentor de Aseguramiento de la Calidad en la Traducción Bíblica Basada en la Iglesia (CBBT), enfatizando la colaboración con una Comunidad de Aseguramiento de la Calidad en lugar del modelo tradicional de expertos. El mentor brinda capacitación, acompañamiento y apoyo a los líderes de la iglesia y a los traductores, garantizando una traducción de alta calidad mediante la participación de la comunidad y la interacción multimodal con las Escrituras.",
+      "files": [
+        {
+          "label": "Inglés",
+          "href": "/files/2025/03/03-Quality-Assurance-Mentor-Job-Description-Whitepaper.pdf"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/03/whats_diff_with_mmt.webp",
+      "body": "<strong>¿Qué Cambia con la Traducción Multimodal (MMT) en la Práctica?</strong><br>Este documento analiza los beneficios prácticos de la Traducción Multimodal (MMT) en la traducción de la Biblia, enfatizando una participación integral mediante métodos orales, visuales y textuales. Destaca cómo la MMT mejora la comprensión, la participación de la comunidad y la expresión artística, garantizando que las traducciones resuenen profundamente con los usuarios en los diversos modos de comunicación.",
+      "files": [
+        {
+          "label": "Inglés",
+          "href": "/files/2025/03/07-What-is-Different-with-Multimodal-Translation-in-Practice-v2-Whitepaper.docx.pdf"
+        }
+      ]
+    }
+  ],
+  "videosHeading": "Biblioteca de videos de teología bíblica",
+  "videos": [
+    {
+      "video": "/videos/biblical-theology-video-1-intro.mp4",
+      "heading": "Temas",
+      "body": "Este video presenta brevemente los grandes temas de la narrativa bíblica, los hilos comunes que recorren toda la Escritura y su importancia para una traducción fiel."
+    },
+    {
+      "video": "/videos/biblical-theology-video-2-reasons.mp4",
+      "heading": "Razones",
+      "body": "Este video enfatiza la importancia de situar el texto que se va a traducir dentro del contexto más amplio de la metanarrativa bíblica."
+    },
+    {
+      "video": "/videos/biblical-theology-video-3-resources.mp4",
+      "heading": "Recursos",
+      "body": "Este video destaca recursos para explorar con mayor profundidad la teología bíblica y la metanarrativa de las Escrituras."
+    }
+  ]
+}

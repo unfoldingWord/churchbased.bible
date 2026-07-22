@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Website-Cover-1024x439.jpg",
+    "title": "这是<strong>教会</strong>的事工，也是教会<em>做事工</em>的方式。",
+    "cta": {
+      "label": "了解更多",
+      "href": "/about/"
+    }
+  },
+  "story": {
+    "title": "神的话语临到<strong>泽梅人</strong>中间。",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/Zeme.webp",
+        "heading": "<strong>泽梅人需要一本自己语言的圣经译本。</strong>",
+        "body": "尽管教会进入印度东北部已有一百多年，泽梅人却一直没有一本可以用于事工和传福音的圣经译本。"
+      },
+      {
+        "image": "/images/uploads/2025/11/Benreu-Village.webp",
+        "heading": "<strong>但翻译圣经是一项复杂的工程，帮助也难以寻得。</strong>",
+        "body": "资金匮乏，任务艰巨。泽梅人需要一种方法，能用现有的资源来翻译圣经。"
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Translating.webp",
+        "heading": "<strong>为寻找解决之道，他们转向了以教会为本的圣经翻译。</strong>",
+        "body": "一家本地机构为一支讲泽梅语的教会领袖团队提供了以教会为本的圣经翻译（CBBT）培训。"
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Bible.webp",
+        "heading": "<strong>CBBT 使他们得以将圣经翻译成泽梅语。</strong>",
+        "body": "翻译团队仅用二十一个月就完成了整本圣经的翻译，并核查了译文的准确性！"
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Traditional-Dance.webp",
+        "heading": "<strong>他们的工作正在推动教会的成长！</strong>",
+        "body": "有了新的译本，泽梅人便能装备起来，传扬福音，使人作耶稣的门徒。"
+      }
+    ]
+  },
+  "quote": "<mark>对<strong>圣经翻译</strong>的需求比以往任何时候都更迫切。<strong>教会</strong>需要一个<em><strong>解决方案</strong></em>。</mark>",
+  "how": {
+    "title": "<strong>CBBT</strong> 如何运作",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/4-1.png",
+        "heading": "装备教会……",
+        "body": "CBBT 装备本地教会，运用其已有的经验和专长来满足自身的翻译需要，并在神学理解上不断成长。教会领袖接受翻译流程方面的培训。"
+      },
+      {
+        "image": "/images/uploads/2025/11/3.png",
+        "heading": "……投入翻译工作……",
+        "body": "翻译团队深入钻研神话语的含义，本地及区域的教会领袖则确保译文可信、易懂、合宜且引人乐读。教会和社区从一开始就参与整个过程。"
+      },
+      {
+        "image": "/images/uploads/2025/11/2.png",
+        "heading": "……使人作耶稣的门徒。",
+        "body": "通过把圣经和门徒训练资源翻译成自己的语言，本地教会得以装备起来，使人作耶稣的门徒，把福音传给自己的族群。"
+      }
+    ]
+  },
+  "fromChurch": {
+    "heading": "源于教会，为了教会。",
+    "lead": "<strong>走进以教会为本的圣经翻译的故事，看它如何改变世界各地的生命与社区。</strong>",
+    "body": "从乡村教会到全球网络，来看神如何使用祂的子民忠心地翻译圣经、白白地分享圣经，并借着祂的话语改变人心。",
+    "cta": {
+      "label": "阅读故事",
+      "href": "/stories/"
+    },
+    "image": "/images/uploads/2024/08/bennett-tobias-Tt_X-AHU3tg-unsplash.webp"
+  },
+  "finalCta": {
+    "video": "/videos/cbbt-homepage-video.mp4",
+    "heading": "您准备好开始您的 CBBT 之旅了吗？",
+    "body": "以教会为本的圣经翻译如何帮助您把圣经翻译成您的语言？欢迎浏览我们的培训资源库。现在正是最好的时机。",
+    "cta": {
+      "label": "立即开始",
+      "href": "/training/"
+    }
+  }
+}

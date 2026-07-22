@@ -1,0 +1,87 @@
+{
+  "title": "Training",
+  "hero": {
+    "image": "/images/uploads/2025/11/Training.webp",
+    "title": "<strong>Je kunt <strong>vandaag</strong> nog <strong><em>beginnen</em></strong> met kerkgebaseerde Bijbelvertaling!</strong>"
+  },
+  "intro": "Kerkgebaseerde Bijbelvertaling vindt overal ter wereld plaats, en <strong>jij kunt daaraan deelnemen!</strong> De onderstaande illustratie laat zien hoe CBBT er in de praktijk uit kan zien. <br><br>Een kwalitatief goede Bijbelvertaling is alleen mogelijk wanneer de kerk en de gemeenschap in staat zijn om fouten te corrigeren en de vertaling aan te passen wanneer de taal verandert. Merk op dat <strong>voortdurende evaluatie en herziening</strong> ook na de publicatie blijven plaatsvinden.",
+  "cycleImage": "/images/uploads/2024/11/ilab_cycle_graphic_final_w_fonts.svg",
+  "resourcesHeading": "<strong>Trainingsmaterialen</strong>",
+  "resourcesIntro": "Deze materialen bieden je gedetailleerde, stapsgewijze handleidingen voor het proces van kerkgebaseerde Bijbelvertaling. Heb je vragen, neem dan contact met ons op via het <a href=\"/contact/\">contactformulier</a>.",
+  "resources": [
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.30.26%E2%80%AFPM.png",
+      "heading": "Aan de slag",
+      "body": "Drie handboeken die trainers toerusten om anderen te trainen in CBBT.",
+      "buttons": [
+        {
+          "label": "Cursus 1",
+          "href": "https://docs.google.com/document/d/1SgGqjxoj2XPiUPVsYNG-oxRtFs4akxZbv12SVO75WDE/"
+        },
+        {
+          "label": "Cursus 2",
+          "href": "https://docs.google.com/document/d/1TQEcXotHh8eOWA8tQWdY8q-TfXbI4Ntk/"
+        },
+        {
+          "label": "Cursus 3",
+          "href": "https://docs.google.com/document/d/1mfBAtorpmqMf5PWGH867Pb6zAPnuCex4YJ5OkABR4Ao/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/07/fountain-788430_640.jpg",
+      "heading": "De bron begrijpen",
+      "body": "Een verzameling hulpmiddelen die speciaal zijn ontwikkeld voor vertaalwerk.",
+      "buttons": [
+        {
+          "label": "The Bible Well",
+          "href": "https://app.well.bible/"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2024/06/Screenshot-2024-06-19-at-2.36.58%E2%80%AFPM.png",
+      "heading": "Verdieping",
+      "body": "Een bibliotheek met CBBT-trainingsmaterialen.",
+      "buttons": [
+        {
+          "label": "Bibliotheek",
+          "href": "https://unfoldingword.org/training-hub"
+        }
+      ]
+    },
+    {
+      "image": "/images/uploads/2025/06/FoundationsBT.webp",
+      "heading": "BT-videoserie",
+      "body": "Een videoserie die eenvoudige, herhaalbare werkwijzen laat zien om helder en doeltreffend met Bijbelvertaling te beginnen.",
+      "buttons": [
+        {
+          "label": "FoundationsBT-videoserie",
+          "href": "https://foundationsbt.com"
+        }
+      ]
+    }
+  ],
+  "faqHeading": "<strong>Veelgestelde vragen</strong>",
+  "faqs": [
+    {
+      "q": "Hoeveel kost kerkgebaseerde Bijbelvertaling?",
+      "a": [
+        "De kosten variëren sterk en zijn afhankelijk van de omvang en reikwijdte van het vertaalwerk. Toch is CBBT een kosteneffectieve vertaalmethode, omdat het steunt op de inzet van de lokale kerk."
+      ]
+    },
+    {
+      "q": "Wat zijn voorbeelden van materialen die met behulp van kerkgebaseerde Bijbelvertaling worden vertaald?",
+      "a": [
+        "CBBT levert zowel gedrukte als audiovertalingen op van uiteenlopende materialen, waaronder Open Bible Stories, studieaantekeningen, andere discipelschapsmaterialen en Bijbelgedeelten. Welke materialen je kiest, hangt af van de behoeften van jouw gemeenschap."
+      ]
+    },
+    {
+      "q": "Hoe lang duurt kerkgebaseerde Bijbelvertaling?",
+      "a": [
+        "Dat hangt af van wat er vertaald wordt en van de eerdere ervaring van het vertaalteam. In het geval van de Zeme duurde de vertaling van de hele Bijbel slechts eenentwintig maanden.",
+        "In andere gevallen duurt het vertaalwerk langer. Sommige gemeenschappen zien vertaling als een belangrijk onderdeel van hun evangeliebediening en zijn van plan om voortdurend te vertalen en te herzien, zodat de boodschap van het evangelie voor elke generatie beschikbaar blijft."
+      ]
+    }
+  ]
+}

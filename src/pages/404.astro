@@ -1,0 +1,63 @@
+---
+// Cloudflare Pages serves /404.html for any unknown path, across all locales,
+// so this single page offers every language's home link.
+import '@fontsource-variable/plus-jakarta-sans';
+import '../styles/global.css';
+import { locales, localePath } from '../i18n/config';
+import { content } from '../i18n/content';
+
+const ui = content('en', 'ui');
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{ui.strings.notFoundTitle} – {ui.siteTitle}</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/images/uploads/2025/11/CBBT-Logo.png" type="image/png" />
+  </head>
+  <body>
+    <main class="nf">
+      <img src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="72" height="72" />
+      <h1>{ui.strings.notFoundTitle}</h1>
+      <p>{ui.strings.notFoundBody}</p>
+      <p><a class="button" href="/">{ui.strings.backHome}</a></p>
+      <nav aria-label="Languages" class="nf__langs">
+        {
+          locales.map((l) => (
+            <a href={localePath(l.code, 'home')} lang={l.tag} dir={l.dir}>
+              {l.name}
+            </a>
+          ))
+        }
+      </nav>
+    </main>
+  </body>
+</html>
+
+<style>
+  .nf {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-4);
+    background: var(--color-tertiary);
+  }
+  .nf img {
+    filter: invert(1);
+    margin-block-end: var(--space-3);
+  }
+  .nf__langs {
+    margin-block-start: var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em 1.2em;
+    justify-content: center;
+    max-width: 40em;
+    font-size: 14px;
+  }
+</style>

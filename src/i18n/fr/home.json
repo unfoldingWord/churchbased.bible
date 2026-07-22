@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Website-Cover-1024x439.jpg",
+    "title": "Un ministère de l'<strong>Église</strong> ; la manière dont l'Église <em>exerce le ministère</em>.",
+    "cta": {
+      "label": "En savoir plus",
+      "href": "/about/"
+    }
+  },
+  "story": {
+    "title": "La Parole est enfin chez elle parmi les <strong>Zeme</strong>.",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/Zeme.webp",
+        "heading": "<strong>Les Zeme avaient besoin d'une traduction de la Bible dans leur langue.</strong>",
+        "body": "Bien que l'Église soit présente dans le nord-est de l'Inde depuis plus de 100 ans, les Zeme ne disposaient pas d'une traduction de la Bible qu'ils pouvaient utiliser pour le ministère et l'évangélisation."
+      },
+      {
+        "image": "/images/uploads/2025/11/Benreu-Village.webp",
+        "heading": "<strong>Mais traduire la Bible est une tâche complexe, et il est difficile de trouver de l'aide.</strong>",
+        "body": "Les financements étaient rares et la tâche immense. Les Zeme devaient trouver un moyen de traduire la Bible avec les ressources dont ils disposaient."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Translating.webp",
+        "heading": "<strong>En quête d'une solution, ils se sont tournés vers la traduction de la Bible par l'Église locale.</strong>",
+        "body": "Une organisation locale a formé une équipe de responsables parlant le zeme à la traduction de la Bible par l'Église locale (CBBT)."
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Bible.webp",
+        "heading": "<strong>La CBBT leur a permis de traduire la Bible en zeme.</strong>",
+        "body": "L'équipe de traduction a achevé la Bible entière et vérifié l'exactitude de la traduction en seulement vingt-et-un mois !"
+      },
+      {
+        "image": "/images/uploads/2025/11/Zeme-Traditional-Dance.webp",
+        "heading": "<strong>Leur travail contribue à la croissance de l'Église !</strong>",
+        "body": "Avec cette nouvelle traduction en main, les Zeme sont équipés pour annoncer l'Évangile et faire des disciples de Jésus."
+      }
+    ]
+  },
+  "quote": "<mark>La demande pour des <strong>traductions de la Bible</strong> est plus forte que jamais. L'<strong>Église </strong>a besoin d'une <em><strong>solution</strong></em>.</mark>",
+  "how": {
+    "title": "Comment fonctionne la <strong>CBBT</strong>",
+    "steps": [
+      {
+        "image": "/images/uploads/2025/11/4-1.png",
+        "heading": "Équiper l'Église…",
+        "body": "La CBBT permet à l'Église locale de mettre à profit son expérience et ses compétences pour répondre à ses propres besoins en matière de traduction et grandir dans la compréhension théologique. Les responsables d'Églises sont formés aux processus de traduction."
+      },
+      {
+        "image": "/images/uploads/2025/11/3.png",
+        "heading": "…pour l'œuvre de traduction…",
+        "body": "Les équipes de traduction étudient en profondeur le sens de la Parole de Dieu, et les responsables d'Églises locaux et régionaux veillent à ce que les traductions soient fiables, compréhensibles, appropriées et attrayantes. L'Église et la communauté sont engagées dans le processus dès le début."
+      },
+      {
+        "image": "/images/uploads/2025/11/2.png",
+        "heading": "…afin de faire des disciples de Jésus.",
+        "body": "En traduisant la Bible et des ressources de formation de disciples dans leur langue, l'Église locale est équipée pour faire des disciples de Jésus et atteindre son peuple avec l'Évangile."
+      }
+    ]
+  },
+  "fromChurch": {
+    "heading": "De l'Église ; pour l'Église.",
+    "lead": "<strong>Parcourez des histoires où la traduction de la Bible par l'Église locale transforme des vies et des communautés à travers le monde.</strong>",
+    "body": "Des Églises de village aux réseaux mondiaux, découvrez comment Dieu se sert de son peuple pour traduire fidèlement les Écritures, les partager librement et transformer les cœurs par sa Parole.",
+    "cta": {
+      "label": "Lire les histoires",
+      "href": "/stories/"
+    },
+    "image": "/images/uploads/2024/08/bennett-tobias-Tt_X-AHU3tg-unsplash.webp"
+  },
+  "finalCta": {
+    "video": "/videos/cbbt-homepage-video.mp4",
+    "heading": "Êtes-vous prêt à commencer votre parcours CBBT ?",
+    "body": "Comment la traduction de la Bible par l'Église locale peut-elle vous aider à traduire la Bible dans votre langue ? Découvrez notre bibliothèque de ressources de formation. Il n'y a jamais eu de meilleur moment que maintenant.",
+    "cta": {
+      "label": "Commencer",
+      "href": "/training/"
+    }
+  }
+}

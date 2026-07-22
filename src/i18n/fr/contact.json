@@ -1,0 +1,28 @@
+{
+  "title": "Contact",
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Lower-Banner.webp",
+    "title": "<strong>Chaque voix, chaque Église, une seule mission</strong>"
+  },
+  "intro": "De toute nation et de toute langue, Dieu bâtit son Église. Que vous souhaitiez en savoir plus, partager une histoire ou rejoindre le mouvement mondial de la traduction de la Bible par l'Église locale, nous serions heureux d'échanger avec vous.",
+  "matter": "<strong>Votre message compte !</strong>",
+  "form": {
+    "name": "Nom",
+    "email": "Adresse e-mail",
+    "required": "(obligatoire)",
+    "subject": "Quel est l'objet de votre message ?",
+    "subjectOptions": [
+      "Sélectionnez une option",
+      "Question sur les ressources et la formation",
+      "Intérêt pour démarrer un projet",
+      "Partager au sujet d'un projet",
+      "Commentaire sur une histoire d'impact",
+      "Erreur | Correction",
+      "Autre"
+    ],
+    "message": "Message",
+    "submit": "Envoyer",
+    "success": "Merci pour votre message. ✨",
+    "back": "← Retour"
+  }
+}

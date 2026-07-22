@@ -1,0 +1,28 @@
+{
+  "title": "Liên hệ",
+  "hero": {
+    "image": "/images/uploads/2025/11/CBBT-Lower-Banner.webp",
+    "title": "<strong>Mỗi tiếng nói, mỗi hội thánh, một sứ mạng</strong>"
+  },
+  "intro": "Từ mọi quốc gia và mọi thứ tiếng, Đức Chúa Trời đang xây dựng hội thánh Ngài. Dù bạn muốn tìm hiểu thêm, chia sẻ một câu chuyện, hay tham gia phong trào toàn cầu về Phiên dịch Kinh Thánh dựa trên Hội thánh, chúng tôi rất mong được kết nối với bạn.",
+  "matter": "<strong>Lời nhắn của bạn rất quan trọng!</strong>",
+  "form": {
+    "name": "Họ tên",
+    "email": "Email",
+    "required": "(bắt buộc)",
+    "subject": "Chủ đề lời nhắn của bạn là gì?",
+    "subjectOptions": [
+      "Chọn một mục",
+      "Câu hỏi về tài liệu và huấn luyện",
+      "Quan tâm đến việc khởi động một dự án",
+      "Chia sẻ về một dự án",
+      "Nhận xét về một câu chuyện tác động",
+      "Báo lỗi | Đính chính",
+      "Khác"
+    ],
+    "message": "Lời nhắn",
+    "submit": "Gửi",
+    "success": "Cảm ơn bạn đã phản hồi. ✨",
+    "back": "← Quay lại"
+  }
+}

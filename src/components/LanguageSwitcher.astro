@@ -1,0 +1,103 @@
+---
+import { locales, byCode, localePath, type PageSlug } from '../i18n/config';
+
+interface Props {
+  locale: string;
+  slug: PageSlug;
+  label?: string;
+}
+const { locale, slug, label = 'Language' } = Astro.props;
+const current = byCode(locale);
+---
+
+<div class="lang-switcher">
+  <button
+    class="lang-switcher__toggle"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-label={label}
+  >
+    <span aria-hidden="true">{current.flag}</span>
+    <span>{current.name}</span>
+    <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
+      <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" />
+    </svg>
+  </button>
+  <ul class="lang-switcher__menu" role="listbox">
+    {
+      locales.map((l) => (
+        <li role="option" aria-selected={l.code === locale}>
+          <a href={localePath(l.code, slug)} lang={l.tag}>
+            <span aria-hidden="true">{l.flag}</span> {l.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  .lang-switcher {
+    position: relative;
+    font-family: var(--font-body);
+    font-size: 15px;
+  }
+  .lang-switcher__toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background: #fdfaf4;
+    color: var(--color-contrast);
+    border: 0;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font: inherit;
+  }
+  .lang-switcher__menu {
+    display: none;
+    position: absolute;
+    inset-inline-end: 0;
+    top: 100%;
+    margin: 0;
+    padding: 0.25em 0;
+    list-style: none;
+    background: #fdfaf4;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.18);
+    max-height: 70vh;
+    overflow-y: auto;
+    min-width: 12em;
+    z-index: 60;
+  }
+  .lang-switcher.is-open .lang-switcher__menu {
+    display: block;
+  }
+  .lang-switcher__menu a {
+    display: block;
+    padding: 0.4em 1em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .lang-switcher__menu a:hover {
+    background: var(--color-tertiary);
+  }
+  .lang-switcher__menu [aria-selected='true'] a {
+    font-weight: 600;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.lang-switcher').forEach((root) => {
+    const toggle = root.querySelector('.lang-switcher__toggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', () => {
+      const open = root.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    document.addEventListener('click', (e) => {
+      if (!root.contains(e.target as Node)) {
+        root.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+</script>

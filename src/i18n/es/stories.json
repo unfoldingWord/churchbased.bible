@@ -1,0 +1,54 @@
+{
+  "title": "Historias de impacto",
+  "hero": {
+    "video": "/videos/cbbt-impact-stories-header.mp4",
+    "line1": "Grupos étnicos de todo el mundo participan en la Traducción Bíblica Basada en la Iglesia.",
+    "line2": "<strong>Estas son sus historias.</strong>"
+  },
+  "stories": [
+    {
+      "heading": "Zeme",
+      "location": "<em>India</em>",
+      "body": "Supongamos que eres un líder de iglesia en un grupo étnico grande. Has notado un problema: aunque la iglesia ha existido en tu grupo étnico por más de 100 años…",
+      "readMore": "Leer más",
+      "pdf": "/files/2024/08/Zeme.pdf",
+      "image": "/images/uploads/2024/08/Zeme-traditional-dance1-min.jpg"
+    },
+    {
+      "heading": "Mblego",
+      "location": "<em>Sudán</em>",
+      "body": "“Siento una gran carga por mi pueblo”. Estas son las palabras de Ahmed*, un hombre sudanés que hace poco se convirtió en seguidor de Jesús.",
+      "readMore": "Leer más",
+      "pdf": "/files/2024/07/Mblego-final.pdf",
+      "image": "/images/uploads/2024/06/yusuf-yassir-SoLZCj0W1Ss-unsplash1.webp"
+    },
+    {
+      "heading": "Tavretsi y Khateni",
+      "location": "<em>Eurasia</em>",
+      "body": "En lo profundo de un país montañoso de Eurasia, dos grupos étnicos no cuentan con una traducción de la Biblia en su idioma.",
+      "readMore": "Leer más",
+      "pdf": "/files/2024/08/Tavretsi-and-Khateni.pdf",
+      "image": "/images/uploads/2024/07/Screenshot-2024-07-15-at-1.45.52%E2%80%AFPM.png"
+    },
+    {
+      "heading": "Ruska Roma",
+      "location": "<em>Ucrania</em>",
+      "body": "Imagina el siguiente escenario. Has crecido en la iglesia y has sido miembro toda tu vida; de hecho, la iglesia ha sido parte de la historia de tu pueblo…",
+      "readMore": "Leer más",
+      "pdf": "/files/2024/08/Ruska-Roma.pdf",
+      "image": "/images/uploads/2024/07/romani-6678445_640.jpg"
+    },
+    {
+      "heading": "Yuracani y Quipa",
+      "location": "<em>América del Sur</em>",
+      "body": "América del Sur es hogar de más de 900 grupos étnicos. Muchos de ellos no han sido alcanzados por el evangelio; viven en selvas densas y mantienen relaciones tensas con el mundo exterior.",
+      "readMore": "Leer más",
+      "pdf": "/files/2024/09/Yuracani_Quipa.pdf",
+      "image": "/images/uploads/2024/09/yuracani_quipa.jpg"
+    }
+  ],
+  "comingSoon": {
+    "heading": "¡Pronto llegarán nuevas <strong>historias de impacto</strong>!",
+    "body": "Cada historia muestra cómo Dios está obrando a través de su iglesia para dar a conocer su Palabra.<br>¿Quieres que tu historia aparezca aquí? Envíanos un mensaje a través del <a href=\"/contact/\">formulario de contacto</a>."
+  }
+}
