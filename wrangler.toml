@@ -1,13 +1,19 @@
-# Cloudflare Pages configuration.
-# Deploy:  npx wrangler pages deploy dist --project-name churchbased-bible
-# (or connect the git repo in the Cloudflare dashboard: build command
-#  "npm run build", output directory "dist")
+# Cloudflare Workers + Static Assets configuration.
+# Deploy:  npx wrangler deploy   (the dashboard build runs this automatically)
+# `npm run build` produces dist/; the Worker in worker/index.ts serves the
+# contact API and legacy redirects, falling through to the static assets.
 name = "churchbased-bible"
+main = "worker/index.ts"
 compatibility_date = "2026-07-01"
-pages_build_output_dir = "dist"
 
-# Non-secret contact-form config (RESEND_API_KEY is set as an encrypted
-# variable in the Pages dashboard, never here).
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+# Serve /404.html (with a 404 status) for any unmatched path.
+not_found_handling = "404-page"
+
+# Non-secret contact-form config. RESEND_API_KEY (and optional TURNSTILE_SECRET)
+# are encrypted secrets set in the dashboard, never committed here.
 [vars]
 CONTACT_TO = "churchbased.bible@unfoldingword.org"
 CONTACT_FROM = "CBBT Website <noreply@churchbased.bible>"

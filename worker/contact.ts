@@ -1,26 +1,24 @@
-// Cloudflare Pages Function: POST /api/contact
+// Contact-form handler for POST /api/contact.
 // Spam defenses: honeypot field ("website") + optional Turnstile when
 // TURNSTILE_SECRET is configured. Email delivery via Resend.
 //
-// Required environment variables (Pages project → Settings → Variables):
-//   RESEND_API_KEY  – API key from resend.com
-//   CONTACT_TO      – destination inbox for submissions
-//   CONTACT_FROM    – verified sender, e.g. "CBBT Website <noreply@churchbased.bible>"
-// Optional:
-//   TURNSTILE_SECRET – enables server-side Turnstile verification
+// Environment variables (Workers project → Settings → Variables & Secrets):
+//   RESEND_API_KEY   – secret; API key from resend.com
+//   CONTACT_TO       – destination inbox (set in wrangler.toml [vars])
+//   CONTACT_FROM     – verified sender (set in wrangler.toml [vars])
+//   TURNSTILE_SECRET – optional secret; enables server-side Turnstile verification
+import type { Env } from './index';
 
-interface Env {
-  RESEND_API_KEY: string;
-  CONTACT_TO: string;
-  CONTACT_FROM: string;
-  TURNSTILE_SECRET?: string;
-}
+const esc = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
-const esc = (s: string) =>
-  s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
-
-export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
-  const form = await request.formData();
+export async function handleContact(request: Request, env: Env): Promise<Response> {
+  let form: FormData;
+  try {
+    form = await request.formData();
+  } catch {
+    // Malformed body / missing multipart content-type — treat as a bad request.
+    return new Response(JSON.stringify({ error: 'invalid' }), { status: 400 });
+  }
 
   // Honeypot: real users never fill this hidden field.
   if (String(form.get('website') ?? '') !== '') {
@@ -39,7 +37,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   if (env.TURNSTILE_SECRET) {
     const token = String(form.get('cf-turnstile-response') ?? '');
-    const verify = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    const verify = (await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
       headers: { 'content-type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
@@ -47,7 +45,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
         response: token,
         remoteip: request.headers.get('cf-connecting-ip') ?? '',
       }),
-    }).then((r) => r.json() as Promise<{ success: boolean }>);
+    }).then((r) => r.json())) as { success: boolean };
     if (!verify.success) {
       return new Response(JSON.stringify({ error: 'turnstile' }), { status: 403 });
     }
@@ -79,4 +77,4 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   return new Response(JSON.stringify({ ok: true }), {
     headers: { 'content-type': 'application/json' },
   });
-};
+}
