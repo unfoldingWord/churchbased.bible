@@ -62,7 +62,7 @@ const homeHref = localePath(locale, 'home');
   }
   .lang-float {
     position: absolute;
-    top: 0;
+    top: 14px;
     inset-inline-end: 5%;
     z-index: 50;
   }
@@ -71,7 +71,9 @@ const homeHref = localePath(locale, 'home');
     align-items: center;
     justify-content: space-between;
     gap: var(--space-3);
-    padding: 28px 5%;
+    /* Extra top padding reserves a band for the floating language switcher,
+       so it never overlaps the nav links (e.g. "Contact"). */
+    padding: 68px 5% 24px;
     font-family: var(--font-heading);
   }
   .site-header--solid {
@@ -122,6 +124,11 @@ const homeHref = localePath(locale, 'home');
     padding: 4px;
   }
   @media (max-width: 700px) {
+    /* Decorative tagline (also shown in the hero/footer) would run under the
+       floating language switcher on narrow screens — drop it here. */
+    .tagline-strip {
+      display: none;
+    }
     .site-nav__open {
       display: block;
     }
