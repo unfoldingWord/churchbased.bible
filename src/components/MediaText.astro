@@ -18,9 +18,16 @@ interface Props {
   /** Narrow the media column to this track size (e.g. "0.6fr" or "260px"),
    *  regardless of which side the media is on. Content takes the rest. */
   mediaFrac?: string;
+  /** Minimum card height at desktop (fill-mode cards with short text would
+   *  otherwise collapse — the source keeps these at 250px). */
+  minH?: string;
 }
-const { image, imageAlt = '', media = 'start', shadow = true, hero = false, tone = 'plain', aspect, mediaFrac } = Astro.props;
-const style = [aspect ? `--crop:${aspect}` : '', mediaFrac ? `--media-frac:${mediaFrac}` : '']
+const { image, imageAlt = '', media = 'start', shadow = true, hero = false, tone = 'plain', aspect, mediaFrac, minH } = Astro.props;
+const style = [
+  aspect ? `--crop:${aspect}` : '',
+  mediaFrac ? `--media-frac:${mediaFrac}` : '',
+  minH ? `--card-min:${minH}` : '',
+]
   .filter(Boolean)
   .join(';');
 
@@ -40,6 +47,7 @@ const columns = mediaFrac
     // Cream cards paint the whole card, so a fixed-aspect image shorter than
     // the content never shows white around its edges.
     tone === 'cream' && 'bg-cream-light',
+    minH && 'md:min-h-[var(--card-min)]',
   ]}
   style={style || undefined}
 >

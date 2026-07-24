@@ -35,7 +35,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.growth.map((card: any, i: number) => (
-          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream">
+          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream" mediaFrac="0.82fr" minH="250px">
             <p set:html={card.body} />
           </MediaText>
         ))
@@ -51,7 +51,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.paradigms.map((card: any, i: number) => (
-          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream">
+          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream" mediaFrac="0.82fr" minH="250px">
             <p set:html={card.body} />
           </MediaText>
         ))
@@ -67,7 +67,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.conditions.map((group: any, i: number) => (
-          <MediaText image={group.image} media={i % 2 ? 'end' : 'start'} tone="cream" mediaFrac="minmax(220px, 0.45fr)">
+          <MediaText image={group.image} media={i % 2 ? 'end' : 'start'} tone="cream" mediaFrac="minmax(220px, 0.43fr)">
             <div class="grid grid-cols-1 gap-7 sm:grid-cols-2">
               {group.items.map((item: any) => (
                 <div class="text-center">
@@ -93,7 +93,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.next.map((card: any, i: number) => (
-          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream">
+          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream" mediaFrac="0.67fr" minH="250px">
             <p set:html={card.body} />
             <p class="mt-6 text-center">
               <a class="button button--dark" href={card.cta.href}>

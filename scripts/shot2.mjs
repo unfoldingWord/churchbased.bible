@@ -18,8 +18,15 @@ await page.evaluate(async () => {
   await document.fonts.ready;
   for (let y = 0; y < document.body.scrollHeight; y += 700) {
     window.scrollTo({ top: y, behavior: 'instant' });
-    await new Promise((r) => setTimeout(r, 30));
+    await new Promise((r) => setTimeout(r, 60));
   }
+  // Force-load any lazy image the scroll pass didn't catch, and wait for all.
+  document.querySelectorAll('img[loading=lazy]').forEach((i) => (i.loading = 'eager'));
+  await Promise.all(
+    [...document.images].map((i) =>
+      i.complete ? null : new Promise((r) => { i.onload = i.onerror = r; })
+    )
+  );
   window.scrollTo({ top: 0, behavior: 'instant' });
   await new Promise((r) => setTimeout(r, 300));
 });
