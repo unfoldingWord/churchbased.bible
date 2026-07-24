@@ -42,14 +42,24 @@ const columns = mediaFrac
 >
   {
     image && (
-      <figure class:list={['m-0', media === 'end' && 'md:order-2', aspect ? 'flex min-h-0 items-center' : 'min-h-full']}>
+      <figure
+        class:list={[
+          'm-0',
+          media === 'end' && 'md:order-2',
+          // Fill mode: the image is absolutely positioned at desktop so it can
+          // never drive the row height — portrait sources crop to the
+          // content's height exactly like landscape ones. On mobile (stacked)
+          // the figure provides its own 3:2 box instead.
+          aspect ? 'flex min-h-0 items-center' : 'relative max-md:aspect-[3/2] md:min-h-full',
+        ]}
+      >
         <img
           src={image}
           alt={imageAlt}
           loading={hero ? 'eager' : 'lazy'}
           class:list={[
             'w-full object-cover',
-            aspect ? 'h-auto [aspect-ratio:var(--crop)]' : 'h-full',
+            aspect ? 'h-auto [aspect-ratio:var(--crop)]' : 'h-full md:absolute md:inset-0',
           ]}
         />
       </figure>
