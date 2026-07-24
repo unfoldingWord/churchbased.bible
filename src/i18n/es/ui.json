@@ -37,6 +37,8 @@
     "backHome": "Volver a la página de inicio",
     "menuLabel": "Menú",
     "languageLabel": "Idioma",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "stayConnected": "Mantente conectado",
+    "stayConnectedBody": "¿Buscas más información o ayuda para comenzar? Escríbenos a:"
   }
 }

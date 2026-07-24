@@ -37,6 +37,8 @@
     "backHome": "Terug naar de startpagina",
     "menuLabel": "Menu",
     "languageLabel": "Taal",
-    "close": "Sluiten"
+    "close": "Sluiten",
+    "stayConnected": "Blijf verbonden",
+    "stayConnectedBody": "Op zoek naar meer informatie of hulp om te beginnen? Stuur ons een e-mail:"
   }
 }

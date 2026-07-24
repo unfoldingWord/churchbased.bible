@@ -37,6 +37,8 @@
     "backHome": "Rudi kwenye ukurasa wa mwanzo",
     "menuLabel": "Menyu",
     "languageLabel": "Lugha",
-    "close": "Funga"
+    "close": "Funga",
+    "stayConnected": "Tuwasiliane",
+    "stayConnectedBody": "Unatafuta maelezo zaidi au msaada wa kuanza? Tutumie barua pepe:"
   }
 }

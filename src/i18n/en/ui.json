@@ -37,6 +37,8 @@
     "backHome": "Back to the homepage",
     "menuLabel": "Menu",
     "languageLabel": "Language",
-    "close": "Close"
+    "close": "Close",
+    "stayConnected": "Stay Connected",
+    "stayConnectedBody": "Looking for more information or help getting started? Send us an email at:"
   }
 }

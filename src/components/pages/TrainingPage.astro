@@ -17,7 +17,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
   <SubHero pageTitle={t.title} heroTitle={t.hero.title} image={t.hero.image} />
 
   <section class="py-sect">
-    <div class="mx-auto max-w-[880px] px-7">
+    <div class="mx-auto max-w-content px-7">
       <p set:html={t.intro} />
       <img class="mx-auto my-card w-full max-w-[560px]" src={t.cycleImage} alt="" loading="lazy" />
       <h2 class="text-center" set:html={t.resourcesHeading} />

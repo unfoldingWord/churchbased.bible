@@ -23,9 +23,9 @@ const heroImage = '/images/uploads/2025/11/CBBT-Website-Cover.webp';
     style={`background-image:url('${heroImage}')`}
   >
     <Header locale={locale} ui={ui} slug="home" variant="overlay" />
-    <div class="relative mx-auto max-w-[1000px] px-7 text-center text-white">
+    <div class="relative mx-auto w-full max-w-[1140px] px-7 text-center text-white">
       <img class="mx-auto w-20" src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="120" height="120" />
-      <h1 class="mt-[1.4em] mb-[0.9em] text-2xl text-white" set:html={t.hero.title} />
+      <h1 class="mt-[1.4em] mb-[0.9em] text-2xl text-balance text-white" set:html={t.hero.title} />
       <a class="button" href={t.hero.cta.href}>{t.hero.cta.label}</a>
     </div>
   </section>
@@ -33,17 +33,19 @@ const heroImage = '/images/uploads/2025/11/CBBT-Website-Cover.webp';
   <section class="py-sect">
     <div class="mx-auto max-w-content px-7">
       <h2 class="mb-sect text-center text-2xl" set:html={t.story.title} />
-      <div class="grid grid-cols-1 gap-x-card gap-y-sect md:grid-cols-2">
+      <div class="grid grid-cols-1 gap-x-7 gap-y-12 md:grid-cols-2">
         {
           t.story.steps.map((step: any, i: number) => {
             const feature = i === t.story.steps.length - 1;
             return (
               <div
                 class:list={[
-                  'grid grid-cols-1 items-start gap-7 sm:grid-cols-[1fr_1.25fr]',
+                  // Matches the source: square image filling half the cell,
+                  // text beside it.
+                  'grid grid-cols-1 items-start gap-6 sm:grid-cols-2',
                   // Final step spans the full width with a large image — the
                   // emphatic close of the Zeme story (as on the original).
-                  feature && 'md:col-span-2 md:grid-cols-2 md:gap-card',
+                  feature && 'md:col-span-2 md:gap-card',
                 ]}
                 data-reveal
               >
@@ -51,16 +53,10 @@ const heroImage = '/images/uploads/2025/11/CBBT-Website-Cover.webp';
                   src={step.image}
                   alt=""
                   loading="lazy"
-                  class:list={['w-full object-cover', feature ? 'aspect-[3/2]' : 'aspect-[4/3.1]']}
+                  class:list={['w-full object-cover', feature ? 'aspect-[3/2]' : 'aspect-square']}
                 />
                 <div>
-                  <h3
-                    class:list={[
-                      feature ? 'text-2xl' : 'text-[clamp(1.5rem,1.1rem+1.5vw,2rem)]',
-                      'mb-[0.5em]',
-                    ]}
-                    set:html={step.heading}
-                  />
+                  <h3 class:list={[feature ? 'text-2xl' : 'text-lg', 'mb-[0.5em]']} set:html={step.heading} />
                   <p class:list={['m-0', feature ? 'text-lg leading-[1.55]' : 'text-base']} set:html={step.body} />
                 </div>
               </div>
@@ -75,7 +71,7 @@ const heroImage = '/images/uploads/2025/11/CBBT-Website-Cover.webp';
     <div class="mx-auto max-w-content px-7">
       <blockquote class="m-0 text-center">
         <p
-          class="mx-auto my-0 max-w-[18em] font-heading text-3xl leading-[1.25] font-semibold [&_mark]:bg-transparent [&_mark]:text-inherit"
+          class="mx-auto my-0 font-heading text-2xl leading-[1.25] font-semibold [&_mark]:bg-transparent [&_mark]:text-inherit"
           set:html={t.quote}
         />
       </blockquote>
@@ -101,8 +97,8 @@ const heroImage = '/images/uploads/2025/11/CBBT-Website-Cover.webp';
 
   <section class="py-sect">
     <div class="mx-auto max-w-content px-7">
-      <MediaText image={t.fromChurch.image} media="end" tone="cream">
-        <h2 class="text-center" set:html={t.fromChurch.heading} />
+      <MediaText image={t.fromChurch.image} media="end" tone="cream" mediaFrac="0.67fr">
+        <h2 class="text-center text-balance" set:html={t.fromChurch.heading} />
         <p><strong set:html={t.fromChurch.lead} /></p>
         <p set:html={t.fromChurch.body} />
         <p class="mt-4 text-center">

@@ -37,6 +37,8 @@
     "backHome": "بازگشت به صفحهٔ اصلی",
     "menuLabel": "منو",
     "languageLabel": "زبان",
-    "close": "بستن"
+    "close": "بستن",
+    "stayConnected": "در ارتباط باشید",
+    "stayConnectedBody": "به دنبال اطلاعات بیشتر یا کمک برای شروع هستید؟ به ما ایمیل بزنید:"
   }
 }

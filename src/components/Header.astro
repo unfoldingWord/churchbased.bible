@@ -30,9 +30,18 @@ const closeLabel = ui.strings?.close ?? 'Close';
     variant === 'solid' ? 'bg-ink' : 'absolute inset-x-0 top-0 z-40 bg-transparent pt-[52px]',
   ]}
 >
-  <p class="m-0 flex-none text-[clamp(1.4rem,1.1rem+0.9vw,1.75rem)] leading-[1.1] font-bold whitespace-nowrap">
+  {/* Mobile: smaller, wrappable wordmark so the menu button always fits.
+      Desktop (nav:): full size on a single line. */}
+  <p class="nav:flex-none m-0 min-w-0 text-[clamp(1.125rem,0.9rem+1vw,1.75rem)] leading-[1.15] font-bold nav:whitespace-nowrap">
     <a href={homeHref} class="inline-flex items-center gap-[0.6em] text-white no-underline">
-      <img class="w-12 flex-none" src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="48" height="48" />
+      {
+        /* The homepage hero already shows the logo mark front and center —
+           showing it twice above the fold looks odd, so the overlay header
+           (homepage only) is wordmark-only. */
+        variant === 'solid' && (
+          <img class="nav:w-12 w-10 flex-none" src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="48" height="48" />
+        )
+      }
       <span>{ui.siteTitle}</span>
     </a>
   </p>
@@ -62,8 +71,9 @@ const closeLabel = ui.strings?.close ?? 'Close';
       </button>
       <ul class="m-0 flex list-none gap-[1.5em] p-0 max-nav:flex-col max-nav:items-center max-nav:gap-[1.4em] max-nav:text-xl">
         {
-          // The contact page is gone — its email lives in the footer instead.
-          ui.nav.filter((item: { href: string }) => item.href !== '/contact/').map((item: { label: string; href: string }) => {
+          // "Home" is redundant (the wordmark links home) and the contact page
+          // is gone — its email lives in the footer instead.
+          ui.nav.filter((item: { href: string }) => item.href !== '/contact/' && item.href !== '/').map((item: { label: string; href: string }) => {
             const href = item.href === '/' ? homeHref : localePath(locale, item.href.replaceAll('/', '') as PageSlug);
             const current = item.href === `/${slug === 'home' ? '' : slug + '/'}`;
             return (

@@ -14,7 +14,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
 
 <Base locale={locale} slug="stories" title={`${t.title} – ${ui.siteTitle}`} description={plain(t.hero.line1)}>
   <div class="mx-auto max-w-content px-7">
-    <h1 class="mt-[1.6em] mb-[0.9em] text-[clamp(1.6rem,1.4rem+1vw,2rem)]">{t.title}</h1>
+    <h1 class="mt-[3.4em] mb-[0.7em] text-2xl">{t.title}</h1>
   </div>
 
   <section class="relative overflow-hidden py-band text-center text-white">
@@ -23,7 +23,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     <div class="absolute inset-0 bg-black/28"></div>
     <div class="relative mx-auto max-w-[900px] px-7">
       <h2 class="mb-[0.3em] text-white" set:html={t.hero.line1} />
-      <h2 class="mb-[0.3em] text-white" set:html={t.hero.line2} />
+      <h2 class="mt-6 mb-[0.3em] text-white" set:html={t.hero.line2} />
     </div>
   </section>
 
@@ -32,14 +32,16 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
       {
         t.stories.map((story: any, i: number) => (
           <MediaText image={story.image} media={i % 2 ? 'start' : 'end'} tone="cream">
-            <h2 set:html={story.heading} />
-            <p class="mt-[-0.6em] opacity-85" set:html={story.location} />
-            <p set:html={story.body} />
-            <p>
-              <a class="button button--dark" href={story.pdf} target="_blank" rel="noopener noreferrer">
-                {story.readMore}
-              </a>
-            </p>
+            <div class="text-center">
+              <h2 set:html={story.heading} />
+              <p class="mt-[-0.6em] opacity-85" set:html={story.location} />
+              <p set:html={story.body} />
+              <p class="mt-6">
+                <a class="button button--dark" href={story.pdf} target="_blank" rel="noopener noreferrer">
+                  {story.readMore}
+                </a>
+              </p>
+            </div>
           </MediaText>
         ))
       }

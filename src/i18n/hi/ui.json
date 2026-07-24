@@ -37,6 +37,8 @@
     "backHome": "मुख पृष्ठ पर वापस जाएँ",
     "menuLabel": "मेनू",
     "languageLabel": "भाषा",
-    "close": "बंद करें"
+    "close": "बंद करें",
+    "stayConnected": "जुड़े रहें",
+    "stayConnectedBody": "अधिक जानकारी चाहिए या शुरुआत करने में मदद? हमें ईमेल करें:"
   }
 }
