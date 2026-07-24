@@ -35,7 +35,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.growth.map((card: any, i: number) => (
-          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream" aspect="2 / 1">
+          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream">
             <p set:html={card.body} />
           </MediaText>
         ))
@@ -51,7 +51,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.paradigms.map((card: any, i: number) => (
-          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream" aspect="2 / 1">
+          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream">
             <p set:html={card.body} />
           </MediaText>
         ))
@@ -93,7 +93,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.next.map((card: any, i: number) => (
-          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream" aspect="2 / 1">
+          <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream">
             <p set:html={card.body} />
             <p class="mt-6 text-center">
               <a class="button button--dark" href={card.cta.href}>
