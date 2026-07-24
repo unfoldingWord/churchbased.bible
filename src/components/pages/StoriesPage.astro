@@ -35,9 +35,8 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
             <p class="story-location" set:html={story.location} />
             <p set:html={story.body} />
             <p>
-              <a class="read-more" href={story.pdf} target="_blank" rel="noopener">
-                <mark>{story.readMore}</mark>
-                <img src="/images/uploads/2024/07/external-link-1.svg" alt="" width="18" height="18" />
+              <a class="button button--dark" href={story.pdf} target="_blank" rel="noopener noreferrer">
+                {story.readMore}
               </a>
             </p>
           </MediaText>
@@ -78,7 +77,7 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
   .stories-hero__scrim {
     position: absolute;
     inset: 0;
-    background: rgb(0 0 0 / 0.45);
+    background: rgb(0 0 0 / 0.28);
   }
   .stories-hero__content {
     position: relative;
@@ -97,18 +96,6 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
   .story-location {
     margin-block-start: -0.6em;
     opacity: 0.85;
-  }
-  .read-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5em;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .read-more mark {
-    background: transparent;
-    text-decoration: underline;
-    text-underline-offset: 4px;
   }
   .separator {
     border: 0;

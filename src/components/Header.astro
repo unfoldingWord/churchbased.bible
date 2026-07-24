@@ -27,7 +27,7 @@ const closeLabel = ui.strings?.close ?? 'Close';
 <header class:list={['site-header', `site-header--${variant}`]}>
   <p class="site-header__title">
     <a href={homeHref}>
-      <img class="site-header__logo" src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="34" height="34" />
+      <img class="site-header__logo" src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="48" height="48" />
       <span>{ui.siteTitle}</span>
     </a>
   </p>
@@ -103,11 +103,12 @@ const closeLabel = ui.strings?.close ?? 'Close';
   }
   .site-header__title {
     margin: 0;
-    /* ~2x the previous 16px wordmark. */
-    font-size: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
+    /* Large wordmark, but it must never wrap. */
+    font-size: clamp(1.4rem, 1.1rem + 0.9vw, 1.75rem);
     font-weight: 700;
     letter-spacing: -0.011em;
     line-height: 1.1;
+    white-space: nowrap;
   }
   .site-header__title a {
     display: inline-flex;
@@ -115,6 +116,10 @@ const closeLabel = ui.strings?.close ?? 'Close';
     gap: 0.6em;
     color: #fff;
     text-decoration: none;
+  }
+  .site-header__title,
+  .site-header__logo {
+    flex: none;
   }
   .site-header__logo {
     width: 48px;
@@ -128,7 +133,7 @@ const closeLabel = ui.strings?.close ?? 'Close';
   }
   .site-nav__list {
     display: flex;
-    gap: 2.2em;
+    gap: 1.5em;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -136,8 +141,9 @@ const closeLabel = ui.strings?.close ?? 'Close';
   .site-nav__list a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
+    white-space: nowrap;
   }
   .site-nav__list a:hover,
   .site-nav__list a[aria-current='page'] {
@@ -153,9 +159,9 @@ const closeLabel = ui.strings?.close ?? 'Close';
     cursor: pointer;
     padding: 4px;
   }
-  @media (max-width: 700px) {
-    /* Decorative tagline (also shown in the hero/footer) would run under the
-       floating language switcher on narrow screens — drop it here. */
+  @media (max-width: 1150px) {
+    /* Collapse to the dialog menu before the large wordmark + full nav would
+       crowd on one line, so neither ever wraps. */
     .tagline-strip {
       display: none;
     }
@@ -247,7 +253,7 @@ const closeLabel = ui.strings?.close ?? 'Close';
 
     // If the viewport grows back to desktop while open, reset cleanly.
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 700) close(false);
+      if (window.innerWidth > 1150) close(false);
     });
   });
 </script>

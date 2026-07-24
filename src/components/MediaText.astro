@@ -11,11 +11,29 @@ interface Props {
   hero?: boolean;
   /** Content-side background. */
   tone?: 'plain' | 'cream';
+  /** Fixed image crop (CSS aspect-ratio, e.g. "2 / 1"). When set, the image is
+   *  cropped to this shape and vertically centered; the content still fills the
+   *  row height so its background never leaves a gap. */
+  aspect?: string;
+  /** Narrow the media column to this track size (e.g. "0.6fr" or "260px"),
+   *  regardless of which side the media is on. Content takes the rest. */
+  mediaFrac?: string;
 }
-const { image, imageAlt = '', media = 'start', shadow = true, hero = false, tone = 'plain' } = Astro.props;
+const { image, imageAlt = '', media = 'start', shadow = true, hero = false, tone = 'plain', aspect, mediaFrac } = Astro.props;
+const style = [aspect ? `--crop:${aspect}` : '', mediaFrac ? `--media-frac:${mediaFrac}` : '']
+  .filter(Boolean)
+  .join(';');
 ---
 
-<div class:list={['media-text', `media-text--${media}`, `media-text--${tone}`, { 'media-text--shadow': shadow && !hero, 'media-text--hero': hero }]}>
+<div
+  class:list={[
+    'media-text',
+    `media-text--${media}`,
+    `media-text--${tone}`,
+    { 'media-text--shadow': shadow && !hero, 'media-text--hero': hero, 'media-text--cropped': !!aspect, 'media-text--cols': !!mediaFrac },
+  ]}
+  style={style || undefined}
+>
   {image && (
     <figure class="media-text__media">
       <img src={image} alt={imageAlt} loading={hero ? 'eager' : 'lazy'} />
@@ -46,6 +64,24 @@ const { image, imageAlt = '', media = 'start', shadow = true, hero = false, tone
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  /* Narrow-column variant: media column set to --media-frac on either side. */
+  .media-text--cols {
+    grid-template-columns: var(--media-frac) 1fr;
+  }
+  .media-text--cols.media-text--end {
+    grid-template-columns: 1fr var(--media-frac);
+  }
+  /* Fixed-crop variant: image keeps a set aspect ratio, vertically centered in
+     its column; the content column still stretches so its background fills. */
+  .media-text--cropped .media-text__media {
+    min-height: 0;
+    display: flex;
+    align-items: center;
+  }
+  .media-text--cropped .media-text__media img {
+    height: auto;
+    aspect-ratio: var(--crop);
   }
   .media-text__content {
     padding: clamp(1.5rem, 4vw, 3.5rem);

@@ -28,25 +28,37 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
               <div>
                 <p set:html={paper.body} />
                 <p class="paper__files">
-                  {paper.files.map((f: any) => (
-                    <a class="button button--dark" href={f.href}>
-                      {f.label}
-                    </a>
-                  ))}
+                  {paper.files.map((f: any) => {
+                    const external = f.href.startsWith('http');
+                    return (
+                      <a
+                        class="button button--dark button--sm"
+                        href={f.href}
+                        target={external ? '_blank' : undefined}
+                        rel={external ? 'noopener noreferrer' : undefined}
+                      >
+                        {f.label}
+                      </a>
+                    );
+                  })}
                 </p>
               </div>
             </div>
           ))
         }
       </div>
-      <hr class="separator" />
+    </div>
+  </section>
+
+  <section class="section videos-section">
+    <div class="container">
       <h2 set:html={t.videosHeading} />
       <div class="videos">
         {
-          t.videos.map((v: any) => (
-            <div class="video-card">
+          t.videos.map((v: any, i: number) => (
+            <div class:list={['video-card', { 'video-card--reverse': i === 1 }]}>
               <video src={v.video} controls preload="metadata" />
-              <div>
+              <div class="video-card__text">
                 <h3 set:html={v.heading} />
                 <p set:html={v.body} />
               </div>
@@ -67,10 +79,17 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     border-top: 1px solid #d8d2c6;
     margin-block: var(--space-4);
   }
-  .papers,
-  .videos {
+  .papers {
     display: grid;
     gap: var(--space-4);
+    margin-block-start: var(--space-4);
+  }
+  .videos-section {
+    padding-block-start: 0;
+  }
+  .videos {
+    display: grid;
+    gap: var(--space-5);
     margin-block-start: var(--space-4);
   }
   .paper {
@@ -91,22 +110,34 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
   }
   .video-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3);
+    grid-template-columns: 1.6fr 1fr;
+    gap: var(--space-4);
     align-items: center;
     background: var(--color-tertiary);
     border-radius: 6px;
-    padding: var(--space-3);
+    padding: var(--space-4);
     box-shadow: 0 10px 26px rgb(0 0 0 / 0.12);
   }
   .video-card video {
     width: 100%;
+    aspect-ratio: 16 / 9;
     background: #000;
+  }
+  /* "Reasons" (2nd) video shows on the right instead of the left, keeping the
+     video in the wide column. */
+  .video-card--reverse {
+    grid-template-columns: 1fr 1.6fr;
+  }
+  .video-card--reverse video {
+    order: 2;
   }
   @media (max-width: 700px) {
     .paper,
     .video-card {
       grid-template-columns: 1fr;
+    }
+    .video-card--reverse video {
+      order: 0;
     }
   }
 </style>

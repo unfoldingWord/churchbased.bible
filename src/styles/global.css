@@ -94,8 +94,16 @@ a { color: inherit; }
 }
 .button:hover { filter: brightness(0.95); }
 .button--dark {
-  background: #6c6c6c;
+  background: var(--color-contrast);
   color: #fff;
+}
+.button--dark:hover {
+  filter: brightness(1.35);
+}
+/* Compact button for inline file/download actions. */
+.button--sm {
+  font-size: var(--text-s);
+  padding: 0.45em 1.2em;
 }
 
 .container {

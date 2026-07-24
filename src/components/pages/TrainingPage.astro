@@ -29,15 +29,23 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     <div class="container cards__list">
       {
         t.resources.map((card: any, i: number) => (
-          <MediaText image={card.image} media={i % 2 ? 'end' : 'start'} tone="cream">
+          <MediaText image={card.image} media={i % 2 ? 'end' : 'start'} tone="cream" aspect="3 / 2">
             <h2 class="centered" set:html={card.heading} />
             <p class="centered" set:html={card.body} />
             <p class="cards__cta">
-              {card.buttons.map((b: any) => (
-                <a class="button button--dark" href={b.href} rel={b.href.startsWith('http') ? 'noopener' : undefined}>
-                  {b.label}
-                </a>
-              ))}
+              {card.buttons.map((b: any) => {
+                const external = b.href.startsWith('http');
+                return (
+                  <a
+                    class="button button--dark"
+                    href={b.href}
+                    target={external ? '_blank' : undefined}
+                    rel={external ? 'noopener noreferrer' : undefined}
+                  >
+                    {b.label}
+                  </a>
+                );
+              })}
             </p>
           </MediaText>
         ))
