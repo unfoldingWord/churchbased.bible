@@ -2,32 +2,25 @@
 
 ## One-time Cloudflare setup (needs account access)
 
-1. **Create the Pages project**
-   - Dashboard → Workers & Pages → Create → Pages → connect this git repo
-     (build command `npm run build`, output `dist`, Node 20+), **or** deploy
-     from the CLI: `npx wrangler pages deploy dist --project-name churchbased-bible`.
+1. **Workers project** (already connected)
+   - The repo deploys as a Workers + Static Assets project: build
+     `npm run build`, deploy `npx wrangler deploy` (runs on every push).
    - Everything ships with the site — all videos were transcoded under the
-     25 MiB Pages file limit, so no R2 bucket is required.
+     25 MiB per-file limit, so no R2 bucket is required.
 
-2. **Contact form variables** (Pages project → Settings → Environment variables)
-   - `RESEND_API_KEY` — create a free account at resend.com, verify the
-     churchbased.bible sending domain (the only secret; set it in the dashboard)
-   - `CONTACT_TO` = `churchbased.bible@unfoldingword.org` (already in wrangler.toml)
-   - `CONTACT_FROM` = `CBBT Website <noreply@churchbased.bible>` (already in wrangler.toml)
-   - optional `TURNSTILE_SECRET` — enables Turnstile bot-checking
-     (functions/api/contact.ts already verifies it when set; the form's
-     honeypot works with no configuration)
+2. **Contact** - a mailto link in the footer (churchbased.bible@unfoldingword.org);
+   no form backend, API keys, or environment variables needed.
 
 3. **Analytics** — Dashboard → Analytics → Web Analytics → add site, copy the
    token into the commented beacon snippet in `src/layouts/Base.astro`.
 
-## Verify on the *.pages.dev preview URL
+## Verify on the *.workers.dev URL
 
 - [ ] All 6 pages × spot-check locales (en, es, ar, zh, hi) render correctly
 - [ ] `npm run check:locales` and `node scripts/check-links.mjs` pass
-- [ ] Contact form test submission arrives at CONTACT_TO
+- [ ] Footer contact email link opens a mail draft to churchbased.bible@unfoldingword.org
 - [ ] Videos play on About, Research, Stories, and the homepage CTA
-- [ ] Old video permalinks 301 (e.g. `/cbbt-homepage-video-mp4/` → `/`)
+- [ ] Old video permalinks 301, and `/contact/` (any locale) 301s to that locale home
 
 ## DNS cutover
 

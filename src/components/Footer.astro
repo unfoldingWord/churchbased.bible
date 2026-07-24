@@ -6,14 +6,26 @@ interface Props {
   ui: any;
 }
 const { locale, ui } = Astro.props;
+// Localized "Contact" heading — reuse the old nav item's label so all 16
+// locales keep their translation.
+const contactLabel = ui.nav.find((i: any) => i.href === '/contact/')?.label ?? 'Contact';
+const CONTACT_EMAIL = 'churchbased.bible@unfoldingword.org';
 ---
 
 <footer class="mt-sect bg-ink py-sect text-white">
-  <div class="mx-auto max-w-content px-7">
-    <p class="mb-[0.4em] font-heading text-lg font-bold">
-      <a href={localePath(locale, 'home')} class="text-inherit no-underline">{ui.siteTitle}</a>
-    </p>
-    <p class="text-base opacity-90" set:html={ui.footer.tagline} />
-    <p class="mt-4 max-w-[34em] text-sm opacity-75" set:html={ui.footer.description} />
+  <div class="mx-auto flex max-w-content flex-col gap-card px-7 md:flex-row md:items-start md:justify-between">
+    <div>
+      <p class="mb-[0.4em] font-heading text-lg font-bold">
+        <a href={localePath(locale, 'home')} class="text-inherit no-underline">{ui.siteTitle}</a>
+      </p>
+      <p class="text-base opacity-90" set:html={ui.footer.tagline} />
+      <p class="mt-4 max-w-[34em] text-sm opacity-75" set:html={ui.footer.description} />
+    </div>
+    <div class="flex-none md:text-end">
+      <p class="mb-[0.4em] font-heading text-lg font-bold">{contactLabel}</p>
+      <a href={`mailto:${CONTACT_EMAIL}`} class="text-sm underline-offset-4 opacity-90 hover:underline">
+        {CONTACT_EMAIL}
+      </a>
+    </div>
   </div>
 </footer>

@@ -62,7 +62,8 @@ const closeLabel = ui.strings?.close ?? 'Close';
       </button>
       <ul class="m-0 flex list-none gap-[1.5em] p-0 max-nav:flex-col max-nav:items-center max-nav:gap-[1.4em] max-nav:text-xl">
         {
-          ui.nav.map((item: { label: string; href: string }) => {
+          // The contact page is gone — its email lives in the footer instead.
+          ui.nav.filter((item: { href: string }) => item.href !== '/contact/').map((item: { label: string; href: string }) => {
             const href = item.href === '/' ? homeHref : localePath(locale, item.href.replaceAll('/', '') as PageSlug);
             const current = item.href === `/${slug === 'home' ? '' : slug + '/'}`;
             return (

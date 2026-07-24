@@ -26,7 +26,7 @@ Requires Node 18+ (`/opt/homebrew/bin/node` on this machine).
 | `src/i18n/{locale}/REVIEW.md` | Translation notes for human reviewers |
 | `src/components/pages/*.astro` | One component per page, shared by all locales |
 | `src/pages/` | Routes: English at `/`, other locales at `/{lang}/…` |
-| `worker/` | Cloudflare Worker: contact API + legacy redirects |
+| `worker/` | Cloudflare Worker: legacy 301 redirects |
 | `scripts/` | mirror/extract/check/screenshot utilities used for the migration |
 | `raw/` | Archived copy of the old WordPress site (HTML, images, videos) |
 
@@ -55,20 +55,20 @@ Adding language #17: add a line to `src/i18n/config.ts`, create `src/i18n/{code}
 with the seven JSON files (copy English, translate), done — routes, hreflang,
 sitemap, and the language switcher pick it up automatically.
 
-## Deploy (Cloudflare Pages)
+## Deploy (Cloudflare Workers + Static Assets)
 
-Connect the repo in the Cloudflare dashboard (build: `npm run build`, output: `dist`),
-or deploy directly: `npx wrangler pages deploy dist --project-name churchbased-bible`.
+The repo is connected in the Cloudflare dashboard (build `npm run build`,
+deploy `npx wrangler deploy`); every push to main deploys. Manual deploy:
+`npx wrangler deploy`.
 
-Environment variables for the contact form:
-`RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM`, optional `TURNSTILE_SECRET`.
+Contact is a simple mailto link in the footer (churchbased.bible@unfoldingword.org)
+- no form backend or environment variables required.
 
 ### Videos
 
-Videos ≤25 MB ship in `public/videos/` with the site. The four larger ones
-(three Biblical-theology teaching videos + the advocacy video) are transcoded into
-`dist-videos/` and belong in an **R2 bucket** served at `/videos/*` via a custom
-domain or Pages route — see the deployment checklist in the project notes.
+All videos ship in `public/videos/` with the site — the originals were
+transcoded to web-friendly H.264 under Cloudflare's 25 MiB per-file limit
+(sources archived in `raw/videos/`).
 
 ### Analytics
 

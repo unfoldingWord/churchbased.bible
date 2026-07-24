@@ -32,7 +32,7 @@ export const locales: LocaleDef[] = [
 
 export const defaultLocale = 'en';
 
-export const pageSlugs = ['home', 'about', 'training', 'research', 'stories', 'contact'] as const;
+export const pageSlugs = ['home', 'about', 'training', 'research', 'stories'] as const;
 export type PageSlug = (typeof pageSlugs)[number];
 
 export function byCode(code: string): LocaleDef {
