@@ -17,40 +17,61 @@ const closeLabel = ui.strings?.close ?? 'Close';
 
 {
   variant === 'solid' && (
-    <div class="tagline-strip">
-      <p set:html={ui.footer.tagline} />
+    <div class="max-nav:hidden bg-cream py-1.5 text-center">
+      <p class="m-0 text-[12px]" set:html={ui.footer.tagline} />
     </div>
   )
 }
-<div class="lang-float"><LanguageSwitcher locale={locale} slug={slug} label={ui.strings?.languageLabel ?? 'Language'} /></div>
+<div class="absolute end-[5%] top-0 z-50"><LanguageSwitcher locale={locale} slug={slug} label={ui.strings?.languageLabel ?? 'Language'} /></div>
 
-<header class:list={['site-header', `site-header--${variant}`]}>
-  <p class="site-header__title">
-    <a href={homeHref}>
-      <img class="site-header__logo" src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="48" height="48" />
+<header
+  class:list={[
+    'flex items-center justify-between gap-7 px-[5%] pt-7 pb-6 font-heading',
+    variant === 'solid' ? 'bg-ink' : 'absolute inset-x-0 top-0 z-40 bg-transparent pt-[52px]',
+  ]}
+>
+  <p class="m-0 flex-none text-[clamp(1.4rem,1.1rem+0.9vw,1.75rem)] leading-[1.1] font-bold whitespace-nowrap">
+    <a href={homeHref} class="inline-flex items-center gap-[0.6em] text-white no-underline">
+      <img class="w-12 flex-none" src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="48" height="48" />
       <span>{ui.siteTitle}</span>
     </a>
   </p>
   <nav class="site-nav" aria-label="Main">
-    <button class="site-nav__open" aria-expanded="false" aria-controls="site-nav-menu" aria-label={menuLabel}>
+    <button
+      class="peer nav:hidden cursor-pointer border-0 bg-transparent p-1 text-white"
+      aria-expanded="false"
+      aria-controls="site-nav-menu"
+      aria-label={menuLabel}
+    >
       <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
       </svg>
     </button>
-    <div id="site-nav-menu" class="site-nav__panel" aria-label={menuLabel}>
-      <button class="site-nav__close" aria-label={closeLabel}>
+    <div
+      id="site-nav-menu"
+      class="nav:contents max-nav:bg-ink max-nav:peer-aria-expanded:flex hidden max-nav:fixed max-nav:inset-0 max-nav:z-70 max-nav:flex-col max-nav:items-center max-nav:justify-center max-nav:gap-[1.4em]"
+      aria-label={menuLabel}
+    >
+      <button
+        class="site-nav__close nav:hidden max-nav:absolute max-nav:end-[5%] max-nav:top-6 cursor-pointer border-0 bg-transparent p-1 text-white"
+        aria-label={closeLabel}
+      >
         <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
       </button>
-      <ul class="site-nav__list">
+      <ul class="m-0 flex list-none gap-[1.5em] p-0 max-nav:flex-col max-nav:items-center max-nav:gap-[1.4em] max-nav:text-xl">
         {
           ui.nav.map((item: { label: string; href: string }) => {
             const href = item.href === '/' ? homeHref : localePath(locale, item.href.replaceAll('/', '') as PageSlug);
             const current = item.href === `/${slug === 'home' ? '' : slug + '/'}`;
             return (
               <li>
-                <a href={href} aria-current={current ? 'page' : undefined}>
+                <a
+                  href={href}
+                  aria-current={current ? 'page' : undefined}
+                  class="text-[17px] font-semibold whitespace-nowrap text-white no-underline underline-offset-[6px] hover:underline aria-[current=page]:underline"
+                >
                   {item.label}
                 </a>
               </li>
@@ -62,146 +83,11 @@ const closeLabel = ui.strings?.close ?? 'Close';
   </nav>
 </header>
 
-<style>
-  .tagline-strip {
-    background: var(--color-secondary);
-    text-align: center;
-    padding-block: 6px;
-  }
-  .tagline-strip p {
-    margin: 0;
-    font-size: 12px;
-  }
-  .lang-float {
-    position: absolute;
-    top: 0;
-    inset-inline-end: 5%;
-    z-index: 50;
-  }
-  .site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-3);
-    padding: 28px 5% 24px;
-    font-family: var(--font-heading);
-  }
-  .site-header--solid {
-    background: var(--color-contrast);
-  }
-  /* The homepage header floats over the hero; it needs a taller top band so the
-     language switcher (top-right) clears the nav row. Subpages have the tagline
-     strip above, so they don't. */
-  .site-header--overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 40;
-    background: transparent;
-    padding-top: 52px;
-  }
-  .site-header__title {
-    margin: 0;
-    /* Large wordmark, but it must never wrap. */
-    font-size: clamp(1.4rem, 1.1rem + 0.9vw, 1.75rem);
-    font-weight: 700;
-    letter-spacing: -0.011em;
-    line-height: 1.1;
-    white-space: nowrap;
-  }
-  .site-header__title a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6em;
-    color: #fff;
-    text-decoration: none;
-  }
-  .site-header__title,
-  .site-header__logo {
-    flex: none;
-  }
-  .site-header__logo {
-    width: 48px;
-    height: auto;
-    flex: none;
-  }
-  .site-nav__panel {
-    /* On desktop the panel is transparent to layout — the link list sits inline
-       in the header row. On mobile it becomes a full-screen dialog. */
-    display: contents;
-  }
-  .site-nav__list {
-    display: flex;
-    gap: 1.5em;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .site-nav__list a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .site-nav__list a:hover,
-  .site-nav__list a[aria-current='page'] {
-    text-decoration: underline;
-    text-underline-offset: 6px;
-  }
-  .site-nav__open,
-  .site-nav__close {
-    display: none;
-    background: none;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    padding: 4px;
-  }
-  @media (max-width: 1150px) {
-    /* Collapse to the dialog menu before the large wordmark + full nav would
-       crowd on one line, so neither ever wraps. */
-    .tagline-strip {
-      display: none;
-    }
-    .site-nav__open {
-      display: block;
-    }
-    .site-nav__panel {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 70;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.4em;
-      background: var(--color-contrast);
-    }
-    .site-nav.is-open .site-nav__panel {
-      display: flex;
-    }
-    .site-nav__list {
-      flex-direction: column;
-      align-items: center;
-      gap: 1.4em;
-      font-size: var(--text-xl);
-    }
-    .site-nav__close {
-      display: block;
-      position: absolute;
-      top: 24px;
-      inset-inline-end: 5%;
-    }
-  }
-</style>
-
 <script>
   document.querySelectorAll<HTMLElement>('.site-nav').forEach((nav) => {
-    const openBtn = nav.querySelector<HTMLButtonElement>('.site-nav__open');
+    const openBtn = nav.querySelector<HTMLButtonElement>('[aria-controls="site-nav-menu"]');
     const closeBtn = nav.querySelector<HTMLButtonElement>('.site-nav__close');
-    const panel = nav.querySelector<HTMLElement>('.site-nav__panel');
+    const panel = nav.querySelector<HTMLElement>('#site-nav-menu');
     if (!openBtn || !panel) return;
 
     const focusable = () =>
@@ -210,7 +96,6 @@ const closeLabel = ui.strings?.close ?? 'Close';
       ).filter((el) => el.offsetParent !== null);
 
     const open = () => {
-      nav.classList.add('is-open');
       openBtn.setAttribute('aria-expanded', 'true');
       panel.setAttribute('role', 'dialog');
       panel.setAttribute('aria-modal', 'true');
@@ -219,8 +104,7 @@ const closeLabel = ui.strings?.close ?? 'Close';
     };
 
     const close = (returnFocus = true) => {
-      if (!nav.classList.contains('is-open')) return;
-      nav.classList.remove('is-open');
+      if (openBtn.getAttribute('aria-expanded') !== 'true') return;
       openBtn.setAttribute('aria-expanded', 'false');
       panel.removeAttribute('role');
       panel.removeAttribute('aria-modal');
@@ -228,7 +112,9 @@ const closeLabel = ui.strings?.close ?? 'Close';
       if (returnFocus) openBtn.focus();
     };
 
-    openBtn.addEventListener('click', open);
+    openBtn.addEventListener('click', () =>
+      openBtn.getAttribute('aria-expanded') === 'true' ? close() : open()
+    );
     closeBtn?.addEventListener('click', () => close());
 
     panel.addEventListener('keydown', (e) => {
@@ -253,7 +139,7 @@ const closeLabel = ui.strings?.close ?? 'Close';
 
     // If the viewport grows back to desktop while open, reset cleanly.
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 1150) close(false);
+      if (window.innerWidth >= 1152) close(false);
     });
   });
 </script>

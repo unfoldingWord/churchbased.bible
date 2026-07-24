@@ -1,139 +1,160 @@
-/* Design tokens extracted from the live churchbased.bible (WP theme "startfitter"
-   + Elementor kit), 2026-07-22. Values verified via computed styles. */
-:root {
-  --color-base: #ffffff;
-  --color-contrast: #0f0f0f;
-  --color-secondary: #e7d3c5; /* cream — buttons */
-  --color-tertiary: #f5f0e4;  /* light cream — soft section backgrounds */
-  --color-on-dark: #ffffff;
+@import 'tailwindcss';
 
-  /* Script-specific faces carry unicode-range, so listing them all costs
-     nothing on pages that don't use them. */
-  --font-scripts: 'Noto Sans Arabic', 'Noto Sans Devanagari', 'Noto Sans Bengali',
-    'Noto Sans Myanmar', 'Noto Sans SC';
+/* ---------------------------------------------------------------------------
+   Design tokens — extracted from the original churchbased.bible (WordPress
+   theme "startfitter" + Elementor kit) and expressed as the Tailwind theme.
+   Edit values here to re-theme the whole site; utilities pick them up.
+   --------------------------------------------------------------------------- */
+@theme {
+  /* Colors */
+  --color-ink: #0f0f0f; /* near-black text & dark bands */
+  --color-paper: #ffffff; /* page background */
+  --color-cream: #e7d3c5; /* warm cream — primary buttons, tagline strip */
+  --color-cream-light: #f5f0e4; /* soft cream — card/section backgrounds */
+  --color-taupe: #837a78; /* sub-hero heading panel */
+  --color-error: #b3261e; /* form validation */
+
+  /* Fonts. --font-script is set per locale via :lang() rules below, so each
+     language gets exactly its own script face — Latin locales get a pure
+     system stack with no cross-script contamination. */
   --font-heading: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans',
-    var(--font-scripts), var(--font-body);
-  --font-body: var(--font-scripts), -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    var(--font-script, ui-sans-serif), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-script, ui-sans-serif), -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
 
-  /* Fluid type scale, same clamp curve as the WP theme */
-  --text-s: clamp(0.8rem, 0.8rem + ((1vw - 0.2rem) * 0.421), 1rem);
-  --text-m: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.526), 1.25rem);
-  --text-l: clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.659), 1.563rem);
+  /* Fluid type scale — the WP theme's clamp curve (≈16→20px body at desktop,
+     big headings ≈39px at 1280w). These REPLACE Tailwind's static sizes so
+     text-base/text-xl/etc. are fluid site-wide. */
+  --text-sm: clamp(0.8rem, 0.8rem + ((1vw - 0.2rem) * 0.421), 1rem);
+  --text-sm--line-height: 1.5;
+  --text-base: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.526), 1.25rem);
+  --text-base--line-height: 1.55;
+  --text-lg: clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.659), 1.563rem);
+  --text-lg--line-height: 1.3;
   --text-xl: clamp(1.563rem, 1.563rem + ((1vw - 0.2rem) * 0.821), 1.953rem);
+  --text-xl--line-height: 1.15;
   --text-2xl: clamp(1.953rem, 1.953rem + ((1vw - 0.2rem) * 1.027), 2.441rem);
+  --text-2xl--line-height: 1.15;
   --text-3xl: clamp(2.441rem, 2.441rem + ((1vw - 0.2rem) * 1.286), 3.052rem);
+  --text-3xl--line-height: 1.15;
   --text-4xl: clamp(3.052rem, 3.052rem + ((1vw - 0.2rem) * 1.606), 3.815rem);
+  --text-4xl--line-height: 1.15;
 
-  --space-1: 0.44rem;
-  --space-2: 1rem;
-  --space-3: 1.75rem;
-  --space-4: clamp(1.75rem, 3.5211268vw, 3.5rem);
-  --space-5: clamp(3.5rem, 7.3943662vw, 5.25rem);
-  --space-6: clamp(5.25rem, 12.3239437vw, 8.75rem);
+  /* Fluid section spacing (WP presets 60/70/80). Use as p*-card / p*-sect /
+     p*-band, gap-card, etc. Small steps use Tailwind's numeric scale. */
+  --spacing-card: clamp(1.75rem, 3.5211268vw, 3.5rem);
+  --spacing-sect: clamp(3.5rem, 7.3943662vw, 5.25rem);
+  --spacing-band: clamp(5.25rem, 12.3239437vw, 8.75rem);
 
-  --content-width: 1080px;
+  /* Content column (max-w-content) */
+  --container-content: 1080px;
+
+  /* Desktop nav breakpoint: below this the header collapses to the dialog
+     menu so the wordmark and nav links never wrap. (nav: / max-nav: variants) */
+  --breakpoint-nav: 72rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* ---------------------------------------------------------------------------
+   Element defaults — a content site with locale-driven rich text (set:html)
+   needs sane typographic defaults beyond per-utility styling.
+   --------------------------------------------------------------------------- */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Latin locales: pure system stack (no script font prepended). */
+    --font-script: ui-sans-serif;
+  }
+  /* Per-locale script faces (see --font-heading/--font-body in @theme). */
+  html:lang(ar),
+  html:lang(fa) {
+    --font-script: 'Noto Sans Arabic';
+  }
+  html:lang(ur) {
+    --font-script: 'Noto Nastaliq Urdu';
+  }
+  html:lang(hi) {
+    --font-script: 'Noto Sans Devanagari';
+  }
+  html:lang(bn) {
+    --font-script: 'Noto Sans Bengali';
+  }
+  html:lang(my) {
+    --font-script: 'Noto Sans Myanmar';
+  }
+  html:lang(zh) {
+    --font-script: 'Noto Sans SC';
+  }
+  body {
+    @apply bg-paper font-body text-base leading-[1.55] text-ink;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-4 font-heading font-semibold leading-[1.15] tracking-[-0.011em] text-balance;
+  }
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  h4 {
+    @apply text-base;
+  }
+  p {
+    @apply mb-4;
+  }
+  img,
+  video {
+    @apply block h-auto max-w-full;
+  }
+
+  /* Urdu reads best in Nastaliq (set via --font-script above) — a tall
+     script needing looser leading. Headings also use Nastaliq. */
+  html:lang(ur) body {
+    line-height: 2;
+  }
+  html:lang(ur) :is(h1, h2, h3, h4) {
+    font-family: var(--font-body);
+  }
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
-}
+/* ---------------------------------------------------------------------------
+   Shared component classes — kept minimal; everything else is utilities.
+   --------------------------------------------------------------------------- */
+@layer components {
+  /* Pill buttons (Elementor style). Variants: .button--dark, .button--sm */
+  .button {
+    @apply inline-block cursor-pointer rounded-full bg-cream px-[1.9em] py-[0.7em] font-heading text-base font-semibold text-ink no-underline transition-[filter] duration-150 hover:brightness-95;
+  }
+  .button--dark {
+    @apply bg-ink text-white hover:brightness-[1.6];
+  }
+  .button--sm {
+    @apply px-[1.2em] py-[0.45em] text-sm;
+  }
 
-body {
-  margin: 0;
-  font-family: var(--font-body);
-  /* Match the original site's body size (~20px at desktop), fluid down on mobile. */
-  font-size: var(--text-m);
-  line-height: 1.55;
-  color: var(--color-contrast);
-  background: var(--color-base);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.011em;
-  margin: 0 0 var(--space-2);
-  text-wrap: balance;
-}
-
-/* Sizes matched to the live site at 1280w: big headings ≈39px, section ≈31px,
-   sub-headings ≈25px. */
-h1 { font-size: var(--text-2xl); }
-h2 { font-size: var(--text-xl); }
-h3 { font-size: var(--text-l); }
-h4 { font-size: var(--text-m); }
-
-p { margin: 0 0 var(--space-2); }
-
-img, video { max-width: 100%; height: auto; display: block; }
-
-a { color: inherit; }
-
-.button {
-  display: inline-block;
-  background: var(--color-secondary);
-  color: var(--color-contrast);
-  border: 0;
-  border-radius: 999px;
-  padding: 0.7em 1.9em;
-  font-family: var(--font-heading);
-  font-size: var(--text-m);
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: filter 150ms ease, transform 150ms ease;
-}
-.button:hover { filter: brightness(0.95); }
-.button--dark {
-  background: var(--color-contrast);
-  color: #fff;
-}
-.button--dark:hover {
-  filter: brightness(1.35);
-}
-/* Compact button for inline file/download actions. */
-.button--sm {
-  font-size: var(--text-s);
-  padding: 0.45em 1.2em;
-}
-
-.container {
-  max-width: var(--content-width);
-  margin-inline: auto;
-  padding-inline: var(--space-3);
-}
-
-.section { padding-block: var(--space-5); }
-.section--cream { background: var(--color-tertiary); }
-.section--dark { background: var(--color-contrast); color: var(--color-on-dark); }
-
-.visually-hidden {
-  position: absolute;
-  width: 1px; height: 1px;
-  clip-path: inset(50%);
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/* RTL locales get dir="rtl" on <html>; all layout uses logical properties. */
-
-/* Urdu reads best in Nastaliq; it is a tall script and needs looser leading. */
-html[lang='ur'] body,
-html[lang='ur'] h1,
-html[lang='ur'] h2,
-html[lang='ur'] h3,
-html[lang='ur'] h4 {
-  font-family: 'Noto Nastaliq Urdu', var(--font-body);
-}
-html[lang='ur'] body {
-  line-height: 2;
+  /* Scroll-driven reveal (IntersectionObserver adds .is-visible; JS adds
+     html.js). Without JS or with reduced motion, content is fully visible. */
+  @media (prefers-reduced-motion: no-preference) {
+    html.js [data-reveal] {
+      opacity: 0;
+      translate: 0 28px;
+      transition:
+        opacity 600ms ease,
+        translate 600ms ease;
+    }
+    html.js [data-reveal].is-visible {
+      opacity: 1;
+      translate: none;
+    }
+  }
 }

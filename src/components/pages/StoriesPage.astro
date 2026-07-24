@@ -13,26 +13,27 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
 ---
 
 <Base locale={locale} slug="stories" title={`${t.title} – ${ui.siteTitle}`} description={plain(t.hero.line1)}>
-  <div class="container">
-    <h1 class="page-title">{t.title}</h1>
+  <div class="mx-auto max-w-content px-7">
+    <h1 class="mt-[1.6em] mb-[0.9em] text-[clamp(1.6rem,1.4rem+1vw,2rem)]">{t.title}</h1>
   </div>
 
-  <section class="stories-hero">
-    <video src={t.hero.video} autoplay muted loop playsinline aria-hidden="true"></video>
-    <div class="stories-hero__scrim"></div>
-    <div class="stories-hero__content">
-      <h2 set:html={t.hero.line1} />
-      <h2 class="stories-hero__strong" set:html={t.hero.line2} />
+  <section class="relative overflow-hidden py-band text-center text-white">
+    <video src={t.hero.video} autoplay muted loop playsinline aria-hidden="true" class="absolute inset-0 h-full w-full object-cover"
+    ></video>
+    <div class="absolute inset-0 bg-black/28"></div>
+    <div class="relative mx-auto max-w-[900px] px-7">
+      <h2 class="mb-[0.3em] text-white" set:html={t.hero.line1} />
+      <h2 class="mb-[0.3em] text-white" set:html={t.hero.line2} />
     </div>
   </section>
 
-  <section class="cards section">
-    <div class="container cards__list">
+  <section class="py-sect">
+    <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.stories.map((story: any, i: number) => (
           <MediaText image={story.image} media={i % 2 ? 'start' : 'end'} tone="cream">
             <h2 set:html={story.heading} />
-            <p class="story-location" set:html={story.location} />
+            <p class="mt-[-0.6em] opacity-85" set:html={story.location} />
             <p set:html={story.body} />
             <p>
               <a class="button button--dark" href={story.pdf} target="_blank" rel="noopener noreferrer">
@@ -45,68 +46,12 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     </div>
   </section>
 
-  <div class="container"><hr class="separator" /></div>
+  <div class="mx-auto max-w-content px-7"><hr class="my-card border-0 border-t border-[#d8d2c6]" /></div>
 
-  <section class="section coming-soon">
-    <div class="container">
+  <section class="py-sect text-center">
+    <div class="mx-auto max-w-content px-7">
       <h2 set:html={t.comingSoon.heading} />
-      <p set:html={t.comingSoon.body} />
+      <p class="mx-auto max-w-[44em]" set:html={t.comingSoon.body} />
     </div>
   </section>
 </Base>
-
-<style>
-  .page-title {
-    font-size: clamp(1.6rem, 1.4rem + 1vw, 2rem);
-    margin-block: 1.6em 0.9em;
-  }
-  .stories-hero {
-    position: relative;
-    overflow: hidden;
-    padding-block: var(--space-6);
-    color: #fff;
-    text-align: center;
-  }
-  .stories-hero video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .stories-hero__scrim {
-    position: absolute;
-    inset: 0;
-    background: rgb(0 0 0 / 0.28);
-  }
-  .stories-hero__content {
-    position: relative;
-    max-width: 900px;
-    margin-inline: auto;
-    padding-inline: var(--space-3);
-  }
-  .stories-hero h2 {
-    color: #fff;
-    margin-block-end: 0.3em;
-  }
-  .cards__list {
-    display: grid;
-    gap: var(--space-4);
-  }
-  .story-location {
-    margin-block-start: -0.6em;
-    opacity: 0.85;
-  }
-  .separator {
-    border: 0;
-    border-top: 1px solid #d8d2c6;
-    margin-block: var(--space-4);
-  }
-  .coming-soon {
-    text-align: center;
-  }
-  .coming-soon p {
-    max-width: 44em;
-    margin-inline: auto;
-  }
-</style>

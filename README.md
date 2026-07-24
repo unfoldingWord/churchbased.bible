@@ -20,14 +20,27 @@ Requires Node 18+ (`/opt/homebrew/bin/node` on this machine).
 
 | Path | What |
 | --- | --- |
+| `src/styles/global.css` | **Design system**: Tailwind 4 `@theme` tokens + base styles |
 | `src/i18n/config.ts` | Locale registry: names, BCP-47 tags, RTL flags, scripts |
 | `src/i18n/{locale}/*.json` | All translatable content — one file per page + `ui.json` |
 | `src/i18n/{locale}/REVIEW.md` | Translation notes for human reviewers |
 | `src/components/pages/*.astro` | One component per page, shared by all locales |
 | `src/pages/` | Routes: English at `/`, other locales at `/{lang}/…` |
-| `functions/api/contact.ts` | Contact form handler (Resend + honeypot + optional Turnstile) |
+| `worker/` | Cloudflare Worker: contact API + legacy redirects |
 | `scripts/` | mirror/extract/check/screenshot utilities used for the migration |
 | `raw/` | Archived copy of the old WordPress site (HTML, images, videos) |
+
+## Design system
+
+Styling is **Tailwind CSS 4** with the original Elementor theme's tokens defined
+in `src/styles/global.css` under `@theme` — colors (`ink`, `paper`, `cream`,
+`cream-light`, `taupe`), the WP fluid type scale (`text-sm`…`text-4xl`), fluid
+section spacing (`card`/`sect`/`band`), the 1080px `content` container, and a
+custom `nav` breakpoint (72rem) where the header collapses. Re-theming means
+editing tokens there; components use utilities only (plus `.button` variants).
+Layout uses logical properties (`start`/`end` utilities), so all 16 locales —
+including RTL Arabic, Urdu, and Farsi — share one stylesheet. Per-locale script
+fonts are assigned via `:lang()` rules setting `--font-script`.
 
 ## Editing translations
 

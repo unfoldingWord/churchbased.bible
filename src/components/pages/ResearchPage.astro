@@ -15,19 +15,19 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
 <Base locale={locale} slug="research" title={`${t.title} – ${ui.siteTitle}`} description={plain(t.intro).slice(0, 160)}>
   <SubHero pageTitle={t.title} heroTitle={t.hero.title} image={t.hero.image} />
 
-  <section class="section">
-    <div class="container narrow">
+  <section class="py-sect">
+    <div class="mx-auto max-w-[980px] px-7">
       <p set:html={t.intro} />
-      <hr class="separator" />
+      <hr class="my-card border-0 border-t border-[#d8d2c6]" />
       <h2 set:html={t.papersHeading} />
-      <div class="papers">
+      <div class="mt-card grid gap-card">
         {
           t.papers.map((paper: any) => (
-            <div class="paper">
-              <img src={paper.image} alt="" loading="lazy" />
+            <div class="grid grid-cols-1 items-center gap-7 sm:grid-cols-[220px_1fr]">
+              <img src={paper.image} alt="" loading="lazy" class="w-full shadow-[0_6px_18px_rgb(0_0_0/0.18)]" />
               <div>
                 <p set:html={paper.body} />
-                <p class="paper__files">
+                <p class="mt-[0.9em] flex flex-wrap gap-2.5">
                   {paper.files.map((f: any) => {
                     const external = f.href.startsWith('http');
                     return (
@@ -50,94 +50,37 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     </div>
   </section>
 
-  <section class="section videos-section">
-    <div class="container">
+  <section class="pb-sect">
+    <div class="mx-auto max-w-content px-7">
       <h2 set:html={t.videosHeading} />
-      <div class="videos">
+      <div class="mt-card grid gap-sect">
         {
-          t.videos.map((v: any, i: number) => (
-            <div class:list={['video-card', { 'video-card--reverse': i === 1 }]}>
-              <video src={v.video} controls preload="metadata" />
-              <div class="video-card__text">
-                <h3 set:html={v.heading} />
-                <p set:html={v.body} />
+          t.videos.map((v: any, i: number) => {
+            // "Reasons" (2nd) video shows on the right instead of the left,
+            // keeping the video in the wide column.
+            const reverse = i === 1;
+            return (
+              <div
+                class:list={[
+                  'grid grid-cols-1 items-center gap-card rounded-md bg-cream-light p-card shadow-[0_10px_26px_rgb(0_0_0/0.12)]',
+                  reverse ? 'md:grid-cols-[1fr_1.6fr]' : 'md:grid-cols-[1.6fr_1fr]',
+                ]}
+              >
+                <video
+                  src={v.video}
+                  controls
+                  preload="metadata"
+                  class:list={['aspect-video w-full bg-black', reverse && 'md:order-2']}
+                />
+                <div>
+                  <h3 set:html={v.heading} />
+                  <p set:html={v.body} />
+                </div>
               </div>
-            </div>
-          ))
+            );
+          })
         }
       </div>
     </div>
   </section>
 </Base>
-
-<style>
-  .narrow {
-    max-width: 980px;
-  }
-  .separator {
-    border: 0;
-    border-top: 1px solid #d8d2c6;
-    margin-block: var(--space-4);
-  }
-  .papers {
-    display: grid;
-    gap: var(--space-4);
-    margin-block-start: var(--space-4);
-  }
-  .videos-section {
-    padding-block-start: 0;
-  }
-  .videos {
-    display: grid;
-    gap: var(--space-5);
-    margin-block-start: var(--space-4);
-  }
-  .paper {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: var(--space-3);
-    align-items: center;
-  }
-  .paper img {
-    width: 100%;
-    box-shadow: 0 6px 18px rgb(0 0 0 / 0.18);
-  }
-  .paper__files {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6em;
-    margin-block-start: 0.9em;
-  }
-  .video-card {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    gap: var(--space-4);
-    align-items: center;
-    background: var(--color-tertiary);
-    border-radius: 6px;
-    padding: var(--space-4);
-    box-shadow: 0 10px 26px rgb(0 0 0 / 0.12);
-  }
-  .video-card video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #000;
-  }
-  /* "Reasons" (2nd) video shows on the right instead of the left, keeping the
-     video in the wide column. */
-  .video-card--reverse {
-    grid-template-columns: 1fr 1.6fr;
-  }
-  .video-card--reverse video {
-    order: 2;
-  }
-  @media (max-width: 700px) {
-    .paper,
-    .video-card {
-      grid-template-columns: 1fr;
-    }
-    .video-card--reverse video {
-      order: 0;
-    }
-  }
-</style>

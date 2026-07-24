@@ -16,23 +16,23 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
 <Base locale={locale} slug="about" title={`${t.title} – ${ui.siteTitle}`} description={plain(t.hero.title)}>
   <SubHero pageTitle={t.title} heroTitle={t.hero.title} image={t.hero.image} />
 
-  <section class="section center-copy">
-    <div class="container">
+  <section class="py-sect text-center">
+    <div class="mx-auto max-w-content px-7">
       <h2 set:html={t.power.heading} />
-      <p set:html={t.power.body} />
-      <video class="feature-video" src={t.power.video} controls preload="metadata"></video>
+      <p class="mx-auto max-w-[46em]" set:html={t.power.body} />
+      <video class="mt-card aspect-video w-full bg-black" src={t.power.video} controls preload="metadata"></video>
     </div>
   </section>
 
-  <section class="section center-copy">
-    <div class="container">
-      <p class="demand-line" set:html={t.demand.line1} />
+  <section class="py-sect text-center">
+    <div class="mx-auto max-w-content px-7">
+      <p class="mx-auto mb-[0.4em] max-w-[46em] font-heading text-[clamp(1.2rem,1rem+0.9vw,1.55rem)] font-semibold" set:html={t.demand.line1} />
       <h2 set:html={t.demand.line2} />
     </div>
   </section>
 
-  <section class="cards">
-    <div class="container cards__list">
+  <section>
+    <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.growth.map((card: any, i: number) => (
           <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream" aspect="2 / 1">
@@ -43,12 +43,12 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     </div>
   </section>
 
-  <section class="section center-copy">
-    <div class="container"><h2 set:html={t.paradigmsHeading} /></div>
+  <section class="py-sect text-center">
+    <div class="mx-auto max-w-content px-7"><h2 set:html={t.paradigmsHeading} /></div>
   </section>
 
-  <section class="cards">
-    <div class="container cards__list">
+  <section>
+    <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.paradigms.map((card: any, i: number) => (
           <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream" aspect="2 / 1">
@@ -59,21 +59,21 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     </div>
   </section>
 
-  <section class="section center-copy">
-    <div class="container"><h2 set:html={t.conditionsHeading} /></div>
+  <section class="py-sect text-center">
+    <div class="mx-auto max-w-content px-7"><h2 set:html={t.conditionsHeading} /></div>
   </section>
 
-  <section class="cards">
-    <div class="container cards__list">
+  <section>
+    <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.conditions.map((group: any, i: number) => (
           <MediaText image={group.image} media={i % 2 ? 'end' : 'start'} tone="cream" mediaFrac="minmax(210px, 0.5fr)">
-            <div class="conditions">
+            <div class="grid grid-cols-1 gap-7 sm:grid-cols-2">
               {group.items.map((item: any) => (
-                <div class="condition">
-                  <img src={item.icon} alt="" loading="lazy" />
-                  <p class="condition__title" set:html={item.title} />
-                  <p class="condition__body" set:html={item.body} />
+                <div class="text-center">
+                  <img src={item.icon} alt="" loading="lazy" class="mx-auto mb-[0.8em] h-12 w-auto" />
+                  <p class="mb-[0.4em]" set:html={item.title} />
+                  <p class="m-0 text-[14px]" set:html={item.body} />
                 </div>
               ))}
             </div>
@@ -83,19 +83,19 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     </div>
   </section>
 
-  <div class="container"><hr class="separator" /></div>
+  <div class="mx-auto max-w-content px-7"><hr class="my-card border-0 border-t border-[#d8d2c6]" /></div>
 
-  <section class="section center-copy">
-    <div class="container"><h2 set:html={t.nextHeading} /></div>
+  <section class="py-sect text-center">
+    <div class="mx-auto max-w-content px-7"><h2 set:html={t.nextHeading} /></div>
   </section>
 
-  <section class="cards">
-    <div class="container cards__list">
+  <section>
+    <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.next.map((card: any, i: number) => (
           <MediaText image={card.image} media={i % 2 ? 'start' : 'end'} tone="cream">
             <p set:html={card.body} />
-            <p class="cards__cta">
+            <p class="text-center">
               <a class="button button--dark" href={card.cta.href}>
                 {card.cta.label}
               </a>
@@ -106,64 +106,3 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     </div>
   </section>
 </Base>
-
-<style>
-  .center-copy {
-    text-align: center;
-  }
-  .center-copy p {
-    max-width: 46em;
-    margin-inline: auto;
-  }
-  .demand-line {
-    font-family: var(--font-heading);
-    font-size: clamp(1.2rem, 1rem + 0.9vw, 1.55rem);
-    font-weight: 600;
-    margin-block-end: 0.4em;
-  }
-  .feature-video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    margin-inline: auto;
-    margin-block-start: var(--space-4);
-    background: #000;
-  }
-  .cards__list {
-    display: grid;
-    gap: var(--space-4);
-  }
-  .cards__cta {
-    text-align: center;
-  }
-  .conditions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3);
-  }
-  .condition img {
-    height: 48px;
-    width: auto;
-    margin-inline: auto;
-    margin-block-end: 0.8em;
-  }
-  .condition {
-    text-align: center;
-  }
-  .condition__title {
-    margin-block-end: 0.4em;
-  }
-  .condition__body {
-    font-size: 14px;
-    margin: 0;
-  }
-  .separator {
-    border: 0;
-    border-top: 1px solid #d8d2c6;
-    margin-block: var(--space-4);
-  }
-  @media (max-width: 620px) {
-    .conditions {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

@@ -10,9 +10,9 @@ const { locale, slug, label = 'Language' } = Astro.props;
 const current = byCode(locale);
 ---
 
-<div class="lang-switcher">
+<div class="lang-switcher relative font-body text-[14px]">
   <button
-    class="lang-switcher__toggle"
+    class="peer flex cursor-pointer items-center gap-2 border-0 bg-[#fdfaf4] px-3.5 py-1 text-ink"
     aria-haspopup="true"
     aria-expanded="false"
     aria-label={label}
@@ -22,7 +22,9 @@ const current = byCode(locale);
       <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" />
     </svg>
   </button>
-  <ul class="lang-switcher__menu">
+  <ul
+    class="absolute end-0 top-full z-60 m-0 hidden max-h-[70vh] min-w-[12em] list-none overflow-y-auto bg-[#fdfaf4] py-1 shadow-[0_8px_24px_rgb(0_0_0/0.18)] peer-aria-expanded:block"
+  >
     {
       locales.map((l) => (
         <li>
@@ -31,6 +33,12 @@ const current = byCode(locale);
             lang={l.tag}
             dir={l.dir}
             aria-current={l.code === locale ? 'true' : undefined}
+            class:list={[
+              'block px-4 py-1.5 whitespace-nowrap no-underline hover:bg-cream-light',
+              // Mark the active language without relying on colour alone.
+              'aria-[current=true]:font-semibold aria-[current=true]:before:content-["✓_"]',
+              l.dir === 'rtl' && 'text-right',
+            ]}
           >
             {l.name}
           </a>
@@ -40,78 +48,20 @@ const current = byCode(locale);
   </ul>
 </div>
 
-<style>
-  .lang-switcher {
-    position: relative;
-    font-family: var(--font-body);
-    font-size: 14px;
-  }
-  .lang-switcher__toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    background: #fdfaf4;
-    color: var(--color-contrast);
-    border: 0;
-    /* Thin utility bar flush to the top of the page. */
-    padding: 0.25em 0.9em;
-    cursor: pointer;
-    font: inherit;
-  }
-  .lang-switcher__menu {
-    display: none;
-    position: absolute;
-    inset-inline-end: 0;
-    top: 100%;
-    margin: 0;
-    padding: 0.25em 0;
-    list-style: none;
-    background: #fdfaf4;
-    box-shadow: 0 8px 24px rgb(0 0 0 / 0.18);
-    max-height: 70vh;
-    overflow-y: auto;
-    min-width: 12em;
-    z-index: 60;
-  }
-  .lang-switcher.is-open .lang-switcher__menu {
-    display: block;
-  }
-  .lang-switcher__menu a {
-    display: block;
-    padding: 0.4em 1em;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .lang-switcher__menu a:hover {
-    background: var(--color-tertiary);
-  }
-  .lang-switcher__menu [aria-current='true'] {
-    font-weight: 600;
-  }
-  /* Mark the active language without relying on colour alone. */
-  .lang-switcher__menu [aria-current='true']::before {
-    content: '✓ ';
-  }
-  .lang-switcher__menu [dir='rtl'] {
-    text-align: right;
-  }
-</style>
-
 <script>
   document.querySelectorAll<HTMLElement>('.lang-switcher').forEach((root) => {
-    const toggle = root.querySelector<HTMLButtonElement>('.lang-switcher__toggle');
+    const toggle = root.querySelector<HTMLButtonElement>('button[aria-haspopup]');
     if (!toggle) return;
 
     const close = (returnFocus = false) => {
-      if (!root.classList.contains('is-open')) return;
-      root.classList.remove('is-open');
+      if (toggle.getAttribute('aria-expanded') !== 'true') return;
       toggle.setAttribute('aria-expanded', 'false');
       if (returnFocus) toggle.focus();
     };
 
     toggle.addEventListener('click', () => {
-      const open = root.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
     });
 
     root.addEventListener('keydown', (e) => {

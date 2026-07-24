@@ -1,11 +1,14 @@
 import { defineConfig } from 'astro/config';
 
+import tailwindcss from '@tailwindcss/vite';
+
 // URL scheme matches the old TranslatePress site exactly:
 // English at /, every other locale at /{lang}/ — no SEO loss on cutover.
 export default defineConfig({
   site: 'https://churchbased.bible',
   devToolbar: { enabled: false },
   trailingSlash: 'always',
+
   i18n: {
     defaultLocale: 'en',
     locales: [
@@ -15,5 +18,9 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false,
     },
+  },
+
+  vite: {
+    plugins: [tailwindcss()],
   },
 });

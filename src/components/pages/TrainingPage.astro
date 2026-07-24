@@ -16,23 +16,23 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
 <Base locale={locale} slug="training" title={`${t.title} – ${ui.siteTitle}`} description={plain(t.hero.title)}>
   <SubHero pageTitle={t.title} heroTitle={t.hero.title} image={t.hero.image} />
 
-  <section class="section">
-    <div class="container narrow">
+  <section class="py-sect">
+    <div class="mx-auto max-w-[880px] px-7">
       <p set:html={t.intro} />
-      <img class="cycle" src={t.cycleImage} alt="" loading="lazy" />
-      <h2 class="centered" set:html={t.resourcesHeading} />
+      <img class="mx-auto my-card w-full max-w-[560px]" src={t.cycleImage} alt="" loading="lazy" />
+      <h2 class="text-center" set:html={t.resourcesHeading} />
       <p set:html={t.resourcesIntro} />
     </div>
   </section>
 
-  <section class="cards">
-    <div class="container cards__list">
+  <section>
+    <div class="mx-auto grid max-w-content gap-card px-7">
       {
         t.resources.map((card: any, i: number) => (
           <MediaText image={card.image} media={i % 2 ? 'end' : 'start'} tone="cream" aspect="3 / 2">
-            <h2 class="centered" set:html={card.heading} />
-            <p class="centered" set:html={card.body} />
-            <p class="cards__cta">
+            <h2 class="text-center" set:html={card.heading} />
+            <p class="text-center" set:html={card.body} />
+            <p class="flex flex-wrap justify-center gap-3 text-center">
               {card.buttons.map((b: any) => {
                 const external = b.href.startsWith('http');
                 return (
@@ -53,17 +53,17 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     </div>
   </section>
 
-  <div class="container"><hr class="separator" /></div>
+  <div class="mx-auto max-w-content px-7"><hr class="my-card border-0 border-t border-[#d8d2c6]" /></div>
 
-  <section class="section">
-    <div class="container narrow">
+  <section class="py-sect">
+    <div class="mx-auto max-w-[880px] px-7">
       <h2 set:html={t.faqHeading} />
       {
         t.faqs.map((faq: any) => (
-          <details class="faq">
-            <summary set:html={faq.q} />
+          <details class="border-b border-[#e2ddd3] py-[0.9em]">
+            <summary class="cursor-pointer font-heading text-[17px] font-semibold" set:html={faq.q} />
             {faq.a.map((p: string) => (
-              <p set:html={p} />
+              <p class="mt-[0.8em] mb-0 text-base" set:html={p} />
             ))}
           </details>
         ))
@@ -71,47 +71,3 @@ const plain = (s: string) => s.replace(/<[^>]+>/g, '');
     </div>
   </section>
 </Base>
-
-<style>
-  .narrow {
-    max-width: 880px;
-  }
-  .centered {
-    text-align: center;
-  }
-  .cycle {
-    width: min(560px, 100%);
-    margin-inline: auto;
-    margin-block: var(--space-4);
-  }
-  .cards__list {
-    display: grid;
-    gap: var(--space-4);
-  }
-  .cards__cta {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75em;
-    justify-content: center;
-  }
-  .separator {
-    border: 0;
-    border-top: 1px solid #d8d2c6;
-    margin-block: var(--space-4);
-  }
-  .faq {
-    border-block-end: 1px solid #e2ddd3;
-    padding-block: 0.9em;
-  }
-  .faq summary {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 17px;
-    cursor: pointer;
-  }
-  .faq p {
-    margin-block: 0.8em 0;
-    font-size: 15px;
-  }
-</style>

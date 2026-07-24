@@ -14,18 +14,23 @@ const f = t.form;
 // first option is the placeholder ("Select An Option")
 const [placeholderOption, ...subjects] = f.subjectOptions;
 const CONTACT_EMAIL = 'churchbased.bible@unfoldingword.org';
+
+const inputClasses =
+  'w-full rounded border border-[#c9c4bb] bg-white px-3 py-2 text-base aria-[invalid=true]:border-error aria-[invalid=true]:outline-error';
+const labelClasses = 'mb-1.5 block font-semibold';
+const errorClasses = 'mt-1 block min-h-[1.2em] text-[0.85em] text-error';
 ---
 
 <Base locale={locale} slug="contact" title={`${t.title} – ${ui.siteTitle}`} description={plain(t.hero.title)}>
   <SubHero pageTitle={t.title} heroTitle={t.hero.title} image={t.hero.image} />
 
-  <section class="section contact">
-    <div class="container narrow">
-      <p class="contact__intro" set:html={t.intro} />
-      <h2 class="contact__matter" set:html={t.matter} />
+  <section class="py-sect">
+    <div class="mx-auto max-w-[760px] px-7">
+      <p class="mx-auto max-w-[46em] text-center text-[clamp(1.05rem,1rem+0.4vw,1.25rem)] font-medium" set:html={t.intro} />
+      <h2 class="mt-[0.8em] mb-card text-center" set:html={t.matter} />
 
       <form
-        class="contact-form"
+        class="contact-form rounded-md bg-white p-[clamp(1.5rem,4vw,3rem)] shadow-[0_12px_32px_rgb(0_0_0/0.16)]"
         method="post"
         action="/api/contact"
         novalidate
@@ -34,122 +39,44 @@ const CONTACT_EMAIL = 'churchbased.bible@unfoldingword.org';
         data-error-required={f.errorRequired}
         data-error-email={f.errorEmail}
       >
-        <p class="hp">
+        <p class="absolute -start-[9999px]">
           <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
         </p>
         <input type="hidden" name="locale" value={locale} />
-        <div class="field">
-          <label for="cf-name">{f.name} <span class="req">{f.required}</span></label>
-          <input id="cf-name" name="name" type="text" required autocomplete="name" aria-describedby="cf-name-error" />
-          <span class="field-error" id="cf-name-error" role="alert"></span>
+        <div class="mb-7">
+          <label class={labelClasses} for="cf-name">{f.name} <span class="text-[0.85em] font-normal opacity-70">{f.required}</span></label>
+          <input class={inputClasses} id="cf-name" name="name" type="text" required autocomplete="name" aria-describedby="cf-name-error" />
+          <span class={errorClasses} id="cf-name-error" role="alert"></span>
         </div>
-        <div class="field">
-          <label for="cf-email">{f.email} <span class="req">{f.required}</span></label>
-          <input id="cf-email" name="email" type="email" required autocomplete="email" aria-describedby="cf-email-error" />
-          <span class="field-error" id="cf-email-error" role="alert"></span>
+        <div class="mb-7">
+          <label class={labelClasses} for="cf-email">{f.email} <span class="text-[0.85em] font-normal opacity-70">{f.required}</span></label>
+          <input class={inputClasses} id="cf-email" name="email" type="email" required autocomplete="email" aria-describedby="cf-email-error" />
+          <span class={errorClasses} id="cf-email-error" role="alert"></span>
         </div>
-        <div class="field">
-          <label for="cf-subject">{f.subject} <span class="req">{f.required}</span></label>
-          <select id="cf-subject" name="subject" required aria-describedby="cf-subject-error">
+        <div class="mb-7">
+          <label class={labelClasses} for="cf-subject">{f.subject} <span class="text-[0.85em] font-normal opacity-70">{f.required}</span></label>
+          <select class={inputClasses} id="cf-subject" name="subject" required aria-describedby="cf-subject-error">
             <option value="" selected disabled>{placeholderOption}</option>
             {subjects.map((s: string) => <option value={s}>{s}</option>)}
           </select>
-          <span class="field-error" id="cf-subject-error" role="alert"></span>
+          <span class={errorClasses} id="cf-subject-error" role="alert"></span>
         </div>
-        <div class="field">
-          <label for="cf-message">{f.message}</label>
-          <textarea id="cf-message" name="message" rows="6"></textarea>
+        <div class="mb-7">
+          <label class={labelClasses} for="cf-message">{f.message}</label>
+          <textarea class:list={[inputClasses, 'resize-y']} id="cf-message" name="message" rows="6"></textarea>
         </div>
-        <p class="submit-row">
+        <p class="m-0 text-center">
           <button class="button button--dark" type="submit">{f.submit}</button>
         </p>
-        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="form-status mt-4 min-h-[1.4em] text-center" role="status" aria-live="polite"></p>
       </form>
 
-      <p class="contact__fallback">
+      <p class="mt-7 text-center text-[0.9em]">
         {f.fallbackLead} <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
       </p>
     </div>
   </section>
 </Base>
-
-<style>
-  .narrow {
-    max-width: 760px;
-  }
-  .contact__intro {
-    text-align: center;
-    font-weight: 500;
-    font-size: clamp(1.05rem, 1rem + 0.4vw, 1.25rem);
-    max-width: 46em;
-    margin-inline: auto;
-  }
-  .contact__matter {
-    text-align: center;
-    margin-block: 0.8em var(--space-4);
-  }
-  .contact-form {
-    background: #fff;
-    border-radius: 6px;
-    box-shadow: 0 12px 32px rgb(0 0 0 / 0.16);
-    padding: clamp(1.5rem, 4vw, 3rem);
-  }
-  .hp {
-    position: absolute;
-    left: -9999px;
-  }
-  .field {
-    margin-block-end: var(--space-3);
-  }
-  .field label {
-    display: block;
-    font-weight: 600;
-    margin-block-end: 0.4em;
-  }
-  .req {
-    font-weight: 400;
-    font-size: 0.85em;
-    opacity: 0.7;
-  }
-  .field input,
-  .field select,
-  .field textarea {
-    width: 100%;
-    font: inherit;
-    padding: 0.6em 0.8em;
-    border: 1px solid #c9c4bb;
-    border-radius: 4px;
-    background: #fff;
-  }
-  .field textarea {
-    resize: vertical;
-  }
-  .field :is(input, select)[aria-invalid='true'] {
-    border-color: #b3261e;
-    outline-color: #b3261e;
-  }
-  .field-error {
-    display: block;
-    min-height: 1.2em;
-    margin-block-start: 0.3em;
-    color: #b3261e;
-    font-size: 0.85em;
-  }
-  .submit-row {
-    text-align: center;
-    margin: 0;
-  }
-  .form-status {
-    text-align: center;
-    margin-block-start: var(--space-2);
-    min-height: 1.4em;
-  }
-  .contact__fallback {
-    text-align: center;
-    margin-block-start: var(--space-3);
-    font-size: 0.9em;
-  }
-</style>
 
 <script>
   const form = document.querySelector<HTMLFormElement>('.contact-form');

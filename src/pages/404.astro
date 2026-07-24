@@ -1,5 +1,5 @@
 ---
-// Cloudflare Pages serves /404.html for any unknown path, across all locales,
+// Cloudflare serves /404.html for any unknown path, across all locales,
 // so this single page offers every language's home link.
 import '@fontsource-variable/plus-jakarta-sans';
 import '../styles/global.css';
@@ -18,12 +18,12 @@ const ui = content('en', 'ui');
     <link rel="icon" href="/images/uploads/2025/11/CBBT-Logo.png" type="image/png" />
   </head>
   <body>
-    <main class="nf">
-      <img src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="72" height="72" />
+    <main class="flex min-h-screen flex-col items-center justify-center bg-cream-light p-card text-center">
+      <img src="/images/uploads/2025/11/CBBT-Logo.png" alt="" width="72" height="72" class="mb-7 invert" />
       <h1>{ui.strings.notFoundTitle}</h1>
       <p>{ui.strings.notFoundBody}</p>
       <p><a class="button" href="/">{ui.strings.backHome}</a></p>
-      <nav aria-label="Languages" class="nf__langs">
+      <nav aria-label="Languages" class="mt-card flex max-w-[40em] flex-wrap justify-center gap-x-5 gap-y-1.5 text-[14px]">
         {
           locales.map((l) => (
             <a href={localePath(l.code, 'home')} lang={l.tag} dir={l.dir}>
@@ -35,29 +35,3 @@ const ui = content('en', 'ui');
     </main>
   </body>
 </html>
-
-<style>
-  .nf {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: var(--space-4);
-    background: var(--color-tertiary);
-  }
-  .nf img {
-    filter: invert(1);
-    margin-block-end: var(--space-3);
-  }
-  .nf__langs {
-    margin-block-start: var(--space-4);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4em 1.2em;
-    justify-content: center;
-    max-width: 40em;
-    font-size: 14px;
-  }
-</style>
