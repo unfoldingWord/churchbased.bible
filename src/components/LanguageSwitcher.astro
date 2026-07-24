@@ -44,7 +44,7 @@ const current = byCode(locale);
   .lang-switcher {
     position: relative;
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 14px;
   }
   .lang-switcher__toggle {
     display: flex;
@@ -53,7 +53,8 @@ const current = byCode(locale);
     background: #fdfaf4;
     color: var(--color-contrast);
     border: 0;
-    padding: 0.5em 1em;
+    /* Thin utility bar flush to the top of the page. */
+    padding: 0.25em 0.9em;
     cursor: pointer;
     font: inherit;
   }

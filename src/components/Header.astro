@@ -74,7 +74,7 @@ const closeLabel = ui.strings?.close ?? 'Close';
   }
   .lang-float {
     position: absolute;
-    top: 14px;
+    top: 0;
     inset-inline-end: 5%;
     z-index: 50;
   }
@@ -99,13 +99,15 @@ const closeLabel = ui.strings?.close ?? 'Close';
     right: 0;
     z-index: 40;
     background: transparent;
-    padding-top: 68px;
+    padding-top: 52px;
   }
   .site-header__title {
     margin: 0;
-    font-size: 16px;
+    /* ~2x the previous 16px wordmark. */
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
     font-weight: 700;
     letter-spacing: -0.011em;
+    line-height: 1.1;
   }
   .site-header__title a {
     display: inline-flex;
@@ -115,7 +117,7 @@ const closeLabel = ui.strings?.close ?? 'Close';
     text-decoration: none;
   }
   .site-header__logo {
-    width: 34px;
+    width: 48px;
     height: auto;
     flex: none;
   }
@@ -134,7 +136,7 @@ const closeLabel = ui.strings?.close ?? 'Close';
   .site-nav__list a {
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
   }
   .site-nav__list a:hover,
