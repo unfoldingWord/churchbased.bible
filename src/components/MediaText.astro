@@ -37,6 +37,9 @@ const columns = mediaFrac
     columns,
     shadow && !hero && 'shadow-[0_12px_32px_rgb(0_0_0/0.16)]',
     hero && 'rounded-none shadow-none',
+    // Cream cards paint the whole card, so a fixed-aspect image shorter than
+    // the content never shows white around its edges.
+    tone === 'cream' && 'bg-cream-light',
   ]}
   style={style || undefined}
 >
