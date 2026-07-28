@@ -39,6 +39,7 @@
     "languageLabel": "Langue",
     "close": "Fermer",
     "stayConnected": "Restez connecté",
-    "stayConnectedBody": "Vous cherchez plus d’informations ou de l’aide pour commencer ? Écrivez-nous à :"
+    "stayConnectedBody": "Vous cherchez plus d’informations ou de l’aide pour commencer ? Écrivez-nous à :",
+    "skipToContent": "Aller au contenu"
   }
 }

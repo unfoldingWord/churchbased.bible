@@ -7,8 +7,20 @@ export interface LocaleDef {
   dir: 'ltr' | 'rtl';
   /** Flag emoji used by the current site's switcher. */
   flag: string;
-  /** Which self-hosted font set the locale needs beyond Latin. */
-  script: 'latin' | 'cyrillic' | 'arabic' | 'devanagari' | 'bengali' | 'myanmar' | 'han';
+  /**
+   * Which self-hosted webfont pack the locale needs beyond the system stack.
+   * Latin and Cyrillic render well from system fonts, so they load none.
+   * Other values name a stylesheet generated into public/fonts/ by
+   * scripts/build-font-css.mjs and <link>ed by Base.astro — see fontPackFor().
+   * Must stay in sync with the :lang() rules in src/styles/global.css.
+   */
+  script: 'latin' | 'cyrillic' | 'arabic' | 'nastaliq' | 'devanagari' | 'bengali' | 'myanmar' | 'han';
+}
+
+/** Stylesheet path for the locale's script, or null when the system stack suffices. */
+export function fontPackFor(code: string): string | null {
+  const { script } = byCode(code);
+  return script === 'latin' || script === 'cyrillic' ? null : `/fonts/${script}.css`;
 }
 
 export const locales: LocaleDef[] = [
@@ -24,7 +36,7 @@ export const locales: LocaleDef[] = [
   { code: 'id', name: 'Bahasa Indonesia',  tag: 'id',    dir: 'ltr', flag: '🇮🇩', script: 'latin' },
   { code: 'vi', name: 'Tiếng Việt',        tag: 'vi',    dir: 'ltr', flag: '🇻🇳', script: 'latin' },
   { code: 'bn', name: 'বাংলা',              tag: 'bn',    dir: 'ltr', flag: '🇧🇩', script: 'bengali' },
-  { code: 'ur', name: 'اردو',               tag: 'ur',    dir: 'rtl', flag: '🇵🇰', script: 'arabic' },
+  { code: 'ur', name: 'اردو',               tag: 'ur',    dir: 'rtl', flag: '🇵🇰', script: 'nastaliq' },
   { code: 'fa', name: 'فارسی',              tag: 'fa',    dir: 'rtl', flag: '🇮🇷', script: 'arabic' },
   { code: 'my', name: 'ဗမာစာ',             tag: 'my',    dir: 'ltr', flag: '🇲🇲', script: 'myanmar' },
   { code: 'nl', name: 'Nederlands',        tag: 'nl',    dir: 'ltr', flag: '🇳🇱', script: 'latin' },

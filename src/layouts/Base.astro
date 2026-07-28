@@ -1,23 +1,12 @@
 ---
-// Latin/Cyrillic/Vietnamese headings — matches the old site.
+// Headings for every locale — matches the old site.
 import '@fontsource-variable/plus-jakarta-sans';
-// Non-Latin scripts. Every @font-face carries a unicode-range, so a browser
-// only downloads the faces whose characters actually appear on the page —
-// safe to declare globally across all 16 locales.
-import '@fontsource/noto-sans-arabic/400.css';
-import '@fontsource/noto-sans-arabic/600.css';
-import '@fontsource/noto-nastaliq-urdu/400.css';
-import '@fontsource/noto-nastaliq-urdu/600.css';
-import '@fontsource/noto-sans-devanagari/400.css';
-import '@fontsource/noto-sans-devanagari/600.css';
-import '@fontsource/noto-sans-bengali/400.css';
-import '@fontsource/noto-sans-bengali/600.css';
-import '@fontsource/noto-sans-myanmar/400.css';
-import '@fontsource/noto-sans-myanmar/600.css';
-import '@fontsource/noto-sans-sc/400.css';
-import '@fontsource/noto-sans-sc/600.css';
+// Non-Latin script faces are NOT imported here: bundling them put ~250 KB of
+// @font-face rules (92% of it Noto Sans SC) into a render-blocking stylesheet
+// on all 16 locales. They're emitted per script into public/fonts/ by
+// scripts/build-font-css.mjs and <link>ed below for the current locale only.
 import '../styles/global.css';
-import { locales, byCode, defaultLocale, localePath, type PageSlug } from '../i18n/config';
+import { locales, byCode, defaultLocale, localePath, fontPackFor, type PageSlug } from '../i18n/config';
 import { content } from '../i18n/content';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -35,6 +24,7 @@ const { locale, slug, title, description, bareHeader = false } = Astro.props;
 const def = byCode(locale);
 const ui = content(locale, 'ui');
 const canonical = new URL(localePath(locale, slug), Astro.site);
+const fontPack = fontPackFor(locale);
 
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -54,6 +44,8 @@ const orgSchema = {
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/images/uploads/2025/11/CBBT-Logo.png" type="image/png" />
+    {/* Only this locale's script font, not all six. */}
+    {fontPack && <link rel="stylesheet" href={fontPack} />}
     {
       locales.map((l) => (
         <link
@@ -75,17 +67,20 @@ const orgSchema = {
     <meta property="og:image" content={new URL('/images/uploads/2025/11/CBBT-Website-Cover.jpg', Astro.site)} />
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
     <slot name="head" />
-    {/*
-      Cloudflare Web Analytics (cookieless, free) — replaces Jetpack stats.
-      Create a site in the Cloudflare dashboard → Analytics → Web Analytics,
-      then paste the token here and uncomment:
-      <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon='{"token": "YOUR_TOKEN"}'></script>
-    */}
+    {/* Cloudflare Web Analytics (cookieless) is injected at the edge by the
+        dashboard setting — no beacon snippet needed here. */}
   </head>
   <body>
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-100 focus:rounded-full focus:bg-cream focus:px-5 focus:py-2 focus:font-heading focus:font-semibold focus:text-ink"
+    >
+      {ui.strings?.skipToContent ?? 'Skip to content'}
+    </a>
     {!bareHeader && <Header locale={locale} ui={ui} slug={slug} />}
-    <slot />
+    <main id="main">
+      <slot />
+    </main>
     <Footer locale={locale} ui={ui} />
   </body>
 </html>

@@ -125,6 +125,16 @@
   html:lang(ur) :is(h1, h2, h3, h4) {
     font-family: var(--font-body);
   }
+
+  /* Visible keyboard focus (WCAG 2.4.7). Two-tone ring — a white outline with
+     a dark outer halo — so one of the two always contrasts, whether the
+     element sits on the light page, the dark header, or a photo hero. */
+  :focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--color-ink);
+    border-radius: 2px;
+  }
 }
 
 /* ---------------------------------------------------------------------------

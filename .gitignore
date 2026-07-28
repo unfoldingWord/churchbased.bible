@@ -22,3 +22,6 @@ dist-videos/
 # OS / editor cruft
 .DS_Store
 Thumbs.db
+
+# Generated per-script webfont CSS (scripts/build-font-css.mjs, run by pre-dev/pre-build)
+public/fonts/

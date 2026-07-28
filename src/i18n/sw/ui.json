@@ -39,6 +39,7 @@
     "languageLabel": "Lugha",
     "close": "Funga",
     "stayConnected": "Tuwasiliane",
-    "stayConnectedBody": "Unatafuta maelezo zaidi au msaada wa kuanza? Tutumie barua pepe:"
+    "stayConnectedBody": "Unatafuta maelezo zaidi au msaada wa kuanza? Tutumie barua pepe:",
+    "skipToContent": "Nenda kwa maudhui"
   }
 }
