@@ -23,17 +23,28 @@ const OUT = join(ROOT, 'public/images/cycle');
 const CX = 589.5;
 const CY = 748.7;
 
-// Per-arc text placement: cw = letters read along a clockwise path (tops face
-// outward); the bottom arc (04) reads left→right on a counter-clockwise path
-// (tops face the centre) so it isn't upside-down — matching the original.
+// Per-arc text placement. `from`/`to` bound the usable text arc in compass
+// degrees, walking in reading order — so for 04 (bottom) they descend, which
+// makes the text read left→right with glyph tops toward the centre instead of
+// upside-down, matching the original.
+//
+// The bounds keep clear of both ends of each arrow: the arrowhead at the start
+// and the number badge at the end. Badge positions were read straight out of
+// the source SVG's digit outlines (compass): 02 at 36–40°, 03 at 127–132°,
+// 04 at 215–220°, 05 at 306–312°; each badge is ~14° wide, so the text stops
+// ~8° short of it.
 const ARCS = {
-  '02': { center: 353, halfSpan: 36, cw: true, rTwo: [434, 384], rOne: [408] },
-  '03': { center: 86, halfSpan: 33, cw: true, rTwo: [434, 384], rOne: [408] },
-  '04': { center: 189, halfSpan: 36, cw: false, rTwo: [368, 418], rOne: [394] },
-  '05': { center: 263, halfSpan: 33, cw: true, rTwo: [434, 384], rOne: [408] },
+  '02': { from: 325, to: 388, rTwo: [434, 384], rOne: [408] }, // 325°→28°
+  '03': { from: 57, to: 118, rTwo: [434, 384], rOne: [408] },
+  '04': { from: 205, to: 151, rTwo: [368, 418], rOne: [394] }, // descends
+  '05': { from: 237, to: 297, rTwo: [434, 384], rOne: [408] },
 };
 const CENTER_TEXT = { x: CX, baselines: [758, 797], fontSize: 31 };
 const ARC_FONT_SIZE = 31.7;
+// Fraction of the available arc the longest line may occupy.
+const ARC_FILL = 0.97;
+// Width available to the centre "01" label (user units, inside the inner disc).
+const CENTER_WIDTH = 190;
 
 // ---------------------------------------------------------------------------
 // Label translations. 01 renders as centred straight lines; 02–05 curve along
@@ -153,16 +164,19 @@ const LABELS = {
   },
 };
 
-// Script metadata: font stack, RTL, and an approximate glyph-width factor
-// (em units per character) for the auto-fit calculation.
+// Script metadata. `family` is the embedded webfont (see embedFor()); `stack`
+// adds system fallbacks. Text widths are measured in a real browser rather than
+// estimated, so no per-script width guesses are needed.
 const SCRIPTS = {
-  latin: { stack: `'Jura','Trebuchet MS','Segoe UI',system-ui,sans-serif`, rtl: false, w: 0.58, jura: true },
-  arabic: { stack: `'Noto Sans Arabic','Geeza Pro','Segoe UI',system-ui,sans-serif`, rtl: true, w: 0.5 },
-  nastaliq: { stack: `'Noto Nastaliq Urdu','Urdu Typesetting','Geeza Pro',system-ui,sans-serif`, rtl: true, w: 0.55 },
-  devanagari: { stack: `'Noto Sans Devanagari','Kohinoor Devanagari','Devanagari Sangam MN','Nirmala UI',sans-serif`, rtl: false, w: 0.55 },
-  bengali: { stack: `'Noto Sans Bengali','Kohinoor Bangla','Bangla Sangam MN','Nirmala UI',sans-serif`, rtl: false, w: 0.55 },
-  myanmar: { stack: `'Noto Sans Myanmar','Myanmar Sangam MN','Myanmar Text',sans-serif`, rtl: false, w: 0.62 },
-  han: { stack: `'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif`, rtl: false, w: 1.05 },
+  latin: { pkg: '@fontsource/jura', family: 'Jura', weight: 700, subsets: /latin|vietnamese|cyrillic/, stack: `'Jura','Trebuchet MS',system-ui,sans-serif`, rtl: false },
+  arabic: { pkg: '@fontsource/noto-sans-arabic', family: 'Noto Sans Arabic', weight: 600, subsets: /arabic/, stack: `'Noto Sans Arabic','Geeza Pro',system-ui,sans-serif`, rtl: true },
+  devanagari: { pkg: '@fontsource/noto-sans-devanagari', family: 'Noto Sans Devanagari', weight: 600, subsets: /devanagari|latin/, stack: `'Noto Sans Devanagari','Kohinoor Devanagari',sans-serif`, rtl: false },
+  bengali: { pkg: '@fontsource/noto-sans-bengali', family: 'Noto Sans Bengali', weight: 600, subsets: /bengali|latin/, stack: `'Noto Sans Bengali','Kohinoor Bangla',sans-serif`, rtl: false },
+  myanmar: { pkg: '@fontsource/noto-sans-myanmar', family: 'Noto Sans Myanmar', weight: 600, subsets: /myanmar|latin/, stack: `'Noto Sans Myanmar','Myanmar Sangam MN',sans-serif`, rtl: false },
+  // Han: no embed — the SC subsets needed would add hundreds of KB, and every
+  // Chinese-capable system ships a CJK face with near-identical (full-width)
+  // metrics, so measuring locally generalises well.
+  han: { family: null, stack: `'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif`, rtl: false },
 };
 const LOCALE_SCRIPT = {
   en: 'latin', es: 'latin', fr: 'latin', sw: 'latin', pt: 'latin', id: 'latin', vi: 'latin', nl: 'latin', ru: 'latin',
@@ -173,26 +187,36 @@ const LOCALE_SCRIPT = {
 };
 
 // ---------------------------------------------------------------------------
-// Jura Bold is the graphic's original typeface (see the source's style block:
-// "font-family: Jura-Bold, Jura"). SVG loaded via <img> can't fetch external
-// fonts, so for the locales Jura covers we embed its woff2 subsets as data
-// URIs, preserving each subset's unicode-range from the fontsource CSS.
-function juraFontFaces() {
-  const pkgDir = join(ROOT, 'node_modules/@fontsource/jura');
-  const css = readFileSync(join(pkgDir, '700.css'), 'utf8');
-  const faces = [];
-  for (const m of css.matchAll(/@font-face\s*\{[^}]*?url\(\.\/files\/([^)]+\.woff2)\)[^}]*?unicode-range:\s*([^;}]+)/gs)) {
-    const [_, file, range] = m;
-    if (!/latin|vietnamese|cyrillic/.test(file)) continue;
-    const b64 = readFileSync(join(pkgDir, 'files', file)).toString('base64');
-    faces.push(
-      `@font-face{font-family:'Jura';font-style:normal;font-weight:700;font-display:swap;` +
-        `src:url(data:font/woff2;base64,${b64}) format('woff2');unicode-range:${range.trim()};}`
-    );
+// SVG loaded through <img> is an isolated document that cannot fetch external
+// fonts, so each graphic embeds the face it needs as data-URI woff2 subsets
+// (unicode-range preserved from the fontsource CSS). Jura Bold is the original
+// artwork's own typeface — see the source's style block, "font-family:
+// Jura-Bold, Jura" — so the Latin locales match the original exactly.
+const embedCache = new Map();
+function embedFor(scriptKey) {
+  if (embedCache.has(scriptKey)) return embedCache.get(scriptKey);
+  const s = SCRIPTS[scriptKey];
+  let out = '';
+  if (s.family) {
+    const pkgDir = join(ROOT, 'node_modules', s.pkg);
+    const css = readFileSync(join(pkgDir, `${s.weight}.css`), 'utf8');
+    const faces = [];
+    for (const m of css.matchAll(
+      /@font-face\s*\{[^}]*?url\(\.\/files\/([^)]+\.woff2)\)[^}]*?unicode-range:\s*([^;}]+)/gs
+    )) {
+      const [, file, range] = m;
+      if (!s.subsets.test(file)) continue;
+      const b64 = readFileSync(join(pkgDir, 'files', file)).toString('base64');
+      faces.push(
+        `@font-face{font-family:'${s.family}';font-style:normal;font-weight:${s.weight};` +
+          `src:url(data:font/woff2;base64,${b64}) format('woff2');unicode-range:${range.trim()};}`
+      );
+    }
+    out = faces.join('');
   }
-  return `<style>${faces.join('')}</style>\n`;
+  embedCache.set(scriptKey, out);
+  return out;
 }
-const JURA_STYLE = juraFontFaces();
 
 // ---------------------------------------------------------------------------
 // Template: original artwork minus the letter-outline glyphs and empty <text>.
@@ -218,50 +242,95 @@ const polar = (r, compassDeg) => {
   return [CX + r * Math.sin(a), CY - r * Math.cos(a)];
 };
 
-// Circular arc path through `center ± half` compass degrees at radius r.
-// cw=true draws in clockwise (visual) direction.
-function arcPath(r, centerDeg, halfDeg, cw) {
-  const a1 = centerDeg - halfDeg;
-  const a2 = centerDeg + halfDeg;
-  const [sx, sy] = polar(r, cw ? a1 : a2);
-  const [ex, ey] = polar(r, cw ? a2 : a1);
-  return `M ${sx.toFixed(2)} ${sy.toFixed(2)} A ${r} ${r} 0 0 ${cw ? 1 : 0} ${ex.toFixed(2)} ${ey.toFixed(2)}`;
+// Circular arc path from `fromDeg` to `toDeg` (compass) at radius r, walking in
+// reading order. Descending angles sweep counter-clockwise, which is how the
+// bottom arc keeps its text upright.
+function arcPath(r, fromDeg, toDeg) {
+  const cw = toDeg > fromDeg;
+  const [sx, sy] = polar(r, fromDeg);
+  const [ex, ey] = polar(r, toDeg);
+  const large = Math.abs(toDeg - fromDeg) > 180 ? 1 : 0;
+  return `M ${sx.toFixed(2)} ${sy.toFixed(2)} A ${r} ${r} 0 ${large} ${cw ? 1 : 0} ${ex.toFixed(2)} ${ey.toFixed(2)}`;
 }
+
+const arcLength = (r, fromDeg, toDeg) => (Math.abs(toDeg - fromDeg) * Math.PI * r) / 180;
 
 function esc(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+// ---------------------------------------------------------------------------
+// Measure every label's real rendered width in a headless browser, using the
+// same embedded font and weight the SVG will use. Estimating from character
+// counts was what let long translations run under the number badges.
+async function measureAll() {
+  const puppeteer = (await import('puppeteer-core')).default;
+  const browser = await puppeteer.launch({
+    executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    headless: 'shell',
+  });
+  const page = await browser.newPage();
+  const REF = 100; // measure at 100px, then scale linearly
+  const widths = {};
+  for (const [locale, labels] of Object.entries(LABELS)) {
+    const key = LOCALE_SCRIPT[locale];
+    const { stack, weight = 700 } = SCRIPTS[key];
+    const lines = Object.values(labels).flat();
+    await page.setContent(
+      `<style>${embedFor(key)}</style>` +
+        `<svg xmlns="http://www.w3.org/2000/svg" width="4000" height="600">` +
+        lines
+          .map(
+            (l, i) =>
+              `<text id="t${i}" x="0" y="${i * 40 + 40}" font-family="${stack}" font-weight="${weight}" font-size="${REF}">${esc(l)}</text>`
+          )
+          .join('') +
+        `</svg>`
+    );
+    await page.evaluate(() => document.fonts.ready);
+    const measured = await page.evaluate(
+      (n) => Array.from({ length: n }, (_, i) => document.getElementById('t' + i).getComputedTextLength()),
+      lines.length
+    );
+    widths[locale] = Object.fromEntries(lines.map((l, i) => [l, measured[i] / REF]));
+  }
+  await browser.close();
+  return widths; // widths[locale][line] = width in em
+}
+
+const EM = await measureAll();
+
 function textLayer(locale) {
   const labels = LABELS[locale];
-  const { stack, rtl, w, jura } = SCRIPTS[LOCALE_SCRIPT[locale]];
+  const key = LOCALE_SCRIPT[locale];
+  const { stack, rtl, weight = 700 } = SCRIPTS[key];
+  const em = EM[locale];
   const dir = rtl ? ' direction="rtl"' : '';
-  let out = jura ? JURA_STYLE : '';
-  out += `<g id="labels-${locale}" font-family="${stack}" font-weight="700">\n`;
+  let out = `<style>${embedFor(key)}</style>\n`;
+  out += `<g id="labels-${locale}" font-family="${stack}" font-weight="${weight}">\n`;
 
-  // Centre label (01) — straight, centred, dark.
+  // Centre label (01) — straight lines, centred, dark. One shared size.
   const c = labels['01'];
-  const cSize = Math.min(
-    CENTER_TEXT.fontSize,
-    ...c.map((line) => (CENTER_TEXT.fontSize * 9.2) / (line.length * w))
-  );
-  const baselines = c.length === 1 ? [772] : CENTER_TEXT.baselines;
+  const cSize = Math.min(CENTER_TEXT.fontSize, ...c.map((line) => CENTER_WIDTH / em[line]));
+  const baselines =
+    c.length === 1 ? [772] : CENTER_TEXT.baselines.map((b) => b - (CENTER_TEXT.fontSize - cSize) * 0.35);
   c.forEach((line, i) => {
-    out += `  <text x="${CENTER_TEXT.x}" y="${baselines[i]}" text-anchor="middle" font-size="${cSize.toFixed(1)}" fill="#1a1a1a"${dir}>${esc(line)}</text>\n`;
+    out += `  <text x="${CENTER_TEXT.x}" y="${baselines[i].toFixed(1)}" text-anchor="middle" font-size="${cSize.toFixed(1)}" fill="#1a1a1a"${dir}>${esc(line)}</text>\n`;
   });
 
-  // Arc labels 02–05 — white text on the coloured band.
-  for (const key of ['02', '03', '04', '05']) {
-    const lines = labels[key];
-    const arc = ARCS[key];
+  // Arc labels 02–05 — white text on the coloured band. Both lines of an arc
+  // share one size (as in the original), fitted to the tighter line.
+  for (const arcKey of ['02', '03', '04', '05']) {
+    const lines = labels[arcKey];
+    const arc = ARCS[arcKey];
     const radii = lines.length === 1 ? arc.rOne : arc.rTwo;
+    const size = Math.min(
+      ARC_FONT_SIZE,
+      ...lines.map((line, i) => (arcLength(radii[i], arc.from, arc.to) * ARC_FILL) / em[line])
+    );
     lines.forEach((line, i) => {
-      const r = radii[i];
-      const arcLen = ((arc.halfSpan * 2 * Math.PI) / 180) * r;
-      const estWidth = line.length * w * ARC_FONT_SIZE;
-      const size = estWidth > arcLen * 0.94 ? (ARC_FONT_SIZE * arcLen * 0.94) / estWidth : ARC_FONT_SIZE;
-      const id = `arc-${locale}-${key}-${i}`;
-      out += `  <path id="${id}" d="${arcPath(r, arc.center, arc.halfSpan, arc.cw)}" fill="none"/>\n`;
+      const id = `arc-${locale}-${arcKey}-${i}`;
+      out += `  <path id="${id}" d="${arcPath(radii[i], arc.from, arc.to)}" fill="none"/>\n`;
       out += `  <text font-size="${size.toFixed(1)}" fill="#ffffff"${dir}><textPath href="#${id}" startOffset="50%" text-anchor="middle">${esc(line)}</textPath></text>\n`;
     });
   }

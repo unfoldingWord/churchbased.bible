@@ -821,20 +821,21 @@
        id="path319"
        style="fill:#737373;fill-opacity:1" />
   </g>
+<style></style>
 <g id="labels-zh" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="700">
-  <text x="589.5" y="758" text-anchor="middle" font-size="31.0" fill="#1a1a1a">能力</text>
-  <text x="589.5" y="797" text-anchor="middle" font-size="31.0" fill="#1a1a1a">培养</text>
-  <path id="arc-zh-02-0" d="M 293.51 431.29 A 434 434 0 0 1 799.91 369.12" fill="none"/>
+  <text x="589.5" y="758.0" text-anchor="middle" font-size="31.0" fill="#1a1a1a">能力</text>
+  <text x="589.5" y="797.0" text-anchor="middle" font-size="31.0" fill="#1a1a1a">培养</text>
+  <path id="arc-zh-02-0" d="M 340.57 393.19 A 434 434 0 0 1 793.25 365.50" fill="none"/>
   <text font-size="31.7" fill="#ffffff"><textPath href="#arc-zh-02-0" startOffset="50%" text-anchor="middle">社区参与和</textPath></text>
-  <path id="arc-zh-02-1" d="M 327.61 467.86 A 384 384 0 0 1 775.67 412.85" fill="none"/>
+  <path id="arc-zh-02-1" d="M 369.25 434.15 A 384 384 0 0 1 769.78 409.65" fill="none"/>
   <text font-size="31.7" fill="#ffffff"><textPath href="#arc-zh-02-1" startOffset="50%" text-anchor="middle">口语化初稿</textPath></text>
-  <path id="arc-zh-03-0" d="M 915.34 503.16 A 408 408 0 0 1 946.34 946.50" fill="none"/>
+  <path id="arc-zh-03-0" d="M 931.68 526.49 A 408 408 0 0 1 949.74 940.24" fill="none"/>
   <text font-size="31.7" fill="#ffffff"><textPath href="#arc-zh-03-0" startOffset="50%" text-anchor="middle">质量保证社区审核</textPath></text>
-  <path id="arc-zh-04-0" d="M 310.90 1027.30 A 394 394 0 0 0 768.37 1099.76" fill="none"/>
+  <path id="arc-zh-04-0" d="M 422.99 1105.79 A 394 394 0 0 0 780.51 1093.30" fill="none"/>
   <text font-size="31.7" fill="#ffffff"><textPath href="#arc-zh-04-0" startOffset="50%" text-anchor="middle">区域教会领袖认证</textPath></text>
-  <path id="arc-zh-05-0" d="M 257.04 1027.67 A 434 434 0 0 1 199.42 558.45" fill="none"/>
+  <path id="arc-zh-05-0" d="M 225.52 985.07 A 434 434 0 0 1 202.80 551.67" fill="none"/>
   <text font-size="31.7" fill="#ffffff"><textPath href="#arc-zh-05-0" startOffset="50%" text-anchor="middle">迭代出版</textPath></text>
-  <path id="arc-zh-05-1" d="M 295.34 995.53 A 384 384 0 0 1 244.36 580.37" fill="none"/>
+  <path id="arc-zh-05-1" d="M 267.45 957.84 A 384 384 0 0 1 247.35 574.37" fill="none"/>
   <text font-size="31.7" fill="#ffffff"><textPath href="#arc-zh-05-1" startOffset="50%" text-anchor="middle">与修订</textPath></text>
 </g>
 </svg>
